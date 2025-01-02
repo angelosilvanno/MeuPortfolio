@@ -65,7 +65,7 @@ Para visualizar e executar o código do meu portfólio localmente, você precisa
 
 ## 👷 Autor  
 
-- **Ângelo Silvano**  - *Desenvolvedor Web* - [angelodesenvolvedor](https://github.com/angelodesenvolvedor)  
+- **Ângelo Silvano**  - *Front-End Developer* - [angelodesenvolvedor](https://github.com/angelodesenvolvedor)  
 
 ## 📄 Licença  
 
