@@ -42,10 +42,6 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento e rodar o po
    ```bash  
    npm install  
    ```  
-   ou  
-   ```bash  
-   yarn install  
-   ```  
 
 4. Rode o projeto:  
    ```bash  
@@ -70,8 +66,7 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento e rodar o po
 
 ## 👷 Autor  
 
-**Ângelo Silvano**  - Desenvolvedor Web  
-- GitHub: [@angelodesenvolvedor](https://github.com/angelodesenvolvedor)  
+**Ângelo Silvano**  - Desenvolvedor Web [angelodesenvolvedor](https://github.com/angelodesenvolvedor)
 
 ---
 
