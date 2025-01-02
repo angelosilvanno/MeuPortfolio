@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ângelo Silvano - Portfólio</title>
+    <meta name="description" content="Portfólio de Ângelo Silvano, um desenvolvedor web. Confira meus projetos e entre em contato.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #45a049;
+        }
+
+        .project-description {
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 7rem;
+        }
+
+        @supports not (line-clamp: 5) {
+            .project-description {
+                max-height: 7rem;
+                overflow: hidden;
+            }
+        }
+
+        .active {
+            display: flex !important;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: white;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+            z-index: 50;
+        }
+
+        .active li {
+            padding: 0;
+            width: 100%;
+            margin: 0;
+        }
+
+        .active li a {
+            display: block;
+            padding: 0.75rem 0;
+            line-height: 1.5;
+        }
+
+        .md\:flex.space-x-6 {
+            margin-right: 0;
+        }
+
+        #menu li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu li a {
+            display: block;
+            padding: 0.75rem 1rem;
+            text-align: center;
+            line-height: 1.5;
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        #menu li a:hover{
+          color: #3490dc
+        }
+        
+        .project-card{
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover{
+           transform: translateY(-5px);
+           box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+         .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #3490dc;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+         .section-title:hover::after{
+             transform: scaleX(1);
+         }
+
+         .skill-item{
+           transition: transform 0.3s ease, box-shadow 0.3s ease;
+         }
+
+          .skill-item:hover{
+             transform: translateY(-5px);
+             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+         }
+        
+        .about-image {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+          @keyframes fadeIn {
+           from {
+               opacity: 0;
+              transform: translateY(-20px);
+           }
+           to {
+                opacity: 1;
+                transform: translateY(0);
+           }
+        }
+        
+       .about-text {
+            animation: slideInFromLeft 1s ease-in-out;
+        }
+          
+         @keyframes slideInFromLeft {
+            from {
+              opacity: 0;
+             transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+          }
+
+        @media (min-width: 768px) {
+          #projects, #skills, #hard-skills, #contact {
+              padding-top: 6rem;
+            }
+         }
+    </style>
+
+</head>
+
+<body class="font-sans bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto p-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold">Ângelo Silvano</h1>
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <ul id="menu" class="hidden md:flex space-x-6">
+                <li><a href="#about" class="hover:text-blue-500">Sobre</a></li>
+                <li><a href="#projects" class="hover:text-blue-500">Projetos</a></li>
+                <li><a href="#skills" class="hover:text-blue-500">Habilidades</a></li>
+                <li><a href="#contact" class="hover:text-blue-500">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="container mx-auto px-4 py-16 mt-20">
+        <div class="flex flex-col md:flex-row items-center justify-center">
+            <div class="text-center md:text-left md:mr-8 about-text">
+                <h2 class="text-3xl font-bold mb-4 section-title">Sobre Mim</h2>
+                <p class="text-lg leading-7">
+                    Sou um desenvolvedor web em constante aprendizado, focado em criar soluções simples, eficientes e de qualidade, sempre aberto a novas tecnologias e desafios.
+                </p>
+            </div>
+            <img src="./image/20240803_110519.jpg" alt="Foto de Ângelo Silvano, um desenvolvedor web" loading="lazy"
+                class="rounded-full shadow-lg w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-cover mt-8 md:mt-0 about-image">
+        </div>
+    </section>
+
+    <section id="projects" class="container mx-auto px-4 py-16 bg-gray-50">
+        <h2 class="text-3xl font-bold text-center mb-8 section-title">Meus Projetos</h2>
+        <p class="text-lg text-center mb-8">Confira alguns dos projetos que desenvolvi:</p>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div class="bg-white shadow-md rounded-lg p-4 project-card">
+                <h3 class="text-xl font-semibold mb-2">VibePlay</h3>
+                <p class="text-sm text-justify project-description">Uma aplicação web interativa para reprodução de música,
+                    com recursos como controle de volume, busca por músicas, navegação por gêneros e informações sobre
+                    artistas.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <a href="https://github.com/angelodesenvolvedor/vibe-play" class="text-blue-500 hover:underline">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://vibeplay-web.vercel.app/" class="text-blue-500 hover:underline">
+                        <i class="fas fa-globe text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-4 project-card">
+                <h3 class="text-xl font-semibold mb-2">FootCoder</h3>
+                <p class="text-sm text-justify project-description">Simulação de loja online especializada em camisetas de
+                    times de futebol. Permite navegação pelos produtos, adição ao carrinho e pagamentos como cartão, boleto
+                    bancário e PIX.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <a href="https://github.com/angelodesenvolvedor/FootCoder" class="text-blue-500 hover:underline">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://foot-coder.vercel.app/" class="text-blue-500 hover:underline">
+                        <i class="fas fa-globe text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-4 project-card">
+                <h3 class="text-xl font-semibold mb-2">Lógica Quiz</h3>
+                <p class="text-sm text-justify project-description">Jogo educativo para praticar lógica proposicional,
+                    desenvolvido na disciplina de Matemática Discreta. Ajuda a aprimorar o raciocínio lógico dos usuários.
+                </p>
+                <div class="flex justify-between items-center mt-4">
+                    <a href="https://github.com/angelodesenvolvedor/LogicaQuiz" class="text-blue-500 hover:underline">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://logicaquiz.vercel.app/" class="text-blue-500 hover:underline">
+                        <i class="fas fa-globe text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-4 project-card">
+                <h3 class="text-xl font-semibold mb-2">Clima</h3>
+                <p class="text-sm text-justify project-description">Este projeto é uma aplicação web que permite aos
+                    usuários obterem informações em tempo real sobre as condições meteorológicas de uma cidade específica.
+                </p>
+                <div class="flex justify-between items-center mt-4">
+                    <a href="https://github.com/angelodesenvolvedor/Clima" class="text-blue-500 hover:underline">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://clima-eight-neon.vercel.app/" class="text-blue-500 hover:underline">
+                        <i class="fas fa-globe text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-4 project-card">
+                <h3 class="text-xl font-semibold mb-2">Conversor de Moeda Web</h3>
+                <p class="text-sm text-justify project-description">Conversor de Moeda Web: Projeto de um simples conversor
+                    de moeda desenvolvido em HTML, CSS, JavaScript e utilizando a API do ExchangeRate-API.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <a href="https://github.com/angelodesenvolvedor/ConversordeMoedaWeb"
+                        class="text-blue-500 hover:underline">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://conversor-de-moeda-web.vercel.app/" class="text-blue-500 hover:underline">
+                        <i class="fas fa-globe text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-4 project-card">
+                <h3 class="text-xl font-semibold mb-2">Jogo da Velha</h3>
+                <p class="text-sm text-justify project-description">Jogo da Velha: O projeto oferece uma interface simples e
+                    intuitiva, permitindo que os jogadores cliquem nas células do tabuleiro para realizar suas jogadas.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <a href="https://github.com/angelodesenvolvedor/Jogo-da-Velha"
+                        class="text-blue-500 hover:underline">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://jogo-da-velha-nine-ebon.vercel.app/" class="text-blue-500 hover:underline">
+                        <i class="fas fa-globe text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container mx-auto px-4 py-16 bg-gray-50">
+        <h2 class="text-3xl font-bold text-center mb-8 section-title">Soft Skills</h2>
+        <p class="text-lg text-center mb-8">Habilidades que me ajudam a trabalhar melhor:</p>
+        <ul class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2">Comunicação</h3>
+                <p class="text-sm">Explico minhas ideias de forma clara para todos.</p>
+            </li>
+            <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2">Resolução de Problemas</h3>
+                <p class="text-sm">Encontro soluções para desafios de forma criativa.</p>
+            </li>
+             <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2">Criatividade</h3>
+                <p class="text-sm">Crio soluções novas e diferentes para cada projeto.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="hard-skills" class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-8 section-title">Hard Skills</h2>
+         <p class="text-lg text-center mb-8">Ferramentas que uso para criar meus projetos:</p>
+        <ul class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2">HTML</h3>
+                 <p class="text-sm">Crio a base de sites e aplicações web.</p>
+            </li>
+            <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2">CSS e Tailwind CSS</h3>
+                <p class="text-sm">Deixo os sites bonitos e fáceis de usar.</p>
+            </li>
+            <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2">JavaScript</h3>
+                <p class="text-sm">Crio interações e funcionalidades para sites.</p>
+            </li>
+            <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2">React</h3>
+                <p class="text-sm">Crio partes reutilizáveis para sites maiores.</p>
+            </li>
+             <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2">Git</h3>
+                <p class="text-sm">Guardo e organizo o código dos meus projetos.</p>
+            </li>
+            <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2">TypeScript</h3>
+                <p class="text-sm">Crio código mais seguro e fácil de manter.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact" class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-8 section-title">Contato</h2>
+        <div id="success-message" class="hidden bg-green-500 text-white p-4 rounded-md mb-4 text-center">
+            Formulário enviado com sucesso!
+        </div>
+        <form id="contactForm" action="https://formspree.io/f/xbllknvq" method="POST" class="max-w-lg mx-auto"
+            target="_blank">
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-semibold">Nome</label>
+                <input type="text" id="name" name="name"
+                    class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-semibold">E-mail</label>
+                <input type="email" id="email" name="email"
+                    class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-sm font-semibold">Mensagem</label>
+                <textarea id="message" name="message" rows="4"
+                    class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required></textarea>
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="bg-gray-200 p-4">
+        <div class="container mx-auto text-center">
+            <p>© 2024 Ângelo Silvano. Todos os direitos reservados.</p>
+            <div class="flex justify-center space-x-4 mt-2">
+                <a href="https://github.com/angelodesenvolvedor" class="text-blue-500 hover:underline"><i
+                        class="fab fa-github text-xl mr-1"></i>GitHub</a>
+                <a href="https://www.linkedin.com/in/angelosilvanno/" class="text-blue-500 hover:underline"><i
+                        class="fab fa-linkedin text-xl mr-1"></i>LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            document.getElementById('success-message').classList.remove('hidden');
+            setTimeout(function () {
+                document.getElementById('success-message').classList.add('hidden');
+            }, 5000);
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menu-toggle');
+            const menu = document.getElementById('menu');
+            const menuLinks = menu.querySelectorAll('a');
+            let menuTimeout;
+
+            function closeMenu() {
+                menu.classList.add('hidden');
+                menu.classList.remove('active');
+                clearTimeout(menuTimeout);
+            }
+
+            menuToggle.addEventListener('click', function () {
+                menu.classList.toggle('hidden');
+                menu.classList.toggle('active');
+                clearTimeout(menuTimeout);
+
+                if (menu.classList.contains('active')) {
+                    menuTimeout = setTimeout(closeMenu, 5000);
+                }
+            });
+
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    closeMenu();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+             const desktopMenuLinks = document.querySelectorAll('#menu li a');
+               desktopMenuLinks.forEach(link => {
+                   link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement){
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                })
+              })
+        });
+    </script>
+</body>
+
+</html>
