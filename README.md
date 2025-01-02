@@ -19,11 +19,7 @@ Este portfólio foi criado para demonstrar minhas habilidades como desenvolvedor
 
 Para visualizar e executar o código do meu portfólio localmente, você precisará:  
 
-1. **Node.js:** (Recomendado: versão 16 ou superior)  
-   - Baixe e instale em: [https://nodejs.org/](https://nodejs.org/)  
-2. **npm ou yarn:** (Gerenciadores de pacotes do Node.js)  
-   - O npm vem com o Node.js, e o Yarn pode ser instalado separadamente.  
-3. **Git:** (Para clonar o repositório)  
+1. **Git:** (Para clonar o repositório)  
    - Baixe e instale em: [https://git-scm.com/](https://git-scm.com/)  
 
 ---
@@ -60,29 +56,8 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento e rodar o po
 
 ---
 
-## 🛠️ Testes  
-
-**Observação:** Este portfólio não possui testes automatizados no momento. No futuro, caso sejam adicionados, você poderá executar os testes utilizando o seguinte comando:  
-```bash  
-npm test  
-```  
-
----
-
 ## 📦 Tecnologias Utilizadas  
 
-**Front-end:**  
-- HTML  
-- CSS  
-- Tailwind CSS  
-- JavaScript  
-- React  
-
-**Outras Tecnologias:**  
-- Git  
-- TypeScript  
-
-**Badges:**  
 - HTML  
 - CSS  
 - Tailwind CSS  
@@ -95,8 +70,7 @@ npm test
 
 ## 👷 Autor  
 
-**Ângelo Silvano**  
-- Desenvolvedor Web  
+**Ângelo Silvano**  - Desenvolvedor Web  
 - GitHub: [@angelodesenvolvedor](https://github.com/angelodesenvolvedor)  
 
 ---
