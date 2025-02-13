@@ -1,4 +1,4 @@
-# Ângelo Silvano - Portfólio  
+# Ângelo Dev
 
 Este é o meu portfólio, um site que apresenta meus projetos, habilidades e informações de contato.  
 
