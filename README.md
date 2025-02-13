@@ -36,18 +36,6 @@ Para visualizar e executar o código do meu portfólio localmente, você precisa
    cd MeuPortfolio  
    ```  
 
-3. Instale as dependências:  
-   ```bash  
-   npm install  
-   ```  
-
-4. Rode o projeto:  
-   ```bash  
-   npm run dev  
-   ```  
-
-5. Abra o navegador e acesse: [http://localhost:3000](http://localhost:3000).  
-
 ## 📦 Tecnologias Utilizadas  
 
 ### **Front-end:**  
