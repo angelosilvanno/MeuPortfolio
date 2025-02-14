@@ -14,7 +14,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
-<body class="font-sans bg-gray-100 text-gray-800">
+<body class="font-sans bg-gray-50 text-gray-800">
 
     <header class="bg-white shadow-md fixed w-full top-0 z-50">
         <nav class="container mx-auto p-4 flex justify-between items-center">
@@ -23,7 +23,7 @@
                 <i class="fas fa-bars text-xl"></i>
             </button>
             <ul id="menu" class="hidden md:flex space-x-6">
-                <li><a href="#welcome" class="hover:text-blue-500">Incio</a></li>
+                <li><a href="#welcome" class="hover:text-blue-500">Início</a></li>
                 <li><a href="#about" class="hover:text-blue-500">Sobre</a></li>
                 <li><a href="#skills" class="hover:text-blue-500">Habilidades</a></li>
                 <li><a href="#projects" class="hover:text-blue-500">Projetos</a></li>
@@ -32,43 +32,44 @@
         </nav>
     </header>
 
-    <!-- Nova seção de boas-vindas -->
-    <section id="welcome" class="container mx-auto px-4 py-24 mt-20 bg-gray-100">
+    <section id="welcome" class="container mx-auto px-4 py-24 mt-20 bg-gray-50">
         <div class="flex flex-col md:flex-row items-center justify-center">
             <div class="text-center md:text-left md:mr-8">
-                <h2 class="text-4xl font-bold mb-4">Bem-Vindo(a)!</h2>
-                <p class="text-lg leading-7">
+                <h2 class="text-4xl font-bold mb-4 text-blue-700">Bem-Vindo(a)!</h2>
+                <p class="text-lg leading-7 text-gray-700">
                     Olá! É um prazer ter você por aqui. Explore meu portfólio e descubra um pouco mais sobre meu trabalho
                     como desenvolvedor web.
                 </p>
             </div>
             <img src="./image/undraw_programming_65t2.png" alt="Imagem de boas-vindas" loading="lazy"
-                class="rounded-lg shadow-lg w-64 h-64 md:w-80 md:h-80 object-cover mt-8 md:mt-0 bg-gray-100">
+                class="rounded-xl shadow-lg w-64 h-64 md:w-80 md:h-80 object-cover mt-8 md:mt-0 bg-white">
         </div>
     </section>
 
     <section id="about" class="container mx-auto px-4 py-16">
         <div class="flex flex-col md:flex-row items-center justify-center">
-            <div class="text-center md:text-left md:mr-8 about-text">
-                <h2 class="text-3xl font-bold mb-4 section-title">Sobre Mim</h2>
-                <p class="text-lg leading-7">
+            <img src="./image/20240803_110519.jpg" alt="Foto de Ângelo Silvano, um desenvolvedor web" loading="lazy"
+                class="rounded-full shadow-lg w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-cover mb-8 md:mb-0 md:mr-8">
+            <div class="text-center md:text-left about-text">
+                <h2 class="text-3xl font-bold mb-4 section-title text-blue-700">Sobre Mim</h2>
+                <p class="text-lg leading-7 text-gray-700">
                     Sou um desenvolvedor web em constante aprendizado, focado em criar soluções simples, eficientes e de
                     qualidade, sempre aberto a novas tecnologias e desafios.
                 </p>
             </div>
-            <img src="./image/20240803_110519.jpg" alt="Foto de Ângelo Silvano, um desenvolvedor web" loading="lazy"
-                class="rounded-full shadow-lg w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-cover mt-8 md:mt-0 about-image">
+
         </div>
     </section>
 
     <section id="projects" class="container mx-auto px-4 py-16 bg-gray-50">
-        <h2 class="text-3xl font-bold text-center mb-8 section-title">Meus Projetos</h2>
-        <p class="text-lg text-center mb-8">Confira alguns dos projetos que desenvolvi:</p>
+        <h2 class="text-3xl font-bold text-center mb-8 section-title text-blue-700">Meus Projetos</h2>
+        <p class="text-lg text-center mb-8 text-gray-700">Confira alguns dos projetos que desenvolvi:</p>
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div class="bg-white shadow-md rounded-lg p-4 project-card">
-                <h3 class="text-xl font-semibold mb-2">VibePlay</h3>
-                <p class="text-sm text-justify project-description">Uma aplicação web interativa para reprodução de música,
+                <h3 class="text-xl font-semibold mb-2 text-blue-700">VibePlay</h3>
+                <p class="text-sm text-justify project-description text-gray-700">Uma aplicação web interativa para
+                    reprodução de música,
                     com recursos como controle de volume, busca por músicas, navegação por gêneros e informações sobre
                     artistas.</p>
                 <div class="flex justify-between items-center mt-4">
@@ -82,8 +83,9 @@
             </div>
 
             <div class="bg-white shadow-md rounded-lg p-4 project-card">
-                <h3 class="text-xl font-semibold mb-2">FootCoder</h3>
-                <p class="text-sm text-justify project-description">Simulação de loja online especializada em camisetas de
+                <h3 class="text-xl font-semibold mb-2 text-blue-700">FootCoder</h3>
+                <p class="text-sm text-justify project-description text-gray-700">Simulação de loja online especializada em
+                    camisetas de
                     times de futebol. Permite navegação pelos produtos, adição ao carrinho e pagamentos como cartão, boleto
                     bancário e PIX.</p>
                 <div class="flex justify-between items-center mt-4">
@@ -97,8 +99,9 @@
             </div>
 
             <div class="bg-white shadow-md rounded-lg p-4 project-card">
-                <h3 class="text-xl font-semibold mb-2">Lógica Quiz</h3>
-                <p class="text-sm text-justify project-description">Jogo educativo para praticar lógica proposicional,
+                <h3 class="text-xl font-semibold mb-2 text-blue-700">Lógica Quiz</h3>
+                <p class="text-sm text-justify project-description text-gray-700">Jogo educativo para praticar lógica
+                    proposicional,
                     desenvolvido na disciplina de Matemática Discreta. Ajuda a aprimorar o raciocínio lógico dos usuários.
                 </p>
                 <div class="flex justify-between items-center mt-4">
@@ -112,8 +115,9 @@
             </div>
 
             <div class="bg-white shadow-md rounded-lg p-4 project-card">
-                <h3 class="text-xl font-semibold mb-2">LinkTree</h3>
-                <p class="text-sm text-justify project-description">Minha página LinkTree com links para minhas redes
+                <h3 class="text-xl font-semibold mb-2 text-blue-700">LinkTree</h3>
+                <p class="text-sm text-justify project-description text-gray-700">Minha página LinkTree com links para minhas
+                    redes
                     sociais, portfólio e mais. Conecte-se comigo!
                 </p>
                 <div class="flex justify-between items-center mt-4">
@@ -127,8 +131,9 @@
             </div>
 
             <div class="bg-white shadow-md rounded-lg p-4 project-card">
-                <h3 class="text-xl font-semibold mb-2">RunTech 🏃‍♂️🏃‍♀️</h3>
-                <p class="text-sm text-justify project-description">Um e-commerce focado em produtos para corrida e
+                <h3 class="text-xl font-semibold mb-2 text-blue-700">RunTech 🏃‍♂️🏃‍♀️</h3>
+                <p class="text-sm text-justify project-description text-gray-700">Um e-commerce focado em produtos para
+                    corrida e
                     esportes, com layout responsivo e funcionalidades essenciais para uma boa experiência de compra.</p>
                 <div class="flex justify-between items-center mt-4">
                     <a href="https://github.com/angelodesenvolvedor/RunTech"
@@ -142,8 +147,9 @@
             </div>
 
             <div class="bg-white shadow-md rounded-lg p-4 project-card">
-                <h3 class="text-xl font-semibold mb-2">Jogo da Velha</h3>
-                <p class="text-sm text-justify project-description">Jogo da Velha: O projeto oferece uma interface simples e
+                <h3 class="text-xl font-semibold mb-2 text-blue-700">Jogo da Velha</h3>
+                <p class="text-sm text-justify project-description text-gray-700">Jogo da Velha: O projeto oferece uma
+                    interface simples e
                     intuitiva, permitindo que os jogadores cliquem nas células do tabuleiro para realizar suas jogadas.</p>
                 <div class="flex justify-between items-center mt-4">
                     <a href="https://github.com/angelodesenvolvedor/Jogo-da-Velha"
@@ -159,89 +165,98 @@
     </section>
 
     <section id="skills" class="container mx-auto px-4 py-16 bg-gray-50">
-        <h2 class="text-3xl font-bold text-center mb-8 section-title">Soft Skills</h2>
-        <p class="text-lg text-center mb-8">Habilidades que me ajudam a trabalhar melhor:</p>
+        <h2 class="text-3xl font-bold text-center mb-8 section-title text-blue-700">Soft Skills</h2>
+        <p class="text-lg text-center mb-8 text-gray-700">Habilidades que me ajudam a trabalhar melhor:</p>
         <ul class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             <li class="bg-white shadow-md rounded-lg p-4 skill-item">
-                <h3 class="text-xl font-semibold mb-2">Comunicação</h3>
-                <p class="text-sm">Explico minhas ideias de forma clara para todos.</p>
+                <h3 class="text-xl font-semibold mb-2 text-blue-700">Comunicação</h3>
+                <p class="text-sm text-gray-700">Explico minhas ideias de forma clara para todos.</p>
             </li>
             <li class="bg-white shadow-md rounded-lg p-4 skill-item">
-                <h3 class="text-xl font-semibold mb-2">Resolução de Problemas</h3>
-                <p class="text-sm">Encontro soluções para desafios de forma criativa.</p>
+                <h3 class="text-xl font-semibold mb-2 text-blue-700">Resolução de Problemas</h3>
+                <p class="text-sm text-gray-700">Encontro soluções para desafios de forma criativa.</p>
             </li>
             <li class="bg-white shadow-md rounded-lg p-4 skill-item">
-                <h3 class="text-xl font-semibold mb-2">Criatividade</h3>
-                <p class="text-sm">Crio soluções novas e diferentes para cada projeto.</p>
+                <h3 class="text-xl font-semibold mb-2 text-blue-700">Criatividade</h3>
+                <p class="text-sm text-gray-700">Crio soluções novas e diferentes para cada projeto.</p>
             </li>
         </ul>
     </section>
 
     <section id="hard-skills" class="container mx-auto px-4 py-16">
-        <h2 class="text-3xl font-bold text-center mb-8 section-title">Hard Skills</h2>
-        <p class="text-lg text-center mb-8">Ferramentas que uso para criar meus projetos:</p>
+        <h2 class="text-3xl font-bold text-center mb-8 section-title text-blue-700">Hard Skills</h2>
+        <p class="text-lg text-center mb-8 text-gray-700">Ferramentas que uso para criar meus projetos:</p>
         <ul class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             <li class="bg-white shadow-md rounded-lg p-4 skill-item">
-                <h3 class="text-xl font-semibold mb-2"><i class="fab fa-html5 text-orange-500 mr-2"></i> HTML</h3>
-                <p class="text-sm">Crio a base de sites e aplicações web.</p>
+                <h3 class="text-xl font-semibold mb-2 text-blue-700"><i
+                        class="fab fa-html5 text-orange-500 mr-2"></i> HTML</h3>
+                <p class="text-sm text-gray-700">Crio a base de sites e aplicações web.</p>
             </li>
             <li class="bg-white shadow-md rounded-lg p-4 skill-item">
-                <h3 class="text-xl font-semibold mb-2"><i class="fab fa-css3-alt text-blue-500 mr-2"></i> CSS</h3>
-                <p class="text-sm">Estilizo os sites para um visual atraente.</p>
+                <h3 class="text-xl font-semibold mb-2 text-blue-700"><i class="fab fa-css3-alt text-blue-500 mr-2"></i>
+                    CSS</h3>
+                <p class="text-sm text-gray-700">Estilizo os sites para um visual atraente.</p>
             </li>
             <li class="bg-white shadow-md rounded-lg p-4 skill-item">
-                <h3 class="text-xl font-semibold mb-2"><i class="fab fa-js text-yellow-500 mr-2"></i> JavaScript</h3>
-                <p class="text-sm">Crio interações e funcionalidades para sites.</p>
+                <h3 class="text-xl font-semibold mb-2 text-blue-700"><i class="fab fa-js text-yellow-500 mr-2"></i>
+                    JavaScript</h3>
+                <p class="text-sm text-gray-700">Crio interações e funcionalidades para sites.</p>
             </li>
             <li class="bg-white shadow-md rounded-lg p-4 skill-item">
-                <h3 class="text-xl font-semibold mb-2"><i class="fab fa-react text-blue-300 mr-2"></i> React</h3>
-                <p class="text-sm">Crio partes reutilizáveis para sites maiores.</p>
+                <h3 class="text-xl font-semibold mb-2 text-blue-700"><i class="fab fa-react text-blue-300 mr-2"></i>
+                    React</h3>
+                <p class="text-sm text-gray-700">Crio partes reutilizáveis para sites maiores.</p>
             </li>
             <li class="bg-white shadow-md rounded-lg p-4 skill-item">
-                <h3 class="text-xl font-semibold mb-2"><i class="fab fa-git text-red-500 mr-2"></i> Git</h3>
-                <p class="text-sm">Guardo e organizo o código dos meus projetos.</p>
+                <h3 class="text-xl font-semibold mb-2 text-blue-700"><i class="fab fa-git text-red-500 mr-2"></i> Git
+                </h3>
+                <p class="text-sm text-gray-700">Guardo e organizo o código dos meus projetos.</p>
             </li>
             <li class="bg-white shadow-md rounded-lg p-4 skill-item">
-                <h3 class="text-xl font-semibold mb-2">
+                <h3 class="text-xl font-semibold mb-2 text-blue-700">
                     <img src="./image/iconetailwind.png" alt="Tailwind CSS" class="inline-block h-6 w-6 mr-2">
                     Tailwind CSS
                 </h3>
-                <p class="text-sm">Utilizo Tailwind CSS para criar interfaces responsivas de forma eficiente.</p>
+                <p class="text-sm text-gray-700">Utilizo Tailwind CSS para criar interfaces responsivas de forma
+                    eficiente.</p>
             </li>
             <li class="bg-white shadow-md rounded-lg p-4 skill-item">
-                <h3 class="text-xl font-semibold mb-2">
+                <h3 class="text-xl font-semibold mb-2 text-blue-700">
                     <img src="./image/iconetype.png" alt="TypeScript" class="inline-block h-6 w-6 mr-2">
                     TypeScript
                 </h3>
-                <p class="text-sm">Crio código mais seguro e fácil de manter.</p>
+                <p class="text-sm text-gray-700">Crio código mais seguro e fácil de manter.</p>
             </li>
         </ul>
     </section>
 
     <section id="contact" class="container mx-auto px-4 py-16">
-        <h2 class="text-3xl font-bold text-center mb-8 section-title">Contato</h2>
+        <h2 class="text-3xl font-bold text-center mb-8 section-title text-blue-700">Contato</h2>
         <div id="success-message" class="hidden bg-green-500 text-white p-4 rounded-md mb-4 text-center">
             Formulário enviado com sucesso!
         </div>
         <form id="contactForm" action="https://formspree.io/f/xbllknvq" method="POST" class="max-w-lg mx-auto"
             target="_blank">
             <div class="mb-4">
-                <label for="name" class="block text-sm font-semibold">Nome</label>
+                <label for="name" class="block text-sm font-semibold text-gray-700">Nome</label>
                 <input type="text" id="name" name="name"
-                    class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
+                    required>
             </div>
             <div class="mb-4">
-                <label for="email" class="block text-sm font-semibold">E-mail</label>
+                <label for="email" class="block text-sm font-semibold text-gray-700">E-mail</label>
                 <input type="email" id="email" name="email"
-                    class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
+                    required>
             </div>
             <div class="mb-4">
-                <label for="message" class="block text-sm font-semibold">Mensagem</label>
+                <label for="message" class="block text-sm font-semibold text-gray-700">Mensagem</label>
                 <textarea id="message" name="message" rows="4"
-                    class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
                     required></textarea>
             </div>
-            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">Enviar</button>
+            <button type="submit"
+                class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">Enviar</button>
         </form>
     </section>
 
