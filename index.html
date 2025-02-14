@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ângelo Dev</title>
-    <meta name="description" content="Portfólio de Ângelo Silvano, um desenvolvedor web. Confira meus projetos e entre em contato.">
+    <meta name="description"
+        content="Portfólio de Ângelo Silvano, um desenvolvedor web. Confira meus projetos e entre em contato.">
     <link rel="shortcut icon" href="./image/portfolio.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src=".js/app.js"></script>
@@ -22,6 +23,7 @@
                 <i class="fas fa-bars text-xl"></i>
             </button>
             <ul id="menu" class="hidden md:flex space-x-6">
+                <li><a href="#welcome" class="hover:text-blue-500">Inicio</a></li>
                 <li><a href="#about" class="hover:text-blue-500">Sobre</a></li>
                 <li><a href="#skills" class="hover:text-blue-500">Habilidades</a></li>
                 <li><a href="#projects" class="hover:text-blue-500">Projetos</a></li>
@@ -30,12 +32,28 @@
         </nav>
     </header>
 
-    <section id="about" class="container mx-auto px-4 py-16 mt-20">
+    <!-- Nova seção de boas-vindas -->
+    <section id="welcome" class="container mx-auto px-4 py-24 mt-20">
+        <div class="flex flex-col md:flex-row items-center justify-center">
+            <div class="text-center md:text-left md:mr-8">
+                <h2 class="text-4xl font-bold mb-4">Bem-Vindo(a)!</h2>
+                <p class="text-lg leading-7">
+                    Olá! É um prazer ter você por aqui. Explore meu portfólio e descubra um pouco mais sobre meu trabalho
+                    como desenvolvedor web.
+                </p>
+            </div>
+            <img src="./image/undraw_programming_65t2.png" alt="Imagem de boas-vindas" loading="lazy"
+                class="rounded-lg shadow-lg w-64 h-64 md:w-80 md:h-80 object-cover mt-8 md:mt-0">
+        </div>
+    </section>
+
+    <section id="about" class="container mx-auto px-4 py-16">
         <div class="flex flex-col md:flex-row items-center justify-center">
             <div class="text-center md:text-left md:mr-8 about-text">
                 <h2 class="text-3xl font-bold mb-4 section-title">Sobre Mim</h2>
                 <p class="text-lg leading-7">
-                    Sou um desenvolvedor web em constante aprendizado, focado em criar soluções simples, eficientes e de qualidade, sempre aberto a novas tecnologias e desafios.
+                    Sou um desenvolvedor web em constante aprendizado, focado em criar soluções simples, eficientes e de
+                    qualidade, sempre aberto a novas tecnologias e desafios.
                 </p>
             </div>
             <img src="./image/20240803_110519.jpg" alt="Foto de Ângelo Silvano, um desenvolvedor web" loading="lazy"
@@ -95,7 +113,8 @@
 
             <div class="bg-white shadow-md rounded-lg p-4 project-card">
                 <h3 class="text-xl font-semibold mb-2">LinkTree</h3>
-                <p class="text-sm text-justify project-description">Minha página LinkTree com links para minhas redes sociais, portfólio e mais. Conecte-se comigo!
+                <p class="text-sm text-justify project-description">Minha página LinkTree com links para minhas redes
+                    sociais, portfólio e mais. Conecte-se comigo!
                 </p>
                 <div class="flex justify-between items-center mt-4">
                     <a href="https://github.com/angelodesenvolvedor/LinkTree" class="text-blue-500 hover:underline">
@@ -109,7 +128,8 @@
 
             <div class="bg-white shadow-md rounded-lg p-4 project-card">
                 <h3 class="text-xl font-semibold mb-2">RunTech 🏃‍♂️🏃‍♀️</h3>
-                <p class="text-sm text-justify project-description">Um e-commerce focado em produtos para corrida e esportes, com layout responsivo e funcionalidades essenciais para uma boa experiência de compra.</p>
+                <p class="text-sm text-justify project-description">Um e-commerce focado em produtos para corrida e
+                    esportes, com layout responsivo e funcionalidades essenciais para uma boa experiência de compra.</p>
                 <div class="flex justify-between items-center mt-4">
                     <a href="https://github.com/angelodesenvolvedor/RunTech"
                         class="text-blue-500 hover:underline">
