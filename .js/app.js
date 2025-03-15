@@ -1,23 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
-    const menuLinks = menu ? menu.querySelectorAll('a') : [];
+    const menuLinks = menu?.querySelectorAll('a') || [];
     let menuTimeout;
     const contactForm = document.getElementById('contactForm');
     const successMessage = document.getElementById('success-message');
 
-    function closeMenu() {
-        if (menu) {
-            menu.classList.add('hidden');
-            menu.classList.remove('active');
-        }
-        if (menuToggle) {
-            menuToggle.classList.remove('active');
-        }
+    const closeMenu = () => {
+        menu?.classList.add('hidden');
+        menu?.classList.remove('active');
+        menuToggle?.classList.remove('active');
         clearTimeout(menuTimeout);
-    }
+    };
 
-    function scrollToSection(targetId) {
+    const scrollToSection = (targetId) => {
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
             const headerOffset = document.querySelector('header')?.offsetHeight || 0;
@@ -28,9 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 behavior: 'smooth',
             });
         }
-    }
+    };
 
-    function checkScreenSize() {
+    const checkScreenSize = () => {
         if (!menu || !menuToggle) return;
 
         if (window.innerWidth >= 768) {
@@ -39,52 +35,72 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (!menuToggle.classList.contains('active')) {
             menu.classList.add('hidden');
         }
-    }
+    };
 
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function () {
-            if (!menu) return;
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-            clearTimeout(menuTimeout);
+    menuToggle?.addEventListener('click', () => {
+        if (!menu) return;
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        clearTimeout(menuTimeout);
 
-            if (menu.classList.contains('active')) {
-                menuTimeout = setTimeout(closeMenu, 5000);
-            }
-        });
-    }
+        if (menu.classList.contains('active')) {
+            menuTimeout = setTimeout(closeMenu, 5000);
+        }
+    });
 
     menuLinks.forEach((link) => {
-        link.addEventListener('click', function (event) {
+        link.addEventListener('click', (event) => {
             event.preventDefault();
             closeMenu();
-            const targetId = this.getAttribute('href');
-            scrollToSection(targetId);
+            scrollToSection(link.getAttribute('href'));
         });
     });
 
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
 
-    // **Adaptação para simulação de envio do formulário**
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (event) {
-            event.preventDefault(); // Evita o envio padrão do formulário
+    contactForm?.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-            // Simula um envio bem-sucedido
-            successMessage.textContent = 'Formulário enviado com sucesso!';
-            successMessage.classList.remove('hidden');
-            successMessage.classList.add('bg-green-500');
-            successMessage.classList.remove('bg-red-500');
-            contactForm.reset(); // Limpa os campos do formulário
+        const formData = new FormData(contactForm);
 
-            // Oculta a mensagem após alguns segundos
-            setTimeout(() => {
-                successMessage.classList.add('hidden');
-            }, 5000);
-
-
-        });
-    }
+        fetch('https://formspree.io/f/xpwpwprz', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+            .then(response => {
+                if (response.ok) {
+                    successMessage.textContent = 'Formulário enviado com sucesso!';
+                    successMessage.classList.remove('hidden');
+                    successMessage.classList.add('bg-green-500');
+                    successMessage.classList.remove('bg-red-500');
+                    contactForm.reset();
+                    setTimeout(() => {
+                        successMessage.classList.add('hidden');
+                    }, 5000);
+                } else {
+                    successMessage.textContent = 'Erro ao enviar o formulário.';
+                    successMessage.classList.remove('hidden');
+                    successMessage.classList.add('bg-red-500');
+                    successMessage.classList.remove('bg-green-500');
+                    setTimeout(() => {
+                        successMessage.classList.add('hidden');
+                    }, 5000);
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao enviar o formulário:', error);
+                successMessage.textContent = 'Erro ao enviar o formulário.';
+                successMessage.classList.remove('hidden');
+                successMessage.classList.add('bg-red-500');
+                successMessage.classList.remove('bg-green-500');
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                }, 5000);
+            });
+    });
 });
