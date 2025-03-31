@@ -1,17 +1,33 @@
 document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-    const menuLinks = menu?.querySelectorAll('a') || [];
-    let menuTimeout;
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuLinks = mobileMenu?.querySelectorAll('a') || [];
     const contactForm = document.getElementById('contactForm');
-    const successMessage = document.getElementById('success-message');
+    const successMessageDiv = document.getElementById('success-message');
+    const errorMessageDiv = document.getElementById('error-message');
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    const currentYearSpan = document.getElementById('current-year');
+
+    let menuTimeout;
 
     const closeMenu = () => {
-        menu?.classList.add('hidden');
-        menu?.classList.remove('active');
-        menuToggle?.classList.remove('active');
+        if (!mobileMenu || !menuToggle) return;
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
         clearTimeout(menuTimeout);
     };
+
+    const openMenu = () => {
+        if (!mobileMenu || !menuToggle) return;
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('active');
+        menuToggle.classList.add('active');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        clearTimeout(menuTimeout);
+        menuTimeout = setTimeout(closeMenu, 5000);
+    }
 
     const scrollToSection = (targetId) => {
         const targetElement = document.querySelector(targetId);
@@ -27,80 +43,121 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     const checkScreenSize = () => {
-        if (!menu || !menuToggle) return;
-
+        if (!mobileMenu || !menuToggle) return;
         if (window.innerWidth >= 768) {
-            menu.classList.remove('hidden', 'active');
-            menuToggle.classList.remove('active');
-        } else if (!menuToggle.classList.contains('active')) {
-            menu.classList.add('hidden');
+            closeMenu();
         }
     };
 
-    menuToggle?.addEventListener('click', () => {
-        if (!menu) return;
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('active');
-        menuToggle.classList.toggle('active');
-        clearTimeout(menuTimeout);
+    const handleScroll = () => {
+         if (scrollToTopBtn) {
+             if (window.pageYOffset > 300) {
+                 scrollToTopBtn.classList.remove('opacity-0');
+                 scrollToTopBtn.classList.add('opacity-100');
+             } else {
+                 scrollToTopBtn.classList.remove('opacity-100');
+                 scrollToTopBtn.classList.add('opacity-0');
+             }
+         }
+     };
 
-        if (menu.classList.contains('active')) {
-            menuTimeout = setTimeout(closeMenu, 5000);
+    const updateFooterYear = () => {
+        if (currentYearSpan) {
+             currentYearSpan.textContent = new Date().getFullYear();
+         }
+    }
+
+    menuToggle?.addEventListener('click', () => {
+        if (mobileMenu?.classList.contains('hidden')) {
+            openMenu();
+        } else {
+            closeMenu();
         }
     });
 
-    menuLinks.forEach((link) => {
+    mobileMenuLinks.forEach((link) => {
         link.addEventListener('click', (event) => {
-            event.preventDefault();
-            closeMenu();
-            scrollToSection(link.getAttribute('href'));
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                event.preventDefault();
+                closeMenu();
+                scrollToSection(href);
+            }
         });
     });
 
-    checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
 
-    contactForm?.addEventListener('submit', function (event) {
+    window.addEventListener('scroll', handleScroll);
+
+    contactForm?.addEventListener('submit', async function (event) {
         event.preventDefault();
 
-        const formData = new FormData(contactForm);
+        successMessageDiv?.classList.add('hidden');
+        errorMessageDiv?.classList.add('hidden');
 
-        fetch('https://formspree.io/f/xpwpwprz', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-            .then(response => {
-                if (response.ok) {
-                    successMessage.textContent = 'Formulário enviado com sucesso!';
-                    successMessage.classList.remove('hidden');
-                    successMessage.classList.add('bg-green-500');
-                    successMessage.classList.remove('bg-red-500');
-                    contactForm.reset();
-                    setTimeout(() => {
-                        successMessage.classList.add('hidden');
-                    }, 5000);
-                } else {
-                    successMessage.textContent = 'Erro ao enviar o formulário.';
-                    successMessage.classList.remove('hidden');
-                    successMessage.classList.add('bg-red-500');
-                    successMessage.classList.remove('bg-green-500');
-                    setTimeout(() => {
-                        successMessage.classList.add('hidden');
-                    }, 5000);
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton ? submitButton.textContent : 'Enviar Mensagem';
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Enviando...';
+        }
+
+        const formData = new FormData(contactForm);
+        const object = {};
+        formData.forEach((value, key) => { object[key] = value });
+        const json = JSON.stringify(object);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: contactForm.method,
+                body: json,
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
                 }
-            })
-            .catch(error => {
-                console.error('Erro ao enviar o formulário:', error);
-                successMessage.textContent = 'Erro ao enviar o formulário.';
-                successMessage.classList.remove('hidden');
-                successMessage.classList.add('bg-red-500');
-                successMessage.classList.remove('bg-green-500');
-                setTimeout(() => {
-                    successMessage.classList.add('hidden');
-                }, 5000);
             });
+
+            if (response.ok) {
+                if(successMessageDiv) {
+                    successMessageDiv.classList.remove('hidden');
+                }
+                contactForm.reset();
+                setTimeout(() => {
+                    successMessageDiv?.classList.add('hidden');
+                }, 5000);
+            } else {
+                 const data = await response.json().catch(() => ({}));
+                 const errorText = data?.error || 'Ocorreu um erro ao enviar. Tente novamente.';
+                if(errorMessageDiv) {
+                    const span = errorMessageDiv.querySelector('span');
+                    if (span) span.textContent = errorText;
+                    errorMessageDiv.classList.remove('hidden');
+                 }
+                setTimeout(() => {
+                    errorMessageDiv?.classList.add('hidden');
+                }, 5000);
+            }
+        } catch (error) {
+            console.error('Erro de rede ao enviar o formulário:', error);
+            if(errorMessageDiv) {
+                 const span = errorMessageDiv.querySelector('span');
+                 if (span) span.textContent = 'Erro de conexão. Verifique sua internet.';
+                 errorMessageDiv.classList.remove('hidden');
+            }
+            setTimeout(() => {
+                errorMessageDiv?.classList.add('hidden');
+            }, 5000);
+        } finally {
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
+        }
     });
+
+    updateFooterYear();
+    checkScreenSize();
+    handleScroll();
+
 });
