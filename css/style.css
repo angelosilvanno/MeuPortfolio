@@ -6,11 +6,15 @@ html {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #4CAF50;
+    background-color: #3b82f6; 
     color: white;
     border: none;
     border-radius: 50%;
-    padding: 10px;
+    width: 40px; 
+    height: 40px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
     cursor: pointer;
     font-size: 18px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -18,7 +22,7 @@ html {
 }
 
 .scroll-to-top:hover {
-    background-color: #45a049;
+    background-color: #2563eb; 
 }
 
 .project-description {
@@ -83,20 +87,20 @@ html {
     transition: color 0.3s ease;
 }
 
-#menu li a:hover{
-  color: #3490dc
+#menu li a:hover {
+    color: #3490dc;
 }
 
-.project-card{
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover{
-   transform: translateY(-5px);
-   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
- .section-title {
+.section-title {
     position: relative;
     display: inline-block;
     padding-bottom: 0.5rem;
@@ -115,51 +119,51 @@ html {
     transition: transform 0.3s ease;
 }
 
- .section-title:hover::after{
-     transform: scaleX(1);
- }
+.section-title:hover::after {
+    transform: scaleX(1);
+}
 
- .skill-item{
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
- }
+.skill-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .skill-item:hover{
-     transform: translateY(-5px);
-     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
- }
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
 
 .about-image {
     animation: fadeIn 1s ease-in-out;
 }
 
-  @keyframes fadeIn {
-   from {
-       opacity: 0;
-      transform: translateY(-20px);
-   }
-   to {
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
         opacity: 1;
         transform: translateY(0);
-   }
+    }
 }
 
 .about-text {
     animation: slideInFromLeft 1s ease-in-out;
 }
-  
- @keyframes slideInFromLeft {
+
+@keyframes slideInFromLeft {
     from {
-      opacity: 0;
-     transform: translateX(-50px);
+        opacity: 0;
+        transform: translateX(-50px);
     }
     to {
         opacity: 1;
         transform: translateX(0);
     }
-  }
+}
 
 @media (min-width: 768px) {
-  #projects, #skills, #hard-skills, #contact {
-      padding-top: 6rem;
+    #projects, #skills, #hard-skills, #contact {
+        padding-top: 6rem;
     }
- }
+}
