@@ -1,3 +1,37 @@
+/* src/input.css */
+
+/* Diretivas do Tailwind - Mantêm todo o poder do Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos do botão Voltar ao Topo */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3b82f6; 
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    z-index: 100;
+}
+
+.scroll-to-top:hover {
+    background-color: #2563eb; 
+}
+
+/* === Fim dos estilos personalizados === */
