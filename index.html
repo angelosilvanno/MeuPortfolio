@@ -9,7 +9,7 @@
         content="Portfólio de Ângelo Silvano, um desenvolvedor web. Confira meus projetos e entre em contato.">
     <link rel="shortcut icon" href="./image/portfolio.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- O ARQUIVO app.js SERÁ CARREGADO NO FINAL DO BODY -->
+    <script src=".js/app.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
@@ -19,10 +19,9 @@
     <header class="bg-white shadow-md fixed w-full top-0 z-50">
         <nav class="container mx-auto p-4 flex justify-between items-center">
             <h1 class="text-xl font-bold">Ângelo Silvano</h1>
-            <button id="menu-toggle" class="md:hidden focus:outline-none" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
                 <i class="fas fa-bars text-xl"></i>
             </button>
-            <!-- Desktop Menu -->
             <ul id="menu" class="hidden md:flex space-x-6">
                 <li><a href="#welcome" class="hover:text-sky-500">Início</a></li>
                 <li><a href="#about" class="hover:text-sky-500">Sobre</a></li>
@@ -31,311 +30,255 @@
                 <li><a href="#contact" class="hover:text-sky-500">Contato</a></li>
             </ul>
         </nav>
-        <!-- Mobile Menu container -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
-           <ul class="flex flex-col items-center py-4 space-y-2">
-                <li><a href="#welcome" class="block py-2 hover:text-sky-500 w-full text-center mobile-menu-link">Início</a></li>
-                <li><a href="#about" class="block py-2 hover:text-sky-500 w-full text-center mobile-menu-link">Sobre</a></li>
-                <li><a href="#skills" class="block py-2 hover:text-sky-500 w-full text-center mobile-menu-link">Habilidades</a></li>
-                <li><a href="#projects" class="block py-2 hover:text-sky-500 w-full text-center mobile-menu-link">Projetos</a></li>
-                <li><a href="#contact" class="block py-2 hover:text-sky-500 w-full text-center mobile-menu-link">Contato</a></li>
-            </ul>
-        </div>
     </header>
 
-    <main class="pt-16">
-        <!-- Conteúdo das seções (welcome, about, projects, skills, contact) permanece o mesmo -->
-        <!-- ... (welcome section) ... -->
-        <section id="welcome" class="container mx-auto px-4 py-12 bg-stone-50 scroll-mt-16">
-            <div class="flex flex-col md:flex-row items-center justify-center">
-                <div class="text-center md:text-left md:mr-8">
-                    <h2 class="text-4xl font-bold mb-4 text-sky-700">Bem-Vindo(a)!</h2>
-                    <p class="text-lg leading-7 text-gray-700">
-                        Olá! É um prazer ter você por aqui. Explore meu portfólio e descubra um pouco mais sobre meu trabalho
-                        como desenvolvedor web.
-                    </p>
-                </div>
-                <img src="./image/undraw_programming_65t2.png" alt="Ilustração de um programador" loading="lazy"
-                    class="rounded-xl shadow-lg w-64 h-64 md:w-80 md:h-80 object-cover mt-8 md:mt-0 bg-white">
+    <section id="welcome" class="container mx-auto px-4 py-12 mt-16 bg-stone-50">
+        <div class="flex flex-col md:flex-row items-center justify-center">
+            <div class="text-center md:text-left md:mr-8">
+                <h2 class="text-4xl font-bold mb-4 text-sky-700">Bem-Vindo(a)!</h2>
+                <p class="text-lg leading-7 text-gray-700">
+                    Olá! É um prazer ter você por aqui. Explore meu portfólio e descubra um pouco mais sobre meu trabalho
+                    como desenvolvedor web.
+                </p>
             </div>
-        </section>
+            <img src="./image/undraw_programming_65t2.png" alt="Imagem de boas-vindas" loading="lazy"
+                class="rounded-xl shadow-lg w-64 h-64 md:w-80 md:h-80 object-cover mt-8 md:mt-0 bg-white">
+        </div>
+    </section>
 
-        <!-- ... (about section) ... -->
-        <section id="about" class="container mx-auto px-4 py-12 scroll-mt-16">
-            <div class="flex flex-col md:flex-row items-center justify-center">
-                <img src="./image/Ângelo Silvano.png" alt="Foto de Ângelo Silvano, um desenvolvedor web" loading="lazy"
-                    class="rounded-full shadow-lg w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-cover mb-8 md:mb-0 md:mr-8">
-                <div class="text-center md:text-left md:max-w-2xl">
-                    <h2 class="text-3xl font-bold mb-4 text-sky-700">Sobre Mim</h2>
-                    <p class="text-lg leading-7 text-gray-800 text-justify">
-                        Sou um desenvolvedor web sempre aprendendo, focado em criar soluções que funcionam bem e com qualidade.
-                        Gosto de tecnologia e estou sempre buscando as melhores práticas para melhorar meu trabalho.
-                        Tenho experiência com <span class="font-semibold">HTML</span>, <span class="font-semibold">CSS</span>, <span class="font-semibold">JavaScript</span> e <span class="font-semibold">Next.js</span>, criando interfaces modernas e responsivas.
-                        Uso <span class="font-semibold">Git</span> para controle de versão e trabalho em equipe, e aproveito o <span class="font-semibold">Tailwind CSS</span> para montar layouts bonitos e eficientes. Além disso, estou explorando <span class="font-semibold">TypeScript</span> para deixar os projetos mais seguros e escaláveis.
-                    </p>
-                </div>
+    <section id="about" class="container mx-auto px-4 py-12" style="padding-top: 60px; margin-top: -60px;">
+        <div class="relative" style="top: -60px;"></div>
+        <div class="flex flex-col md:flex-row items-center justify-center">
+            <img src="./image/Ângelo Silvano.png" alt="Foto de Ângelo Silvano, um desenvolvedor web" loading="lazy"
+                class="rounded-full shadow-lg w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-cover mb-8 md:mb-0 md:mr-8">
+            <div class="text-center about-text">
+                <h2 class="text-3xl font-bold mb-4 section-title text-sky-700">Sobre Mim</h2>
+                <p class="text-lg leading-7 text-gray-800 text-justify">
+                    Sou um desenvolvedor web sempre aprendendo, focado em criar soluções que funcionam bem e com qualidade. 
+                    Gosto de tecnologia e estou sempre buscando as melhores práticas para melhorar meu trabalho. 
+                    Tenho experiência com <span class="font-semibold">HTML</span>, <span class="font-semibold">CSS</span>, <span class="font-semibold">JavaScript</span> e <span class="font-semibold">Next.js</span>, criando interfaces modernas e responsivas. 
+                    Uso <span class="font-semibold">Git</span> para controle de versão e trabalho em equipe, e aproveito o <span class="font-semibold">Tailwind CSS</span> para montar layouts bonitos e eficientes. Além disso, estou explorando <span class="font-semibold">TypeScript</span> para deixar os projetos mais seguros e escaláveis.
+                </p>
             </div>
-        </section>
+        </div>
+    </section>    
 
-        <!-- ... (projects section) ... -->
-        <section id="projects" class="container mx-auto px-4 py-12 bg-stone-100 scroll-mt-16">
-            <h2 class="text-3xl font-bold text-center mb-8 text-sky-700">Meus Projetos</h2>
-            <p class="text-lg text-center mb-8 text-gray-700">Confira alguns dos projetos que desenvolvi:</p>
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                 <!-- Project Card 1 -->
-                <div class="bg-white shadow-md rounded-lg p-6 flex flex-col h-full project-card">
-                    <h3 class="text-xl font-semibold mb-2 text-sky-700">VibePlay</h3>
-                    <p class="text-sm text-justify project-description text-gray-700 flex-grow">Uma aplicação web interativa para
-                        reprodução de música,
-                        com recursos como controle de volume, busca por músicas, navegação por gêneros e informações sobre
-                        artistas.</p>
-                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-gray-200">
-                        <a href="https://github.com/angelodesenvolvedor/vibe-play" target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:text-sky-700 transition duration-300" aria-label="VibePlay GitHub Repository">
-                            <i class="fab fa-github text-2xl"></i>
-                        </a>
-                        <a href="https://vibeplay-web.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:text-sky-700 transition duration-300" aria-label="VibePlay Live Demo">
-                            <i class="fas fa-globe text-2xl"></i>
-                        </a>
-                    </div>
-                </div>
-                <!-- Project Card 2 -->
-                <div class="bg-white shadow-md rounded-lg p-6 flex flex-col h-full project-card">
-                    <h3 class="text-xl font-semibold mb-2 text-sky-700">FootCoder</h3>
-                    <p class="text-sm text-justify project-description text-gray-700 flex-grow">Simulação de loja online especializada
-                        em
-                        camisetas de
-                        times de futebol. Permite navegação pelos produtos, adição ao carrinho e pagamentos como cartão,
-                        boleto
-                        bancário e PIX.</p>
-                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-gray-200">
-                        <a href="https://github.com/angelodesenvolvedor/FootCoder" target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:text-sky-700 transition duration-300" aria-label="FootCoder GitHub Repository">
-                            <i class="fab fa-github text-2xl"></i>
-                        </a>
-                        <a href="https://foot-coder.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:text-sky-700 transition duration-300" aria-label="FootCoder Live Demo">
-                            <i class="fas fa-globe text-2xl"></i>
-                        </a>
-                    </div>
-                </div>
-                <!-- Project Card 3 -->
-                <div class="bg-white shadow-md rounded-lg p-6 flex flex-col h-full project-card">
-                    <h3 class="text-xl font-semibold mb-2 text-sky-700">Lógica Quiz</h3>
-                    <p class="text-sm text-justify project-description text-gray-700 flex-grow">Jogo educativo para praticar lógica
-                        proposicional,
-                        desenvolvido na disciplina de Matemática Discreta. Ajuda a aprimorar o raciocínio lógico dos usuários.
-                    </p>
-                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-gray-200">
-                        <a href="https://github.com/angelodesenvolvedor/LogicaQuiz" target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:text-sky-700 transition duration-300" aria-label="Lógica Quiz GitHub Repository">
-                            <i class="fab fa-github text-2xl"></i>
-                        </a>
-                        <a href="https://logicaquiz.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:text-sky-700 transition duration-300" aria-label="Lógica Quiz Live Demo">
-                            <i class="fas fa-globe text-2xl"></i>
-                        </a>
-                    </div>
-                </div>
-                <!-- Project Card 4 -->
-                <div class="bg-white shadow-md rounded-lg p-6 flex flex-col h-full project-card">
-                    <h3 class="text-xl font-semibold mb-2 text-sky-700">LinkTree</h3>
-                    <p class="text-sm text-justify project-description text-gray-700 flex-grow">Minha página LinkTree com links para
-                        minhas
-                        redes
-                        sociais, portfólio e mais. Conecte-se comigo!
-                    </p>
-                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-gray-200">
-                        <a href="https://github.com/angelodesenvolvedor/LinkTree" target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:text-sky-700 transition duration-300" aria-label="LinkTree GitHub Repository">
-                            <i class="fab fa-github text-2xl"></i>
-                        </a>
-                        <a href="https://linktreeangelo.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:text-sky-700 transition duration-300" aria-label="LinkTree Live Demo">
-                            <i class="fas fa-globe text-2xl"></i>
-                        </a>
-                    </div>
-                </div>
-                <!-- Project Card 5 -->
-                <div class="bg-white shadow-md rounded-lg p-6 flex flex-col h-full project-card">
-                    <h3 class="text-xl font-semibold mb-2 text-sky-700">RunTech 🏃‍♂️🏃‍♀️</h3>
-                    <p class="text-sm text-justify project-description text-gray-700 flex-grow">Um e-commerce focado em produtos para
-                        corrida e
-                        esportes, com layout responsivo e funcionalidades essenciais para uma boa experiência de compra.</p>
-                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-gray-200">
-                        <a href="https://github.com/angelodesenvolvedor/RunTech" target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:text-sky-700 transition duration-300" aria-label="RunTech GitHub Repository">
-                            <i class="fab fa-github text-2xl"></i>
-                        </a>
-                        <a href="https://runtechweb.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:text-sky-700 transition duration-300" aria-label="RunTech Live Demo">
-                            <i class="fas fa-globe text-2xl"></i>
-                        </a>
-                    </div>
-                </div>
-                <!-- Project Card 6 -->
-                <div class="bg-white shadow-md rounded-lg p-6 flex flex-col h-full project-card">
-                    <h3 class="text-xl font-semibold mb-2 text-sky-700">Jogo da Velha</h3>
-                    <p class="text-sm text-justify project-description text-gray-700 flex-grow">Jogo da Velha: O projeto oferece uma
-                        interface simples e
-                        intuitiva, permitindo que os jogadores cliquem nas células do tabuleiro para realizar suas jogadas.
-                    </p>
-                    <div class="flex justify-between items-center mt-4 pt-4 border-t border-gray-200">
-                        <a href="https://github.com/angelodesenvolvedor/Jogo-da-Velha" target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:text-sky-700 transition duration-300" aria-label="Jogo da Velha GitHub Repository">
-                            <i class="fab fa-github text-2xl"></i>
-                        </a>
-                        <a href="https://jogo-da-velha-nine-ebon.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:text-sky-700 transition duration-300" aria-label="Jogo da Velha Live Demo">
-                            <i class="fas fa-globe text-2xl"></i>
-                        </a>
-                    </div>
+    <section id="projects" class="container mx-auto px-4 py-12 bg-stone-50">
+        <h2 class="text-3xl font-bold text-center mb-8 section-title text-sky-700">Meus Projetos</h2>
+        <p class="text-lg text-center mb-8 text-gray-700">Confira alguns dos projetos que desenvolvi:</p>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div class="bg-white shadow-md rounded-lg p-4 project-card">
+                <h3 class="text-xl font-semibold mb-2 text-sky-700">VibePlay</h3>
+                <p class="text-sm text-justify project-description text-gray-700">Uma aplicação web interativa para
+                    reprodução de música,
+                    com recursos como controle de volume, busca por músicas, navegação por gêneros e informações sobre
+                    artistas.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <a href="https://github.com/angelodesenvolvedor/vibe-play" class="text-sky-500 hover:underline">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://vibeplay-web.vercel.app/" class="text-sky-500 hover:underline">
+                        <i class="fas fa-globe text-xl"></i>
+                    </a>
                 </div>
             </div>
-        </section>
 
-        <!-- ... (skills section) ... -->
-        <section id="skills" class="container mx-auto px-4 py-12 bg-stone-50 scroll-mt-16">
-             <h2 class="text-3xl font-bold text-center mb-8 text-sky-700">Soft Skills</h2>
-             <p class="text-lg text-center mb-8 text-gray-700">Habilidades que me ajudam a trabalhar melhor:</p>
-             <ul class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"> <!-- Increased gap -->
-                 <li class="bg-white shadow-md rounded-lg p-6 skill-item"> <!-- Increased padding -->
-                     <h3 class="text-xl font-semibold mb-2 text-sky-700">Comunicação</h3>
-                     <p class="text-sm text-gray-700">Explico minhas ideias de forma clara para todos.</p>
-                 </li>
-                 <li class="bg-white shadow-md rounded-lg p-6 skill-item">
-                     <h3 class="text-xl font-semibold mb-2 text-sky-700">Resolução de Problemas</h3>
-                     <p class="text-sm text-gray-700">Encontro soluções para desafios de forma criativa.</p>
-                 </li>
-                 <li class="bg-white shadow-md rounded-lg p-6 skill-item">
-                     <h3 class="text-xl font-semibold mb-2 text-sky-700">Criatividade</h3>
-                     <p class="text-sm text-gray-700">Crio soluções novas e diferentes para cada projeto.</p>
-                 </li>
-                  <li class="bg-white shadow-md rounded-lg p-6 skill-item">
-                     <h3 class="text-xl font-semibold mb-2 text-sky-700">Trabalho em Equipe</h3>
-                     <p class="text-sm text-gray-700">Colaboro bem com outros para alcançar objetivos comuns.</p>
-                 </li>
-                  <li class="bg-white shadow-md rounded-lg p-6 skill-item">
-                     <h3 class="text-xl font-semibold mb-2 text-sky-700">Adaptabilidade</h3>
-                     <p class="text-sm text-gray-700">Ajusto-me rapidamente a novas tecnologias e desafios.</p>
-                 </li>
-                  <li class="bg-white shadow-md rounded-lg p-6 skill-item">
-                     <h3 class="text-xl font-semibold mb-2 text-sky-700">Aprendizado Contínuo</h3>
-                     <p class="text-sm text-gray-700">Estou sempre buscando aprender e melhorar minhas habilidades.</p>
-                 </li>
-             </ul>
-        </section>
-
-        <!-- ... (hard-skills section) ... -->
-        <section id="hard-skills" class="container mx-auto px-4 py-12 bg-stone-100 scroll-mt-16">
-             <h2 class="text-3xl font-bold text-center mb-8 text-sky-700">Hard Skills</h2>
-             <p class="text-lg text-center mb-8 text-gray-700">Ferramentas que uso para criar meus projetos:</p>
-             <ul class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                 <li class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center skill-item">
-                      <i class="fab fa-html5 text-orange-500 text-4xl mb-3"></i>
-                     <h3 class="text-xl font-semibold mb-2 text-sky-700">HTML</h3>
-                     <p class="text-sm text-gray-700">Estruturação semântica de páginas web.</p>
-                 </li>
-                 <li class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center skill-item">
-                      <i class="fab fa-css3-alt text-blue-500 text-4xl mb-3"></i>
-                     <h3 class="text-xl font-semibold mb-2 text-sky-700">CSS</h3>
-                     <p class="text-sm text-gray-700">Estilização e layouts responsivos.</p>
-                 </li>
-                 <li class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center skill-item">
-                     <i class="fab fa-js text-yellow-400 text-4xl mb-3"></i>
-                     <h3 class="text-xl font-semibold mb-2 text-sky-700">JavaScript</h3>
-                     <p class="text-sm text-gray-700">Interatividade e manipulação do DOM.</p>
-                 </li>
-                  <li class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center skill-item">
-                      <img src="./image/iconetype.png" alt="TypeScript Icon" class="h-10 w-10 mb-3">
-                     <h3 class="text-xl font-semibold mb-2 text-sky-700">TypeScript</h3>
-                     <p class="text-sm text-gray-700">JavaScript com tipagem estática.</p>
-                 </li>
-                 <li class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center skill-item">
-                     <i class="fab fa-react text-sky-400 text-4xl mb-3"></i>
-                     <h3 class="text-xl font-semibold mb-2 text-sky-700">React / Next.js</h3>
-                     <p class="text-sm text-gray-700">Criação de interfaces de usuário reativas.</p>
-                 </li>
-                 <li class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center skill-item">
-                     <img src="./image/iconetailwind.png" alt="Tailwind CSS Icon" class="h-10 w-10 mb-3">
-                     <h3 class="text-xl font-semibold mb-2 text-sky-700">Tailwind CSS</h3>
-                     <p class="text-sm text-gray-700">Framework CSS utility-first.</p>
-                 </li>
-                  <li class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center skill-item">
-                     <i class="fab fa-git-alt text-red-500 text-4xl mb-3"></i>
-                     <h3 class="text-xl font-semibold mb-2 text-sky-700">Git</h3>
-                     <p class="text-sm text-gray-700">Controle de versão de código.</p>
-                 </li>
-                  <li class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center skill-item">
-                     <i class="fab fa-github text-gray-800 text-4xl mb-3"></i>
-                     <h3 class="text-xl font-semibold mb-2 text-sky-700">GitHub</h3>
-                     <p class="text-sm text-gray-700">Plataforma de hospedagem de código.</p>
-                 </li>
-             </ul>
-        </section>
-
-        <!-- ... (contact section) ... -->
-        <section id="contact" class="container mx-auto px-4 py-12 scroll-mt-16">
-            <h2 class="text-3xl font-bold text-center mb-8 text-sky-700">Contato</h2>
-             <p class="text-lg text-center mb-8 text-gray-700 max-w-xl mx-auto">
-                Tem alguma pergunta, proposta ou só quer dizer oi? Preencha o formulário abaixo!
-            </p>
-            <!-- Success Message Div -->
-            <div id="success-message" class="hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4 max-w-lg mx-auto" role="alert">
-                <strong class="font-bold">Sucesso!</strong>
-                <span class="block sm:inline"> Sua mensagem foi enviada. Obrigado por entrar em contato!</span>
+            <div class="bg-white shadow-md rounded-lg p-4 project-card">
+                <h3 class="text-xl font-semibold mb-2 text-sky-700">FootCoder</h3>
+                <p class="text-sm text-justify project-description text-gray-700">Simulação de loja online especializada
+                    em
+                    camisetas de
+                    times de futebol. Permite navegação pelos produtos, adição ao carrinho e pagamentos como cartão,
+                    boleto
+                    bancário e PIX.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <a href="https://github.com/angelodesenvolvedor/FootCoder" class="text-sky-500 hover:underline">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://foot-coder.vercel.app/" class="text-sky-500 hover:underline">
+                        <i class="fas fa-globe text-xl"></i>
+                    </a>
+                </div>
             </div>
-            <!-- Error Message Div -->
-             <div id="error-message" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4 max-w-lg mx-auto" role="alert">
-                <strong class="font-bold">Erro!</strong>
-                <span class="block sm:inline"> Houve um problema ao enviar sua mensagem. Tente novamente.</span>
+
+            <div class="bg-white shadow-md rounded-lg p-4 project-card">
+                <h3 class="text-xl font-semibold mb-2 text-sky-700">Lógica Quiz</h3>
+                <p class="text-sm text-justify project-description text-gray-700">Jogo educativo para praticar lógica
+                    proposicional,
+                    desenvolvido na disciplina de Matemática Discreta. Ajuda a aprimorar o raciocínio lógico dos usuários.
+                </p>
+                <div class="flex justify-between items-center mt-4">
+                    <a href="https://github.com/angelodesenvolvedor/LogicaQuiz"
+                        class="text-sky-500 hover:underline">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://logicaquiz.vercel.app/" class="text-sky-500 hover:underline">
+                        <i class="fas fa-globe text-xl"></i>
+                    </a>
+                </div>
             </div>
-            <!-- Contact Form -->
-            <form id="contactForm" action="https://formspree.io/f/xpwpwprz" method="POST" class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md">
-                <div class="mb-5">
-                    <label for="name" class="block text-sm font-semibold text-gray-700 mb-1">Nome</label>
-                    <input type="text" id="name" name="name" placeholder="Seu nome completo"
-                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-gray-700 transition duration-300"
-                        required>
-                </div>
-                <div class="mb-5">
-                    <label for="email" class="block text-sm font-semibold text-gray-700 mb-1">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com"
-                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-gray-700 transition duration-300"
-                        required>
-                </div>
-                <div class="mb-6">
-                    <label for="message" class="block text-sm font-semibold text-gray-700 mb-1">Mensagem</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem aqui..."
-                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-gray-700 transition duration-300"
-                        required></textarea>
-                </div>
-                <button type="submit"
-                    class="w-full bg-sky-500 text-white py-3 px-6 rounded-md hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 transition duration-300 font-semibold text-lg">
-                    Enviar Mensagem
-                </button>
-            </form>
-        </section>
 
-    </main>
+            <div class="bg-white shadow-md rounded-lg p-4 project-card">
+                <h3 class="text-xl font-semibold mb-2 text-sky-700">LinkTree</h3>
+                <p class="text-sm text-justify project-description text-gray-700">Minha página LinkTree com links para
+                    minhas
+                    redes
+                    sociais, portfólio e mais. Conecte-se comigo!
+                </p>
+                <div class="flex justify-between items-center mt-4">
+                    <a href="https://github.com/angelodesenvolvedor/LinkTree" class="text-sky-500 hover:underline">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://linktreeangelo.vercel.app/" class="text-sky-500 hover:underline">
+                        <i class="fas fa-globe text-xl"></i>
+                    </a>
+                </div>
+            </div>
 
-    <footer class="bg-gray-800 text-gray-300 p-6 mt-12">
+            <div class="bg-white shadow-md rounded-lg p-4 project-card">
+                <h3 class="text-xl font-semibold mb-2 text-sky-700">RunTech 🏃‍♂️🏃‍♀️</h3>
+                <p class="text-sm text-justify project-description text-gray-700">Um e-commerce focado em produtos para
+                    corrida e
+                    esportes, com layout responsivo e funcionalidades essenciais para uma boa experiência de compra.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <a href="https://github.com/angelodesenvolvedor/RunTech" class="text-sky-500 hover:underline">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://runtechweb.vercel.app/" class="text-sky-500 hover:underline">
+                        <i class="fas fa-globe text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-4 project-card">
+                <h3 class="text-xl font-semibold mb-2 text-sky-700">Jogo da Velha</h3>
+                <p class="text-sm text-justify project-description text-gray-700">Jogo da Velha: O projeto oferece uma
+                    interface simples e
+                    intuitiva, permitindo que os jogadores cliquem nas células do tabuleiro para realizar suas jogadas.
+                </p>
+                <div class="flex justify-between items-center mt-4">
+                    <a href="https://github.com/angelodesenvolvedor/Jogo-da-Velha"
+                        class="text-sky-500 hover:underline">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://jogo-da-velha-nine-ebon.vercel.app/" class="text-sky-500 hover:underline">
+                        <i class="fas fa-globe text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container mx-auto px-4 py-12 bg-stone-50">
+        <h2 class="text-3xl font-bold text-center mb-8 section-title text-sky-700">Soft Skills</h2>
+        <p class="text-lg text-center mb-8 text-gray-700">Habilidades que me ajudam a trabalhar melhor:</p>
+        <ul class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2 text-sky-700">Comunicação</h3>
+                <p class="text-sm text-gray-700">Explico minhas ideias de forma clara para todos.</p>
+            </li>
+            <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2 text-sky-700">Resolução de Problemas</h3>
+                <p class="text-sm text-gray-700">Encontro soluções para desafios de forma criativa.</p>
+            </li>
+            <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2 text-sky-700">Criatividade</h3>
+                <p class="text-sm text-gray-700">Crio soluções novas e diferentes para cada projeto.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="hard-skills" class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold text-center mb-8 section-title text-sky-700">Hard Skills</h2>
+        <p class="text-lg text-center mb-8 text-gray-700">Ferramentas que uso para criar meus projetos:</p>
+        <ul class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2 text-sky-700"><i
+                        class="fab fa-html5 text-orange-500 mr-2"></i> HTML</h3>
+                <p class="text-sm text-gray-700">Crio a base de sites e aplicações web.</p>
+            </li>
+            <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2 text-sky-700"><i class="fab fa-css3-alt text-blue-500 mr-2"></i>
+                    CSS</h3>
+                <p class="text-sm text-gray-700">Estilizo os sites para um visual atraente.</p>
+            </li>
+            <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2 text-sky-700"><i class="fab fa-js text-yellow-500 mr-2"></i>
+                    JavaScript</h3>
+                <p class="text-sm text-gray-700">Crio interações e funcionalidades para sites.</p>
+            </li>
+            <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2 text-sky-700"><i class="fab fa-react text-blue-300 mr-2"></i>
+                    React</h3>
+                <p class="text-sm text-gray-700">Crio partes reutilizáveis para sites maiores.</p>
+            </li>
+            <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2 text-sky-700"><i class="fab fa-git text-red-500 mr-2"></i> Git
+                </h3>
+                <p class="text-sm text-gray-700">Guardo e organizo o código dos meus projetos.</p>
+            </li>
+            <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2 text-sky-700">
+                    <img src="./image/iconetailwind.png" alt="Tailwind CSS" class="inline-block h-6 w-6 mr-2">
+                    Tailwind CSS
+                </h3>
+                <p class="text-sm text-gray-700">Utilizo Tailwind CSS para criar interfaces responsivas de forma
+                    eficiente.</p>
+            </li>
+            <li class="bg-white shadow-md rounded-lg p-4 skill-item">
+                <h3 class="text-xl font-semibold mb-2 text-sky-700">
+                    <img src="./image/iconetype.png" alt="TypeScript" class="inline-block h-6 w-6 mr-2">
+                    TypeScript
+                </h3>
+                <p class="text-sm text-gray-700">Crio código mais seguro e fácil de manter.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact" class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold text-center mb-8 section-title text-sky-700">Contato</h2>
+        <div id="success-message" class="hidden bg-green-500 text-white p-4 rounded-md mb-4 text-center">
+            Formulário enviado com sucesso!
+        </div>
+        <form id="contactForm" action="https://formspree.io/f/xpwpwprz" method="POST" class="max-w-lg mx-auto">
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-semibold text-gray-700">Nome</label>
+                <input type="text" id="name" name="name"
+                    class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 text-gray-700"
+                    required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-semibold text-gray-700">E-mail</label>
+                <input type="email" id="email" name="email"
+                    class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 text-gray-700"
+                    required>
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-sm font-semibold text-gray-700">Mensagem</label>
+                <textarea id="message" name="message" rows="4"
+                    class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 text-gray-700"
+                    required></textarea>
+            </div>
+            <button type="submit"
+                class="w-full bg-sky-500 text-white py-2 rounded-md hover:bg-sky-600">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="bg-gray-200 p-4">
         <div class="container mx-auto text-center">
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="https://github.com/angelodesenvolvedor" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-sky-400 transition duration-300" aria-label="GitHub Profile">
-                    <i class="fab fa-github text-2xl"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/angelosilvanno/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-sky-400 transition duration-300" aria-label="LinkedIn Profile">
-                    <i class="fab fa-linkedin text-2xl"></i>
-                </a>
-                 <a href="mailto:angelo.s.silvano@gmail.com" class="text-gray-300 hover:text-sky-400 transition duration-300" aria-label="Send Email">
-                    <i class="fas fa-envelope text-2xl"></i>
-                </a>
+            <p>© 2025 Ângelo Silvano. Todos os direitos reservados.</p>
+            <div class="flex justify-center space-x-4 mt-2">
+                <a href="https://github.com/angelodesenvolvedor" class="text-sky-500 hover:underline"><i
+                        class="fab fa-github text-xl mr-1"></i>GitHub</a>
+                <a href="https://www.linkedin.com/in/angelosilvanno/" class="text-sky-500 hover:underline"><i
+                        class="fab fa-linkedin text-xl mr-1"></i>LinkedIn</a>
             </div>
-            <p class="text-sm">© <span id="current-year"></span> Ângelo Silvano. Todos os direitos reservados.</p>
-            <p class="text-xs mt-1">Desenvolvido com <i class="fas fa-heart text-red-500"></i> e <i class="fas fa-coffee text-yellow-700"></i></p>
         </div>
     </footer>
 
-    <!-- Scroll-to-top Button -->
-    <button id="scrollToTopBtn" aria-label="Voltar ao topo"
-            class="fixed bottom-5 right-5 bg-sky-500 hover:bg-sky-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 transition-opacity duration-300 opacity-0 z-40"
-            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
-        <i class="fas fa-arrow-up text-xl"></i>
-    </button>
-
-    <!-- ****** CARREGANDO O SCRIPT EXTERNO ****** -->
-    <!-- Certifique-se que este caminho está correto! -->
-    <script src="./js/app.js" defer></script>
+    <button class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
 
 </body>
+
 </html>
