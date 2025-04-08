@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
             opacity: 0,
             scale: 0.95,
             easing: 'cubic-bezier(0.5, 0, 0, 1)',
-            reset: false // Mudar para true para animar toda vez que rolar
+            reset: false 
         });
 
         sr.reveal('.section-title', { delay: 200, origin: 'top' });
