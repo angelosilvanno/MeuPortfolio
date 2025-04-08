@@ -2,9 +2,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
     const menuLinks = menu?.querySelectorAll('a') || [];
-    let menuTimeout;
     const contactForm = document.getElementById('contactForm');
     const successMessage = document.getElementById('success-message');
+    const currentYearSpan = document.getElementById('current-year');
+    const header = document.querySelector('header');
+    const MESSAGE_TIMEOUT = 5000;
+    const MOBILE_BREAKPOINT = 768;
+    let menuTimeout;
 
     const closeMenu = () => {
         menu?.classList.add('hidden');
@@ -15,45 +19,62 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const scrollToSection = (targetId) => {
         const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            const headerOffset = document.querySelector('header')?.offsetHeight || 0;
+        if (targetElement && header) {
+            const headerOffset = header.offsetHeight || 0;
             const elementPosition = targetElement.offsetTop - headerOffset;
-
-            window.scrollTo({
-                top: elementPosition,
-                behavior: 'smooth',
-            });
+            window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+        } else if (targetElement) {
+            window.scrollTo({ top: targetElement.offsetTop, behavior: 'smooth' });
         }
     };
 
     const checkScreenSize = () => {
         if (!menu || !menuToggle) return;
-
-        if (window.innerWidth >= 768) {
+        if (window.innerWidth >= MOBILE_BREAKPOINT) {
             menu.classList.remove('hidden', 'active');
             menuToggle.classList.remove('active');
-        } else if (!menuToggle.classList.contains('active')) {
+            menu.style.display = '';
+        } else if (!menu.classList.contains('active')) {
             menu.classList.add('hidden');
+        }
+    };
+
+    const showStatusMessage = (message, isError) => {
+        if (!successMessage) return;
+        successMessage.textContent = message;
+        successMessage.classList.remove('hidden');
+        successMessage.classList.toggle('bg-green-500', !isError);
+        successMessage.classList.toggle('bg-red-500', isError);
+        setTimeout(() => {
+            successMessage.classList.add('hidden');
+        }, MESSAGE_TIMEOUT);
+    };
+
+    const updateCopyrightYear = () => {
+        if (currentYearSpan) {
+            currentYearSpan.textContent = new Date().getFullYear();
         }
     };
 
     menuToggle?.addEventListener('click', () => {
         if (!menu) return;
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('active');
-        menuToggle.classList.toggle('active');
+        const isActive = menu.classList.toggle('active');
+        menu.classList.toggle('hidden', !isActive);
+        menuToggle.classList.toggle('active', isActive);
         clearTimeout(menuTimeout);
-
-        if (menu.classList.contains('active')) {
-            menuTimeout = setTimeout(closeMenu, 5000);
+        if (isActive) {
+            menuTimeout = setTimeout(closeMenu, MESSAGE_TIMEOUT);
         }
     });
 
     menuLinks.forEach((link) => {
         link.addEventListener('click', (event) => {
-            event.preventDefault();
-            closeMenu();
-            scrollToSection(link.getAttribute('href'));
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                event.preventDefault();
+                closeMenu();
+                scrollToSection(href);
+            }
         });
     });
 
@@ -62,45 +83,62 @@ document.addEventListener('DOMContentLoaded', function () {
 
     contactForm?.addEventListener('submit', function (event) {
         event.preventDefault();
-
         const formData = new FormData(contactForm);
 
-        fetch('https://formspree.io/f/xpwpwprz', {
+        fetch(contactForm.action, {
             method: 'POST',
             body: formData,
             headers: {
                 'Accept': 'application/json'
             }
         })
-            .then(response => {
-                if (response.ok) {
-                    successMessage.textContent = 'Formulário enviado com sucesso!';
-                    successMessage.classList.remove('hidden');
-                    successMessage.classList.add('bg-green-500');
-                    successMessage.classList.remove('bg-red-500');
-                    contactForm.reset();
-                    setTimeout(() => {
-                        successMessage.classList.add('hidden');
-                    }, 5000);
-                } else {
-                    successMessage.textContent = 'Erro ao enviar o formulário.';
-                    successMessage.classList.remove('hidden');
-                    successMessage.classList.add('bg-red-500');
-                    successMessage.classList.remove('bg-green-500');
-                    setTimeout(() => {
-                        successMessage.classList.add('hidden');
-                    }, 5000);
-                }
-            })
-            .catch(error => {
-                console.error('Erro ao enviar o formulário:', error);
-                successMessage.textContent = 'Erro ao enviar o formulário.';
-                successMessage.classList.remove('hidden');
-                successMessage.classList.add('bg-red-500');
-                successMessage.classList.remove('bg-green-500');
-                setTimeout(() => {
-                    successMessage.classList.add('hidden');
-                }, 5000);
-            });
+        .then(response => {
+            if (response.ok) {
+                showStatusMessage('Formulário enviado com sucesso!', false);
+                contactForm.reset();
+            } else {
+                response.json().then(data => {
+                    const errorMessage = data?.errors?.map(err => err.message).join(', ') || 'Ocorreu um erro ao enviar.';
+                    showStatusMessage(`Erro: ${errorMessage}`, true);
+                }).catch(() => {
+                     showStatusMessage('Erro ao processar a resposta do servidor.', true);
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Erro na requisição fetch:', error);
+            showStatusMessage('Erro de rede ao tentar enviar o formulário.', true);
+        });
     });
+
+    updateCopyrightYear();
+
+    if (typeof ScrollReveal === 'function') {
+        const sr = ScrollReveal({
+            origin: 'bottom',
+            distance: '40px',
+            duration: 800,
+            delay: 150,
+            opacity: 0,
+            scale: 0.95,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            reset: false // Mudar para true para animar toda vez que rolar
+        });
+
+        sr.reveal('.section-title', { delay: 200, origin: 'top' });
+        sr.reveal('#welcome h2', { delay: 200 });
+        sr.reveal('#welcome p', { delay: 300 });
+        sr.reveal('#welcome .flex.space-x-6', { delay: 400 });
+        sr.reveal('#welcome img', { delay: 350, origin: 'right', distance: '60px', scale: 1 });
+        sr.reveal('#about img', { origin: 'left', distance: '50px', scale: 1 });
+        sr.reveal('.about-text', { delay: 250, origin: 'right', distance: '50px', scale: 1 });
+        sr.reveal('.project-card', { interval: 150 });
+        sr.reveal('.skill-item', { interval: 100, distance: '30px', scale: 1 });
+        sr.reveal('#contact form div', { interval: 100, delay: 200 });
+        sr.reveal('#contact form button', { delay: 400 });
+
+    } else {
+        console.warn('ScrollReveal library not found or not loaded correctly.');
+    }
+
 });
