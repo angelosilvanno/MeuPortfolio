@@ -113,32 +113,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateCopyrightYear();
 
-    if (typeof ScrollReveal === 'function') {
-        const sr = ScrollReveal({
-            origin: 'bottom',
-            distance: '40px',
-            duration: 800,
-            delay: 150,
-            opacity: 0,
-            scale: 0.95,
-            easing: 'cubic-bezier(0.5, 0, 0, 1)',
-            reset: false 
-        });
-
-        sr.reveal('.section-title', { delay: 200, origin: 'top' });
-        sr.reveal('#welcome h2', { delay: 200 });
-        sr.reveal('#welcome p', { delay: 300 });
-        sr.reveal('#welcome .flex.space-x-6', { delay: 400 });
-        sr.reveal('#welcome img', { delay: 350, origin: 'right', distance: '60px', scale: 1 });
-        sr.reveal('#about img', { origin: 'left', distance: '50px', scale: 1 });
-        sr.reveal('.about-text', { delay: 250, origin: 'right', distance: '50px', scale: 1 });
-        sr.reveal('.project-card', { interval: 150 });
-        sr.reveal('.skill-item', { interval: 100, distance: '30px', scale: 1 });
-        sr.reveal('#contact form div', { interval: 100, delay: 200 });
-        sr.reveal('#contact form button', { delay: 400 });
-
-    } else {
-        console.warn('ScrollReveal library not found or not loaded correctly.');
-    }
-
 });
