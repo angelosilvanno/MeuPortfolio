@@ -1,18 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Variáveis
     const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-    const menuLinks = menu.querySelectorAll('a');
+    const menuLinks = document.querySelectorAll('#mobile-menu a');
     const contactForm = document.getElementById('contactForm');
     const successMessage = document.getElementById('success-message');
     const currentYearSpan = document.getElementById('current-year');
     const header = document.querySelector('header');
+    const mobileMenu = document.getElementById('mobile-menu'); 
 
     const TIMEOUT = 5000;
     const MOBILE_BREAKPOINT = 768;
 
+    // Funções auxiliares
     const closeMenu = () => {
-        menu.classList.add('hidden');
-        menu.classList.remove('active');
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('active');
         menuToggle.classList.remove('active');
     };
 
@@ -27,9 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const checkScreenSize = () => {
         if (window.innerWidth >= MOBILE_BREAKPOINT) {
-            menu.classList.remove('hidden');
-        } else if (!menu.classList.contains('active')) {
-            menu.classList.add('hidden');
+            mobileMenu.classList.remove('hidden');
+        } else if (!mobileMenu.classList.contains('active')) {
+            mobileMenu.classList.add('hidden');
         }
     };
 
@@ -50,9 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // Eventos
     menuToggle.addEventListener('click', () => {
-        const isActive = menu.classList.toggle('active');
-        menu.classList.toggle('hidden', !isActive);
+        const isActive = mobileMenu.classList.toggle('active');
+        mobileMenu.classList.toggle('hidden', !isActive);
     });
 
     menuLinks.forEach(link => {
@@ -91,16 +94,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 
+    // Inicialização
     updateYear();
     checkScreenSize();
+
+    // Event listener para redimensionamento da tela
     window.addEventListener('resize', checkScreenSize);
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    menuToggle.addEventListener("click", function () {
-        mobileMenu.classList.toggle("hidden");
-    });
 });
