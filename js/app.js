@@ -1,35 +1,40 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
-    const menuLinks = menu?.querySelectorAll('a') || [];
+    const menuLinks = menu.querySelectorAll('a');
     const contactForm = document.getElementById('contactForm');
     const successMessage = document.getElementById('success-message');
     const currentYearSpan = document.getElementById('current-year');
     const header = document.querySelector('header');
+
     const MESSAGE_TIMEOUT = 5000;
     const MOBILE_BREAKPOINT = 768;
     let menuTimeout;
 
+    // Fecha o menu mobile
     const closeMenu = () => {
-        menu?.classList.add('hidden');
-        menu?.classList.remove('active');
-        menuToggle?.classList.remove('active');
+        menu.classList.add('hidden');
+        menu.classList.remove('active');
+        menuToggle.classList.remove('active');
         clearTimeout(menuTimeout);
     };
 
+    // Scroll suave para seções
     const scrollToSection = (targetId) => {
-        const targetElement = document.querySelector(targetId);
-        if (targetElement && header) {
-            const headerOffset = header.offsetHeight || 0;
-            const elementPosition = targetElement.offsetTop - headerOffset;
-            window.scrollTo({ top: elementPosition, behavior: 'smooth' });
-        } else if (targetElement) {
-            window.scrollTo({ top: targetElement.offsetTop, behavior: 'smooth' });
-        }
+        const target = document.querySelector(targetId);
+        if (!target) return;
+
+        const offset = header?.offsetHeight || 0;
+        const position = target.offsetTop - offset;
+
+        window.scrollTo({
+            top: position,
+            behavior: 'smooth',
+        });
     };
 
+    // Responsividade do menu
     const checkScreenSize = () => {
-        if (!menu || !menuToggle) return;
         if (window.innerWidth >= MOBILE_BREAKPOINT) {
             menu.classList.remove('hidden', 'active');
             menuToggle.classList.remove('active');
@@ -39,78 +44,79 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
 
-    const showStatusMessage = (message, isError) => {
+    // Mensagem de status do formulário
+    const showStatusMessage = (message, isError = false) => {
         if (!successMessage) return;
+
         successMessage.textContent = message;
         successMessage.classList.remove('hidden');
         successMessage.classList.toggle('bg-green-500', !isError);
         successMessage.classList.toggle('bg-red-500', isError);
+
         setTimeout(() => {
             successMessage.classList.add('hidden');
         }, MESSAGE_TIMEOUT);
     };
 
+    // Atualiza o ano no footer
     const updateCopyrightYear = () => {
         if (currentYearSpan) {
             currentYearSpan.textContent = new Date().getFullYear();
         }
     };
 
-    menuToggle?.addEventListener('click', () => {
-        if (!menu) return;
+    // Toggle do menu mobile
+    menuToggle.addEventListener('click', () => {
         const isActive = menu.classList.toggle('active');
         menu.classList.toggle('hidden', !isActive);
         menuToggle.classList.toggle('active', isActive);
+
         clearTimeout(menuTimeout);
         if (isActive) {
             menuTimeout = setTimeout(closeMenu, MESSAGE_TIMEOUT);
         }
     });
 
+    // Navegação interna
     menuLinks.forEach((link) => {
-        link.addEventListener('click', (event) => {
+        link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
-            if (href && href.startsWith('#')) {
-                event.preventDefault();
+            if (href?.startsWith('#')) {
+                e.preventDefault();
                 closeMenu();
                 scrollToSection(href);
             }
         });
     });
 
-    checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
-
-    contactForm?.addEventListener('submit', function (event) {
-        event.preventDefault();
+    // Envio do formulário
+    contactForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
         const formData = new FormData(contactForm);
 
         fetch(contactForm.action, {
             method: 'POST',
             body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
+            headers: { 'Accept': 'application/json' }
         })
-        .then(response => {
-            if (response.ok) {
-                showStatusMessage('Formulário enviado com sucesso!', false);
+        .then(res => {
+            if (res.ok) {
+                showStatusMessage('Formulário enviado com sucesso!');
                 contactForm.reset();
             } else {
-                response.json().then(data => {
-                    const errorMessage = data?.errors?.map(err => err.message).join(', ') || 'Ocorreu um erro ao enviar.';
-                    showStatusMessage(`Erro: ${errorMessage}`, true);
-                }).catch(() => {
-                     showStatusMessage('Erro ao processar a resposta do servidor.', true);
+                return res.json().then(data => {
+                    const msg = data?.errors?.map(err => err.message).join(', ') || 'Erro ao enviar.';
+                    showStatusMessage(`Erro: ${msg}`, true);
                 });
             }
         })
-        .catch(error => {
-            console.error('Erro na requisição fetch:', error);
+        .catch(err => {
+            console.error('Erro na requisição:', err);
             showStatusMessage('Erro de rede ao tentar enviar o formulário.', true);
         });
     });
 
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
     updateCopyrightYear();
-
 });
