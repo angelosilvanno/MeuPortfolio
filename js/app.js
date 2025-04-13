@@ -7,78 +7,55 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentYearSpan = document.getElementById('current-year');
     const header = document.querySelector('header');
 
-    const MESSAGE_TIMEOUT = 5000;
+    const TIMEOUT = 5000;
     const MOBILE_BREAKPOINT = 768;
-    let menuTimeout;
 
-    // Fecha o menu mobile
     const closeMenu = () => {
         menu.classList.add('hidden');
         menu.classList.remove('active');
         menuToggle.classList.remove('active');
-        clearTimeout(menuTimeout);
     };
 
-    // Scroll suave para seções
     const scrollToSection = (targetId) => {
         const target = document.querySelector(targetId);
         if (!target) return;
-
         const offset = header?.offsetHeight || 0;
         const position = target.offsetTop - offset;
 
-        window.scrollTo({
-            top: position,
-            behavior: 'smooth',
-        });
+        window.scrollTo({ top: position, behavior: 'smooth' });
     };
 
-    // Responsividade do menu
     const checkScreenSize = () => {
         if (window.innerWidth >= MOBILE_BREAKPOINT) {
-            menu.classList.remove('hidden', 'active');
-            menuToggle.classList.remove('active');
-            menu.style.display = '';
+            menu.classList.remove('hidden');
         } else if (!menu.classList.contains('active')) {
             menu.classList.add('hidden');
         }
     };
 
-    // Mensagem de status do formulário
     const showStatusMessage = (message, isError = false) => {
         if (!successMessage) return;
-
         successMessage.textContent = message;
+        successMessage.className = `mt-4 p-2 rounded text-white ${isError ? 'bg-red-500' : 'bg-green-500'}`;
         successMessage.classList.remove('hidden');
-        successMessage.classList.toggle('bg-green-500', !isError);
-        successMessage.classList.toggle('bg-red-500', isError);
 
         setTimeout(() => {
             successMessage.classList.add('hidden');
-        }, MESSAGE_TIMEOUT);
+        }, TIMEOUT);
     };
 
-    // Atualiza o ano no footer
-    const updateCopyrightYear = () => {
+    const updateYear = () => {
         if (currentYearSpan) {
             currentYearSpan.textContent = new Date().getFullYear();
         }
     };
 
-    // Toggle do menu mobile
     menuToggle.addEventListener('click', () => {
         const isActive = menu.classList.toggle('active');
         menu.classList.toggle('hidden', !isActive);
-        menuToggle.classList.toggle('active', isActive);
-
-        clearTimeout(menuTimeout);
-        if (isActive) {
-            menuTimeout = setTimeout(closeMenu, MESSAGE_TIMEOUT);
-        }
     });
 
-    // Navegação interna
-    menuLinks.forEach((link) => {
+    menuLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
             if (href?.startsWith('#')) {
@@ -89,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Envio do formulário
     contactForm?.addEventListener('submit', (e) => {
         e.preventDefault();
         const formData = new FormData(contactForm);
@@ -99,24 +75,32 @@ document.addEventListener('DOMContentLoaded', () => {
             body: formData,
             headers: { 'Accept': 'application/json' }
         })
-        .then(res => {
-            if (res.ok) {
-                showStatusMessage('Formulário enviado com sucesso!');
-                contactForm.reset();
-            } else {
-                return res.json().then(data => {
-                    const msg = data?.errors?.map(err => err.message).join(', ') || 'Erro ao enviar.';
-                    showStatusMessage(`Erro: ${msg}`, true);
-                });
-            }
-        })
-        .catch(err => {
-            console.error('Erro na requisição:', err);
-            showStatusMessage('Erro de rede ao tentar enviar o formulário.', true);
-        });
+            .then(res => {
+                if (res.ok) {
+                    showStatusMessage('Formulário enviado com sucesso!');
+                    contactForm.reset();
+                } else {
+                    return res.json().then(data => {
+                        const msg = data?.errors?.map(err => err.message).join(', ') || 'Erro ao enviar.';
+                        showStatusMessage(`Erro: ${msg}`, true);
+                    });
+                }
+            })
+            .catch(() => {
+                showStatusMessage('Erro de rede ao tentar enviar o formulário.', true);
+            });
     });
 
+    updateYear();
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
-    updateCopyrightYear();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+    });
 });
