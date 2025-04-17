@@ -10,177 +10,179 @@
     <link rel="shortcut icon" href="./image/portfolio.png" type="image/x-icon">
     <link rel="stylesheet" href="css/custom-styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body class="font-sans bg-stone-50 text-gray-800">
 
+    <!-- ================= HEADER ================= -->
     <header class="bg-white shadow-md fixed w-full top-0 z-50">
-        <nav class="container mx-auto px-4 py-3 flex justify-between items-center"> 
-            <a href="#welcome" class="text-xl font-bold text-sky-700 hover:text-sky-600 transition-colors">Ângelo Silvano</a> 
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#welcome" class="text-xl font-bold text-sky-700 hover:text-sky-600 transition-colors">Ângelo Silvano</a>
             <button id="menu-toggle" class="md:hidden focus:outline-none text-gray-700 hover:text-sky-500">
-                <i class="fas fa-bars text-2xl"></i> 
+                <i class="fas fa-bars text-2xl"></i>
             </button>
             <ul id="menu" class="hidden md:flex space-x-6 text-gray-700">
                 <li><a href="#welcome" class="hover:text-sky-500 transition-colors">Início</a></li>
                 <li><a href="#about" class="hover:text-sky-500 transition-colors">Sobre</a></li>
-                <li><a href="#services" class="hover:text-sky-500 transition-colors">Serviços</a></li> 
+                <li><a href="#services" class="hover:text-sky-500 transition-colors">Serviços</a></li>
                 <li><a href="#skills" class="hover:text-sky-500 transition-colors">Habilidades</a></li>
                 <li><a href="#projects" class="hover:text-sky-500 transition-colors">Projetos</a></li>
                 <li><a href="#contact" class="hover:text-sky-500 transition-colors">Contato</a></li>
             </ul>
         </nav>
         <!-- Menu mobile -->
-        <ul id="mobile-menu" class="hidden md:hidden bg-white w-full absolute left-0 shadow-md py-4 flex flex-col items-center space-y-3 text-gray-700">
-             <li><a href="#welcome" class="hover:text-sky-500 transition-colors block w-full text-center py-1">Início</a></li>
-             <li><a href="#about" class="hover:text-sky-500 transition-colors block w-full text-center py-1">Sobre</a></li>
-             <li><a href="#services" class="hover:text-sky-500 transition-colors block w-full text-center py-1">Serviços</a></li>
-             <li><a href="#skills" class="hover:text-sky-500 transition-colors block w-full text-center py-1">Habilidades</a></li>
-             <li><a href="#projects" class="hover:text-sky-500 transition-colors block w-full text-center py-1">Projetos</a></li>
-             <li><a href="#contact" class="hover:text-sky-500 transition-colors block w-full text-center py-1">Contato</a></li>
+        <ul id="mobile-menu" class="hidden md:hidden bg-white w-full absolute left-0 shadow-md py-4 flex-col items-center space-y-3 text-gray-700">
+            <li><a href="#welcome" class="hover:text-sky-500 transition-colors block w-full text-center py-1">Início</a></li>
+            <li><a href="#about" class="hover:text-sky-500 transition-colors block w-full text-center py-1">Sobre</a></li>
+            <li><a href="#services" class="hover:text-sky-500 transition-colors block w-full text-center py-1">Serviços</a></li>
+            <li><a href="#skills" class="hover:text-sky-500 transition-colors block w-full text-center py-1">Habilidades</a></li>
+            <li><a href="#projects" class="hover:text-sky-500 transition-colors block w-full text-center py-1">Projetos</a></li>
+            <li><a href="#contact" class="hover:text-sky-500 transition-colors block w-full text-center py-1">Contato</a></li>
         </ul>
     </header>
 
-    <section id="welcome" class="container mx-auto px-4 py-12 pt-24 md:pt-28 bg-stone-50 min-h-screen flex items-center"> <!-- Ajustado padding-top e min-height -->
+    <!-- ================= WELCOME SECTION ================= -->
+    <section id="welcome" class="container mx-auto px-4 py-12 pt-24 md:pt-28 bg-stone-50 min-h-screen flex items-center">
         <div class="flex flex-col md:flex-row items-center justify-center md:justify-between w-full">
-            <div class="text-center md:text-left md:mr-8 max-w-xl"> <!-- Limitando a largura do texto -->
+            <div class="text-center md:text-left md:mr-8 max-w-xl">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4 text-sky-700">Bem-Vindo(a)!</h2>
-                <p class="text-lg leading-relaxed text-gray-700 mb-6"> <!-- Aumentado leading e mb -->
+                <p class="text-lg leading-relaxed text-gray-700 mb-6">
                     Olá! É um prazer ter você por aqui. Explore meu portfólio e descubra um pouco mais sobre meu trabalho como desenvolvedor web.
                 </p>
-                <div class="mt-6 flex justify-center md:justify-start items-center space-x-4"> <!-- Ajustado mt e space-x -->
+                <div class="mt-6 flex justify-center md:justify-start items-center space-x-4">
                     <a href="https://github.com/angelodesenvolvedor" target="_blank" rel="noopener noreferrer" title="GitHub"
                        class="bg-gray-700 hover:bg-gray-900 text-white w-11 h-11 rounded-full flex items-center justify-center transition-colors duration-300 shadow-md hover:shadow-lg">
                         <i class="fab fa-github text-xl"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/angelosilvanno/" target="_blank" rel="noopener noreferrer" title="LinkedIn"
                        class="bg-sky-600 hover:bg-sky-700 text-white w-11 h-11 rounded-full flex items-center justify-center transition-colors duration-300 shadow-md hover:shadow-lg">
-                        <i class="fab fa-linkedin-in text-xl"></i> <!-- Usado linkedin-in para ícone mais padrão -->
+                        <i class="fab fa-linkedin-in text-xl"></i>
                     </a>
                     <a href="./curriculo/Currículo - Angelo.pdf"
                        download="Currículo - Angelo.pdf"
                        target="_blank"
                        rel="noopener noreferrer"
                        title="Baixar Currículo (PDF)"
-                       class="flex items-center justify-center w-11 h-11 rounded-full bg-red-600 hover:bg-red-700 text-white transition-colors duration-300 shadow-md hover:shadow-lg"> <!-- Estilizado como botão -->
-                         <i class="fas fa-file-pdf text-xl"></i>
+                       class="flex items-center justify-center w-11 h-11 rounded-full bg-red-600 hover:bg-red-700 text-white transition-colors duration-300 shadow-md hover:shadow-lg">
+                        <i class="fas fa-file-pdf text-xl"></i>
                     </a>
                 </div>
             </div>
             <img src="./image/angeloprogramador.png" alt="Ilustração de um desenvolvedor web programando" loading="lazy"
-                class="rounded-lg shadow-xl w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover mt-10 md:mt-0 bg-white p-1 border border-gray-200"> <!-- Aumentado tamanho, adicionado borda/padding -->
+                 class="rounded-lg shadow-xl w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover mt-10 md:mt-0 bg-white p-1 border border-gray-200">
         </div>
     </section>
 
-    <section id="about" class="container mx-auto px-4 py-16 md:py-20 scroll-mt-20"> <!-- Adicionado scroll-mt -->
-         <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16"> <!-- Aumentado gap -->
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="container mx-auto px-4 py-16 md:py-20 scroll-mt-20">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
             <img src="./image/Ângelo Silvano.png" alt="Foto de Ângelo Silvano, um desenvolvedor web" loading="lazy"
-                class="rounded-full shadow-lg w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 object-cover border-4 border-white"> <!-- Aumentado tamanho e adicionado borda branca -->
-             <div class="text-center md:text-left max-w-2xl"> <!-- Limitado largura -->
-                 <h2 class="text-3xl font-bold mb-6 section-title text-sky-700">Sobre Mim</h2>
-                 <p class="text-lg leading-relaxed text-gray-700 space-y-4 text-justify">
-                    Sou <span class="font-semibold text-sky-700">Ângelo Silvano</span>, desenvolvedor front-end especializado em criar aplicações web modernas e funcionais, com foco em código limpo e de alta performance. Tenho experiência sólida em 
-                    <span class="font-semibold">HTML</span>, <span class="font-semibold">CSS</span>, <span class="font-semibold">JavaScript</span> e 
+                 class="rounded-full shadow-lg w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 object-cover border-4 border-white">
+            <div class="text-center md:text-left max-w-2xl">
+                <h2 class="text-3xl font-bold mb-6 section-title text-sky-700">Sobre Mim</h2>
+                <p class="text-lg leading-relaxed text-gray-700 space-y-4 text-justify">
+                    Sou <span class="font-semibold text-sky-700">Ângelo Silvano</span>, desenvolvedor front-end especializado em criar aplicações web modernas e funcionais, com foco em código limpo e de alta performance. Tenho experiência sólida em
+                    <span class="font-semibold">HTML</span>, <span class="font-semibold">CSS</span>, <span class="font-semibold">JavaScript</span> e
                     <span class="font-semibold">Next.js</span>, com ênfase na criação de interfaces responsivas e dinâmicas. Utilizo <span class="font-semibold">Git</span> para controle de versão e organização de projetos, e <span class="font-semibold">Tailwind CSS</span> para desenvolvimento ágil de layouts eficientes. Além disso, estou aprimorando minhas habilidades em <span class="font-semibold">TypeScript</span> para garantir a segurança e escalabilidade de meus projetos.
-                </p>                              
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- ================= SEÇÃO SERVIÇOS REORGANIZADA ================= -->
-<section id="services" class="container mx-auto px-4 py-12 md:py-16 bg-white scroll-mt-20"> <!-- Ajustei o padding aqui -->
-    <h2 class="text-3xl font-bold text-center mb-4 section-title text-sky-700">O que eu faço na prática</h2>
-    <p class="text-lg text-center mb-12 text-gray-600 max-w-3xl mx-auto">
-        Transformo sua ideia em realidade digital. Veja como posso ajudar seu negócio a crescer online com soluções web sob medida:
-    </p>
+    <!-- ================= SERVICES SECTION ================= -->
+    <section id="services" class="container mx-auto px-4 py-12 md:py-16 bg-white scroll-mt-20">
+        <h2 class="text-3xl font-bold text-center mb-4 section-title text-sky-700">O que eu faço na prática</h2>
+        <p class="text-lg text-center mb-12 text-gray-600 max-w-3xl mx-auto">
+            Transformo sua ideia em realidade digital. Veja como posso ajudar seu negócio a crescer online com soluções web sob medida:
+        </p>
 
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-
-        <!-- Card Serviço 1: Site do Zero -->
-        <div class="bg-stone-50 border border-gray-200 rounded-lg p-6 text-center shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center">
-            <div class="mb-4 text-sky-600 bg-sky-100 rounded-full p-3 inline-block">
-                <i class="fas fa-laptop-code fa-2x w-8 h-8"></i>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Card Serviço 1: Site do Zero -->
+            <div class="bg-stone-50 border border-gray-200 rounded-lg p-6 text-center shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center">
+                <div class="mb-4 text-sky-600 bg-sky-100 rounded-full p-3 inline-block">
+                    <i class="fas fa-laptop-code fa-2x w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-sky-800">Criação de Sites Profissionais</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    Desenvolvo sites institucionais ou landing pages do zero, com design moderno, rápido e totalmente adaptado para celulares e tablets.
+                </p>
             </div>
-            <h3 class="text-xl font-semibold mb-2 text-sky-800">Criação de Sites Profissionais</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">
-                Desenvolvo sites institucionais ou landing pages do zero, com design moderno, rápido e totalmente adaptado para celulares e tablets.
-            </p>
+
+            <!-- Card Serviço 2: Loja Online -->
+            <div class="bg-stone-50 border border-gray-200 rounded-lg p-6 text-center shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center">
+                <div class="mb-4 text-sky-600 bg-sky-100 rounded-full p-3 inline-block">
+                    <i class="fas fa-store fa-2x w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-sky-800">Lojas Virtuais (E-commerce)</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    Construo sua loja online completa, com catálogo de produtos, carrinho de compras, integrações de pagamento e frete para você vender mais.
+                </p>
+            </div>
+
+            <!-- Card Serviço 3: Responsividade -->
+            <div class="bg-stone-50 border border-gray-200 rounded-lg p-6 text-center shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center">
+                <div class="mb-4 text-sky-600 bg-sky-100 rounded-full p-3 inline-block">
+                    <i class="fas fa-mobile-alt fa-2x w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-sky-800">Design Responsivo Garantido</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    Garanto que seu site ou aplicação funcione perfeitamente e tenha uma ótima aparência em qualquer tamanho de tela (PCs, tablets e smartphones).
+                </p>
+            </div>
+
+            <!-- Card Serviço 4: Performance -->
+            <div class="bg-stone-50 border border-gray-200 rounded-lg p-6 text-center shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center">
+                <div class="mb-4 text-sky-600 bg-sky-100 rounded-full p-3 inline-block">
+                    <i class="fas fa-tachometer-alt fa-2x w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-sky-800">Otimização de Performance</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    Aplico as melhores práticas para que seu site carregue rapidamente, melhorando a experiência do usuário e o posicionamento no Google.
+                </p>
+            </div>
+
+            <!-- Card Serviço 5: Manutenção -->
+            <div class="bg-stone-50 border border-gray-200 rounded-lg p-6 text-center shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center">
+                <div class="mb-4 text-sky-600 bg-sky-100 rounded-full p-3 inline-block">
+                    <i class="fas fa-tools fa-2x w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-sky-800">Manutenção e Atualização</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    Ofereço planos de manutenção para manter seu site seguro, atualizado e funcionando sem problemas, incluindo backups e suporte técnico.
+                </p>
+            </div>
+
+            <!-- Card Serviço 6: Design -->
+            <div class="bg-stone-50 border border-gray-200 rounded-lg p-6 text-center shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center">
+                <div class="mb-4 text-sky-600 bg-sky-100 rounded-full p-3 inline-block">
+                    <i class="fas fa-paint-brush fa-2x w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-sky-800">Layout Personalizado</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    Crio um visual único e atraente, alinhado com a identidade da sua marca, para que seu site se destaque da concorrência e gere confiança.
+                </p>
+            </div>
         </div>
 
-        <!-- Card Serviço 2: Loja Online -->
-        <div class="bg-stone-50 border border-gray-200 rounded-lg p-6 text-center shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center">
-             <div class="mb-4 text-sky-600 bg-sky-100 rounded-full p-3 inline-block">
-                <i class="fas fa-store fa-2x w-8 h-8"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-sky-800">Lojas Virtuais (E-commerce)</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">
-                Construo sua loja online completa, com catálogo de produtos, carrinho de compras, integrações de pagamento e frete para você vender mais.
-            </p>
+        <div class="text-center mt-12">
+            <a href="#contact" class="inline-block bg-sky-600 text-white text-lg font-semibold py-3 px-8 rounded-lg hover:bg-sky-700 transition-colors duration-300 shadow hover:shadow-md transform hover:-translate-y-1">
+                Vamos conversar sobre seu projeto? <i class="fas fa-arrow-right ml-2"></i>
+            </a>
         </div>
+    </section>
 
-        <!-- Card Serviço 3: Responsividade -->
-         <div class="bg-stone-50 border border-gray-200 rounded-lg p-6 text-center shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center">
-             <div class="mb-4 text-sky-600 bg-sky-100 rounded-full p-3 inline-block">
-                <i class="fas fa-mobile-alt fa-2x w-8 h-8"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-sky-800">Design Responsivo Garantido</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">
-                Garanto que seu site ou aplicação funcione perfeitamente e tenha uma ótima aparência em qualquer tamanho de tela (PCs, tablets e smartphones).
-            </p>
-        </div>
-
-        <!-- Card Serviço 4: Performance -->
-         <div class="bg-stone-50 border border-gray-200 rounded-lg p-6 text-center shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center">
-             <div class="mb-4 text-sky-600 bg-sky-100 rounded-full p-3 inline-block">
-                <i class="fas fa-tachometer-alt fa-2x w-8 h-8"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-sky-800">Otimização de Performance</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">
-                Aplico as melhores práticas para que seu site carregue rapidamente, melhorando a experiência do usuário e o posicionamento no Google.
-            </p>
-        </div>
-
-        <!-- Card Serviço 5: Manutenção -->
-        <div class="bg-stone-50 border border-gray-200 rounded-lg p-6 text-center shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center">
-             <div class="mb-4 text-sky-600 bg-sky-100 rounded-full p-3 inline-block">
-                <i class="fas fa-tools fa-2x w-8 h-8"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-sky-800">Manutenção e Atualização</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">
-                Ofereço planos de manutenção para manter seu site seguro, atualizado e funcionando sem problemas, incluindo backups e suporte técnico.
-            </p>
-        </div>
-
-        <!-- Card Serviço 6: Design -->
-        <div class="bg-stone-50 border border-gray-200 rounded-lg p-6 text-center shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center">
-             <div class="mb-4 text-sky-600 bg-sky-100 rounded-full p-3 inline-block">
-                 <i class="fas fa-paint-brush fa-2x w-8 h-8"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-sky-800">Layout Personalizado</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">
-                Crio um visual único e atraente, alinhado com a identidade da sua marca, para que seu site se destaque da concorrência e gere confiança.
-            </p>
-        </div>
-    </div>
-
-    <div class="text-center mt-12">
-        <a href="#contact" class="inline-block bg-sky-600 text-white text-lg font-semibold py-3 px-8 rounded-lg hover:bg-sky-700 transition-colors duration-300 shadow hover:shadow-md transform hover:-translate-y-1">
-             Vamos conversar sobre seu projeto? <i class="fas fa-arrow-right ml-2"></i>
-        </a>
-    </div>
-</section>
-
-
-    <section id="projects" class="container mx-auto px-4 py-16 md:py-20 bg-stone-50 scroll-mt-20"> <!-- Adicionado scroll-mt -->
+    <!-- ================= PROJECTS SECTION ================= -->
+    <section id="projects" class="container mx-auto px-4 py-16 md:py-20 bg-stone-50 scroll-mt-20">
         <h2 class="text-3xl font-bold text-center mb-4 section-title text-sky-700">Meus Projetos</h2>
         <p class="text-lg text-center mb-12 text-gray-600">Confira alguns dos projetos que desenvolvi:</p>
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <!-- Card Projeto 1 -->
-            <div class="bg-white shadow-md rounded-lg p-6 project-card flex flex-col h-full"> <!-- Adicionado flex e h-full -->
+            <div class="bg-white shadow-md rounded-lg p-6 project-card flex flex-col h-full">
                 <h3 class="text-xl font-semibold mb-2 text-sky-700">VibePlay</h3>
-                <p class="text-sm text-justify project-description text-gray-700 flex-grow mb-4">Uma aplicação web interativa para reprodução de música, com recursos como controle de volume, busca por músicas, navegação por gêneros e informações sobre artistas.</p> <!-- Adicionado flex-grow e mb -->
-                <div class="flex justify-between items-center mt-auto"> <!-- Adicionado mt-auto -->
-                     <a href="https://vibeplay-web.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm bg-sky-100 text-sky-700 px-3 py-1 rounded hover:bg-sky-200 transition-colors" title="Ver projeto online">
+                <p class="text-sm text-justify project-description text-gray-700 flex-grow mb-4">Uma aplicação web interativa para reprodução de música, com recursos como controle de volume, busca por músicas, navegação por gêneros e informações sobre artistas.</p>
+                <div class="flex justify-between items-center mt-auto">
+                    <a href="https://vibeplay-web.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm bg-sky-100 text-sky-700 px-3 py-1 rounded hover:bg-sky-200 transition-colors" title="Ver projeto online">
                         Ver Online <i class="fas fa-external-link-alt ml-1"></i>
                     </a>
                     <a href="https://github.com/angelodesenvolvedor/vibe-play" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-800 transition-colors" title="Ver código no GitHub">
@@ -193,7 +195,7 @@
                 <h3 class="text-xl font-semibold mb-2 text-sky-700">FootCoder</h3>
                 <p class="text-sm text-justify project-description text-gray-700 flex-grow mb-4">Simulação de loja online especializada em camisetas de times de futebol. Permite navegação pelos produtos, adição ao carrinho e simulação de pagamentos (cartão, boleto, PIX).</p>
                 <div class="flex justify-between items-center mt-auto">
-                     <a href="https://foot-coder.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm bg-sky-100 text-sky-700 px-3 py-1 rounded hover:bg-sky-200 transition-colors" title="Ver projeto online">
+                    <a href="https://foot-coder.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm bg-sky-100 text-sky-700 px-3 py-1 rounded hover:bg-sky-200 transition-colors" title="Ver projeto online">
                         Ver Online <i class="fas fa-external-link-alt ml-1"></i>
                     </a>
                     <a href="https://github.com/angelodesenvolvedor/FootCoder" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-800 transition-colors" title="Ver código no GitHub">
@@ -214,7 +216,7 @@
                     </a>
                 </div>
             </div>
-             <!-- Card Projeto 4 -->
+            <!-- Card Projeto 4 -->
             <div class="bg-white shadow-md rounded-lg p-6 project-card flex flex-col h-full">
                 <h3 class="text-xl font-semibold mb-2 text-sky-700">Coffee Delivery</h3>
                 <p class="text-sm text-justify project-description text-gray-700 flex-grow mb-4">Landing page para um serviço de entrega de café, focada em uma experiência de compra simples e intuitiva, com catálogo de produtos e processo de checkout simulado.</p>
@@ -235,20 +237,20 @@
                     <a href="https://runtechweb.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm bg-sky-100 text-sky-700 px-3 py-1 rounded hover:bg-sky-200 transition-colors" title="Ver projeto online">
                         Ver Online <i class="fas fa-external-link-alt ml-1"></i>
                     </a>
-                     <a href="https://github.com/angelodesenvolvedor/RunTech" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-800 transition-colors" title="Ver código no GitHub">
+                    <a href="https://github.com/angelodesenvolvedor/RunTech" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-800 transition-colors" title="Ver código no GitHub">
                         <i class="fab fa-github text-2xl"></i>
                     </a>
                 </div>
             </div>
             <!-- Card Projeto 6 -->
-             <div class="bg-white shadow-md rounded-lg p-6 project-card flex flex-col h-full">
+            <div class="bg-white shadow-md rounded-lg p-6 project-card flex flex-col h-full">
                 <h3 class="text-xl font-semibold mb-2 text-sky-700">Jogo da Velha</h3>
                 <p class="text-sm text-justify project-description text-gray-700 flex-grow mb-4">Implementação clássica do Jogo da Velha utilizando HTML, CSS e JavaScript. Possui interface simples, lógica de turnos, verificação de vencedor e opção de reiniciar o jogo.</p>
                 <div class="flex justify-between items-center mt-auto">
                     <a href="https://jogo-da-velha-nine-ebon.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm bg-sky-100 text-sky-700 px-3 py-1 rounded hover:bg-sky-200 transition-colors" title="Ver projeto online">
                         Ver Online <i class="fas fa-external-link-alt ml-1"></i>
                     </a>
-                     <a href="https://github.com/angelodesenvolvedor/Jogo-da-Velha" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-800 transition-colors" title="Ver código no GitHub">
+                    <a href="https://github.com/angelodesenvolvedor/Jogo-da-Velha" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-800 transition-colors" title="Ver código no GitHub">
                         <i class="fab fa-github text-2xl"></i>
                     </a>
                 </div>
@@ -256,60 +258,68 @@
         </div>
     </section>
 
-     <section id="skills" class="container mx-auto px-4 py-16 md:py-20 bg-white scroll-mt-20"> <!-- Mudado para bg-white -->
+    <!-- ================= SKILLS SECTION ================= -->
+    <section id="skills" class="container mx-auto px-4 py-16 md:py-20 bg-white scroll-mt-20">
         <!-- Hard Skills -->
         <div class="mb-16">
-             <h2 class="text-3xl font-bold text-center mb-4 section-title text-sky-700">Hard Skills</h2>
-             <p class="text-lg text-center mb-12 text-gray-600">Tecnologias e ferramentas que utilizo para construir projetos:</p>
-             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 justify-center"> <!-- Mais colunas e centralizado -->
-                 <!-- HTML -->
+            <h2 class="text-3xl font-bold text-center mb-4 section-title text-sky-700">Hard Skills</h2>
+            <p class="text-lg text-center mb-12 text-gray-600">Tecnologias e ferramentas que utilizo para construir projetos:</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 justify-center">
+                <!-- HTML -->
                 <div class="flex flex-col items-center text-center p-4 bg-stone-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     <i class="fab fa-html5 text-5xl text-orange-500 mb-2"></i>
                     <span class="font-medium text-gray-700">HTML5</span>
                 </div>
-                 <!-- CSS -->
+                <!-- CSS -->
                 <div class="flex flex-col items-center text-center p-4 bg-stone-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     <i class="fab fa-css3-alt text-5xl text-blue-500 mb-2"></i>
                     <span class="font-medium text-gray-700">CSS3</span>
                 </div>
-                 <!-- JavaScript -->
+                <!-- JavaScript -->
                 <div class="flex flex-col items-center text-center p-4 bg-stone-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     <i class="fab fa-js-square text-5xl text-yellow-500 mb-2"></i>
                     <span class="font-medium text-gray-700">JavaScript</span>
                 </div>
-                 <!-- React / Next.js -->
+                <!-- Next.js -->
                 <div class="flex flex-col items-center text-center p-4 bg-stone-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                     <svg class="h-12 w-12 mb-2 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 128 128"><path d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64 64-28.7 64-64S99.3 0 64 0zm0 119.1c-30.5 0-55.1-24.7-55.1-55.1S33.5 8.9 64 8.9s55.1 24.7 55.1 55.1-24.7 55.1-55.1 55.1z"/><path d="M95.7 34.2L64 30.1l-31.7 4.1c-2.4.3-4.6 1.5-6.3 3.2-1.7 1.7-2.9 3.9-3.2 6.3l-4.1 31.7 4.1 31.7c.3 2.4 1.5 4.6 3.2 6.3 1.7 1.7 3.9 2.9 6.3 3.2l31.7 4.1 31.7-4.1c2.4-.3 4.6-1.5 6.3-3.2 1.7-1.7 2.9-3.9 3.2-6.3l4.1-31.7-4.1-31.7c-.3-2.4-1.5-4.6-3.2-6.3-1.7-1.7-3.9-2.9-6.3-3.2zm-7.9 69.4c-.2.9-.7 1.7-1.4 2.3-.7.7-1.5 1.1-2.4 1.3L64 109.1l-20-2.6c-.9-.1-1.8-.5-2.4-1.3-.7-.7-1.1-1.5-1.3-2.4L38.4 83l1.9-14.8 14.8-1.9 19.6-.8 14.8 1.9L90 83l-2.2 20.6zM82.7 55.8c-1.3-1.3-3-2-4.8-2h-28c-1.8 0-3.5.7-4.8 2-1.3 1.3-2 3-2 4.8v28c0 1.8.7 3.5 2 4.8 1.3 1.3 3 2 4.8 2h28c1.8 0 3.5-.7 4.8-2 1.3-1.3 2-3 2-4.8v-28c0-1.8-.7-3.5-2-4.8z"/></svg> <!-- Ícone Next.js SVG -->
+                    <svg class="h-12 w-12 mb-2 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 128 128">
+                        <path d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64 64-28.7 64-64S99.3 0 64 0zm0 119.1c-30.5 0-55.1-24.7-55.1-55.1S33.5 8.9 64 8.9s55.1 24.7 55.1 55.1-24.7 55.1-55.1 55.1z"/>
+                        <path d="M95.7 34.2L64 30.1l-31.7 4.1c-2.4.3-4.6 1.5-6.3 3.2-1.7 1.7-2.9 3.9-3.2 6.3l-4.1 31.7 4.1 31.7c.3 2.4 1.5 4.6 3.2 6.3 1.7 1.7 3.9 2.9 6.3 3.2l31.7 4.1 31.7-4.1c2.4-.3 4.6-1.5 6.3-3.2 1.7-1.7 2.9-3.9 3.2-6.3l4.1-31.7-4.1-31.7c-.3-2.4-1.5-4.6-3.2-6.3-1.7-1.7-3.9-2.9-6.3-3.2zm-7.9 69.4c-.2.9-.7 1.7-1.4 2.3-.7.7-1.5 1.1-2.4 1.3L64 109.1l-20-2.6c-.9-.1-1.8-.5-2.4-1.3-.7-.7-1.1-1.5-1.3-2.4L38.4 83l1.9-14.8 14.8-1.9 19.6-.8 14.8 1.9L90 83l-2.2 20.6zM82.7 55.8c-1.3-1.3-3-2-4.8-2h-28c-1.8 0-3.5.7-4.8 2-1.3 1.3-2 3-2 4.8v28c0 1.8.7 3.5 2 4.8 1.3 1.3 3 2 4.8 2h28c1.8 0 3.5-.7 4.8-2 1.3-1.3 2-3 2-4.8v-28c0-1.8-.7-3.5-2-4.8z"/>
+                    </svg>
                     <span class="font-medium text-gray-700">Next.js</span>
                 </div>
-                 <!-- Tailwind CSS -->
+                <!-- Tailwind CSS -->
                 <div class="flex flex-col items-center text-center p-4 bg-stone-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                     <svg class="h-12 w-12 mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33"><path fill="#38bdf8" d="M27 0c-7.2 0-13 5.8-13 13 0 5.3 3.9 9.8 8.9 11.9l-1.1 1.1c-.6.6-1.4.9-2.1.9s-1.6-.3-2.1-.9L9.2 17.6c-.6-.6-.9-1.4-.9-2.1 0-.8.3-1.5.9-2.1l1.1-1.1C15.2 10.3 19.7 6.4 27 6.4c7.2 0 13 5.8 13 13s-5.8 13-13 13c-5.3 0-9.8-3.9-11.9-8.9l-1.1-1.1c-.6-.6-.9-1.4-.9-2.1s.3-1.6.9-2.1l8.4-8.4c.6-.6 1.4-.9 2.1-.9.8 0 1.5.3 2.1.9l1.1 1.1C36.7 15.2 40.6 19.7 40.6 27c0 7.2-5.8 13-13 13-7.2 0-13-5.8-13-13 0-5.3 3.9-9.8 8.9-11.9l-1.1-1.1c-.6-.6-1.4-.9-2.1-.9s-1.6-.3-2.1-.9L9.2 17.6c-.6-.6-.9-1.4-.9-2.1 0-.8.3-1.5.9-2.1l1.1-1.1C15.2 10.3 19.7 6.4 27 6.4c7.2 0 13 5.8 13 13s-5.8 13-13 13c-5.3 0-9.8-3.9-11.9-8.9l-1.1-1.1c-.6-.6-.9-1.4-.9-2.1s.3-1.6.9-2.1l8.4-8.4c.6-.6 1.4-.9 2.1-.9.8 0 1.5.3 2.1.9l1.1 1.1C36.7 15.2 40.6 19.7 40.6 27 0 7.2-5.8 13-13 13z"/></svg> <!-- Ícone Tailwind SVG -->
+                    <svg class="h-12 w-12 mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33">
+                        <path fill="#38bdf8" d="M27 0c-7.2 0-13 5.8-13 13 0 5.3 3.9 9.8 8.9 11.9l-1.1 1.1c-.6.6-1.4.9-2.1.9s-1.6-.3-2.1-.9L9.2 17.6c-.6-.6-.9-1.4-.9-2.1 0-.8.3-1.5.9-2.1l1.1-1.1C15.2 10.3 19.7 6.4 27 6.4c7.2 0 13 5.8 13 13s-5.8 13-13 13c-5.3 0-9.8-3.9-11.9-8.9l-1.1-1.1c-.6-.6-.9-1.4-.9-2.1s.3-1.6.9-2.1l8.4-8.4c.6-.6 1.4-.9 2.1-.9.8 0 1.5.3 2.1.9l1.1 1.1C36.7 15.2 40.6 19.7 40.6 27c0 7.2-5.8 13-13 13-7.2 0-13-5.8-13-13 0-5.3 3.9-9.8 8.9-11.9l-1.1-1.1c-.6-.6-1.4-.9-2.1-.9s-1.6-.3-2.1-.9L9.2 17.6c-.6-.6-.9-1.4-.9-2.1 0-.8.3-1.5.9-2.1l1.1-1.1C15.2 10.3 19.7 6.4 27 6.4c7.2 0 13 5.8 13 13s-5.8 13-13 13c-5.3 0-9.8-3.9-11.9-8.9l-1.1-1.1c-.6-.6-.9-1.4-.9-2.1s.3-1.6.9-2.1l8.4-8.4c.6-.6 1.4-.9 2.1-.9.8 0 1.5.3 2.1.9l1.1 1.1C36.7 15.2 40.6 19.7 40.6 27 0 7.2-5.8 13-13 13z"/>
+                    </svg>
                     <span class="font-medium text-gray-700">Tailwind CSS</span>
                 </div>
                 <!-- TypeScript -->
-                 <div class="flex flex-col items-center text-center p-4 bg-stone-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                     <svg class="h-12 w-12 mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="#3178c6"><path d="M213.1 42.9H42.9C32.5 42.9 24 51.4 24 61.8v132.4c0 10.4 8.5 18.9 18.9 18.9h170.2c10.4 0 18.9-8.5 18.9-18.9V61.8c0-10.4-8.5-18.9-18.9-18.9zM128 193.4h-23.8V99.1h-17v-14h57.8v14h-17v94.3zm70.5 0h-16.2l-12.5-31.6h-31.3l-12.6 31.6h-16.1L153 99.1h16.1L198.5 193.4zm-39.7-43.2h21.2l-10.6-27.1-10.6 27.1z"/></svg> <!-- Ícone TypeScript SVG -->
+                <div class="flex flex-col items-center text-center p-4 bg-stone-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <svg class="h-12 w-12 mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="#3178c6">
+                        <path d="M213.1 42.9H42.9C32.5 42.9 24 51.4 24 61.8v132.4c0 10.4 8.5 18.9 18.9 18.9h170.2c10.4 0 18.9-8.5 18.9-18.9V61.8c0-10.4-8.5-18.9-18.9-18.9zM128 193.4h-23.8V99.1h-17v-14h57.8v14h-17v94.3zm70.5 0h-16.2l-12.5-31.6h-31.3l-12.6 31.6h-16.1L153 99.1h16.1L198.5 193.4zm-39.7-43.2h21.2l-10.6-27.1-10.6 27.1z"/>
+                    </svg>
                     <span class="font-medium text-gray-700">TypeScript</span>
-                 </div>
-                  <!-- Git -->
-                 <div class="flex flex-col items-center text-center p-4 bg-stone-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <i class="fab fa-git-alt text-5xl text-orange-600 mb-2"></i>
-                    <span class="font-medium text-gray-700">Git</span>
                 </div>
-                 <!-- GitHub -->
-                 <div class="flex flex-col items-center text-center p-4 bg-stone-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <i class="fab fa-github text-5xl text-gray-800 mb-2"></i>
-                    <span class="font-medium text-gray-700">GitHub</span>
-                </div>
-             </div>
-        </div>
+                <!-- Git -->
+                <div class="flex flex-col items-center text-center p-4 bg-stone-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                   <i class="fab fa-git-alt text-5xl text-orange-600 mb-2"></i>
+                   <span class="font-medium text-gray-700">Git</span>
+               </div>
+                <!-- GitHub -->
+                <div class="flex flex-col items-center text-center p-4 bg-stone-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                   <i class="fab fa-github text-5xl text-gray-800 mb-2"></i>
+                   <span class="font-medium text-gray-700">GitHub</span>
+               </div>
+            </div>
+       </div>
 
-        <!-- Soft Skills -->
-        <div>
-             <h2 class="text-3xl font-bold text-center mb-4 section-title text-sky-700">Soft Skills</h2>
-             <p class="text-lg text-center mb-12 text-gray-600">Habilidades interpessoais que agregam valor ao meu trabalho:</p>
-             <ul class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+       <!-- Soft Skills -->
+       <div>
+            <h2 class="text-3xl font-bold text-center mb-4 section-title text-sky-700">Soft Skills</h2>
+            <p class="text-lg text-center mb-12 text-gray-600">Habilidades interpessoais que agregam valor ao meu trabalho:</p>
+            <ul class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <li class="bg-stone-50 border border-gray-200 shadow-sm rounded-lg p-6 skill-item flex items-start space-x-4">
                     <i class="fas fa-comments text-3xl text-sky-600 mt-1"></i>
                     <div>
@@ -324,28 +334,28 @@
                         <p class="text-sm text-gray-600">Habilidade para analisar desafios, identificar causas e implementar soluções eficazes de forma criativa.</p>
                     </div>
                 </li>
-                 <li class="bg-stone-50 border border-gray-200 shadow-sm rounded-lg p-6 skill-item flex items-start space-x-4">
+                <li class="bg-stone-50 border border-gray-200 shadow-sm rounded-lg p-6 skill-item flex items-start space-x-4">
                     <i class="fas fa-users text-3xl text-sky-600 mt-1"></i>
                     <div>
                         <h3 class="text-xl font-semibold mb-1 text-sky-800">Trabalho em Equipe</h3>
                         <p class="text-sm text-gray-600">Colaboração proativa com colegas e stakeholders para alcançar objetivos comuns e entregar resultados de qualidade.</p>
                     </div>
                 </li>
-                 <li class="bg-stone-50 border border-gray-200 shadow-sm rounded-lg p-6 skill-item flex items-start space-x-4">
+                <li class="bg-stone-50 border border-gray-200 shadow-sm rounded-lg p-6 skill-item flex items-start space-x-4">
                     <i class="fas fa-brain text-3xl text-sky-600 mt-1"></i>
                     <div>
                         <h3 class="text-xl font-semibold mb-1 text-sky-800">Pensamento Crítico</h3>
                         <p class="text-sm text-gray-600">Análise lógica de requisitos e feedbacks para tomar decisões informadas sobre design e funcionalidade.</p>
                     </div>
                 </li>
-                 <li class="bg-stone-50 border border-gray-200 shadow-sm rounded-lg p-6 skill-item flex items-start space-x-4">
+                <li class="bg-stone-50 border border-gray-200 shadow-sm rounded-lg p-6 skill-item flex items-start space-x-4">
                     <i class="fas fa-clock text-3xl text-sky-600 mt-1"></i>
-                     <div>
+                    <div>
                         <h3 class="text-xl font-semibold mb-1 text-sky-800">Adaptabilidade</h3>
                         <p class="text-sm text-gray-600">Flexibilidade para me ajustar a novas tecnologias, metodologias e mudanças nos requisitos do projeto.</p>
                     </div>
                 </li>
-                 <li class="bg-stone-50 border border-gray-200 shadow-sm rounded-lg p-6 skill-item flex items-start space-x-4">
+                <li class="bg-stone-50 border border-gray-200 shadow-sm rounded-lg p-6 skill-item flex items-start space-x-4">
                     <i class="fas fa-seedling text-3xl text-sky-600 mt-1"></i>
                     <div>
                         <h3 class="text-xl font-semibold mb-1 text-sky-800">Aprendizado Contínuo</h3>
@@ -356,75 +366,85 @@
         </div>
     </section>
 
-    <section id="contact" class="container mx-auto px-4 py-16 md:py-20 bg-stone-50 scroll-mt-20"> <!-- Adicionado scroll-mt -->
-         <h2 class="text-3xl font-bold text-center mb-4 section-title text-sky-700">Entre em Contato</h2>
-         <p class="text-lg text-center mb-10 text-gray-600 max-w-2xl mx-auto">Tem alguma pergunta, proposta ou só quer trocar uma ideia? Preencha o formulário abaixo!</p>
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="container mx-auto px-4 py-16 md:py-20 bg-stone-50 scroll-mt-20">
+        <h2 class="text-3xl font-bold text-center mb-4 section-title text-sky-700">Entre em Contato</h2>
+        <p class="text-lg text-center mb-10 text-gray-600 max-w-2xl mx-auto">Tem alguma pergunta, proposta ou só quer trocar uma ideia? Preencha o formulário abaixo!</p>
 
         <div id="success-message" class="hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-6 text-center max-w-lg mx-auto" role="alert">
-             <strong class="font-bold">Mensagem enviada com sucesso!</strong>
-             <span class="block sm:inline">Obrigado por entrar em contato. Retornarei em breve.</span>
+            <strong class="font-bold">Mensagem enviada com sucesso!</strong>
+            <span class="block sm:inline">Obrigado por entrar em contato. Retornarei em breve.</span>
         </div>
-         <div id="error-message" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6 text-center max-w-lg mx-auto" role="alert">
-             <strong class="font-bold">Ocorreu um erro!</strong>
-             <span class="block sm:inline">Não foi possível enviar sua mensagem. Tente novamente mais tarde.</span>
+        <div id="error-message" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6 text-center max-w-lg mx-auto" role="alert">
+            <strong class="font-bold">Ocorreu um erro!</strong>
+            <span class="block sm:inline">Não foi possível enviar sua mensagem. Tente novamente mais tarde.</span>
         </div>
 
         <form id="contactForm" action="https://formspree.io/f/xpwpwprz" method="POST" class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md border border-gray-200">
             <div class="mb-5">
                 <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome <span class="text-red-500">*</span></label>
                 <input type="text" id="name" name="name" placeholder="Seu nome completo"
-                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-gray-700 transition"
-                    required>
+                       class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-gray-700 transition"
+                       required>
             </div>
             <div class="mb-5">
                 <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail <span class="text-red-500">*</span></label>
                 <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com"
-                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-gray-700 transition"
-                    required>
+                       class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-gray-700 transition"
+                       required>
             </div>
             <div class="mb-6">
                 <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensagem <span class="text-red-500">*</span></label>
                 <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem aqui..."
-                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-gray-700 transition resize-none"
-                    required></textarea>
+                          class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-gray-700 transition resize-none"
+                          required></textarea>
             </div>
-             <button type="submit" id="submitButton"
-                class="w-full bg-sky-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition-all duration-300 shadow hover:shadow-md flex items-center justify-center space-x-2">
+            <button type="submit" id="submitButton"
+                    class="w-full bg-sky-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition-all duration-300 shadow hover:shadow-md flex items-center justify-center space-x-2">
                 <span id="buttonText">Enviar Mensagem</span>
                 <i id="buttonSpinner" class="fas fa-spinner fa-spin hidden"></i> <!-- Spinner -->
             </button>
         </form>
     </section>
 
+    <!-- ================= FOOTER ================= -->
     <footer class="bg-gray-800 text-gray-300 py-8">
         <div class="container mx-auto text-center px-4">
             <div class="mb-4">
-                 <!-- Ícones Sociais no Rodapé -->
-                 <a href="https://github.com/angelodesenvolvedor" target="_blank" rel="noopener noreferrer" title="GitHub"
-                    class="text-gray-400 hover:text-white mx-3 transition-colors duration-300">
+                <!-- Ícones Sociais no Rodapé -->
+                <a href="https://github.com/angelodesenvolvedor" target="_blank" rel="noopener noreferrer" title="GitHub"
+                   class="text-gray-400 hover:text-white mx-3 transition-colors duration-300">
                     <i class="fab fa-github text-2xl"></i>
-                 </a>
-                 <a href="https://www.linkedin.com/in/angelosilvanno/" target="_blank" rel="noopener noreferrer" title="LinkedIn"
-                    class="text-gray-400 hover:text-white mx-3 transition-colors duration-300">
+                </a>
+                <a href="https://www.linkedin.com/in/angelosilvanno/" target="_blank" rel="noopener noreferrer" title="LinkedIn"
+                   class="text-gray-400 hover:text-white mx-3 transition-colors duration-300">
                     <i class="fab fa-linkedin-in text-2xl"></i>
-                 </a>
-                  <a href="mailto:familiasabino14@gmail.com" title="E-mail" 
+                </a>
+                <a href="mailto:familiasabino14@gmail.com" title="E-mail" class="text-gray-400 hover:text-white mx-3 transition-colors duration-300">
                     <i class="fas fa-envelope text-2xl"></i>
-                 </a>
+                </a>
             </div>
             <p class="text-sm">© <span id="current-year"></span> Ângelo Silvano. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-     <button id="scrollToTopBtn" class="scroll-to-top" title="Voltar ao topo">
+    <!-- ================= SCROLL TO TOP BUTTON ================= -->
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Voltar ao topo">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
-    <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script> <!-- Alpine.js CDN -->
-    <script src="https://unpkg.com/scrollreveal"></script> <!-- ScrollReveal CDN -->
-    <script src ="js/config.js"></script>
+    <!-- ================= SCRIPTS ================= -->
+    <!-- Font Awesome Kit (Note: Using the CDN link from head is more common than this kit link, but keeping as original) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Tailwind CSS CDN (Already included in head, potentially redundant here but kept as original) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <!-- ScrollReveal CDN -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Custom Scripts -->
+    <script src="js/config.js"></script>
     <script src="js/app.js"></script>
+
 </body>
 </html>
