@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const TIMEOUT = 5000;
     const MOBILE_BREAKPOINT = 768;
 
-    // Funções auxiliares
     const closeMenu = () => {
         mobileMenu.classList.add('hidden');
         mobileMenu.classList.remove('active');
@@ -52,7 +51,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Eventos
+    const validateForm = (formData) => {
+        const name = formData.get('name')?.trim();
+        const email = formData.get('email')?.trim();
+        const message = formData.get('message')?.trim();
+
+        if (!name || name.length < 2) {
+            showStatusMessage('Nome inválido. Mínimo 2 caracteres.', true);
+            return false;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailRegex.test(email)) {
+            showStatusMessage('E-mail inválido.', true);
+            return false;
+        }
+
+        if (!message || message.length < 5) {
+            showStatusMessage('Mensagem muito curta.', true);
+            return false;
+        }
+
+        return true;
+    };
+
     menuToggle.addEventListener('click', () => {
         const isActive = mobileMenu.classList.toggle('active');
         mobileMenu.classList.toggle('hidden', !isActive);
@@ -72,6 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm?.addEventListener('submit', (e) => {
         e.preventDefault();
         const formData = new FormData(contactForm);
+
+        if (!validateForm(formData)) return;
 
         fetch(contactForm.action, {
             method: 'POST',
@@ -94,10 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 
-    // Inicialização
     updateYear();
     checkScreenSize();
-
-    // Event listener para redimensionamento da tela
     window.addEventListener('resize', checkScreenSize);
 });
