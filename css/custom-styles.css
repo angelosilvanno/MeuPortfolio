@@ -1,33 +1,40 @@
-/* Estilos personalizados adicionais podem ir aqui se necessário */
-.section-title::after { /* Exemplo de estilo personalizado */
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #0ea5e9; /* Cor sky-500 */
-    margin: 8px auto 0;
+/* ================== Global Styles & Resets ================== */
+
+html {
+    scroll-behavior: smooth;
 }
- html {
-    scroll-behavior: smooth; 
-}
+
 body {
-    font-family: 'Inter', sans-serif; /* Fonte padrão */
-    background-color: #f8fafc; /* Cor de fundo padrão */
-    color: #374151; /* Texto padrão */
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; 
+    color: #374151; 
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
+
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
-    font-weight: 600; /* Peso da fonte para títulos */
+    font-weight: 600;
 }
+
+/* ================== Component Styles ================== */
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #0ea5e9; 
+    margin: 8px auto 0;
+}
+
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #0ea5e9; /* sky-500 */
+    background-color: #0ea5e9; 
     color: white;
     border: none;
     border-radius: 50%;
@@ -49,11 +56,20 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
     visibility: visible;
 }
-/* Adicione animações se desejar */
-.project-card, .skill-item {
+
+.project-card,
+.skill-item {
      transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.project-card:hover, .skill-item:hover {
+
+.project-card:hover,
+.skill-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+}
+
+/* ================== Specific Overrides/Adjustments ================== */
+
+section#welcome .max-w-xl > h2 {
+  margin-bottom: 1.5rem;
 }
