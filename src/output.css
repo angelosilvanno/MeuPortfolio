@@ -514,6 +514,9 @@
   .bg-sky-600 {
     background-color: var(--color-sky-600);
   }
+  .bg-sky-700 {
+    background-color: var(--color-sky-700);
+  }
   .bg-stone-50 {
     background-color: var(--color-stone-50);
   }
@@ -779,6 +782,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-sky-700);
+      }
+    }
+  }
+  .hover\:bg-sky-800 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-sky-800);
       }
     }
   }
