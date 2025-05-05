@@ -61,9 +61,13 @@ h1, h2, h3, h4, h5, h6 {
   visibility: visible;
 }
 
-.hidden {
-    display: none;
+.scroll-to-top:hover {
+  background-color: #0284c7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+
+/* ================== Flexbox Utilities ================== */
 
 .sm\:flex {
     @media (width >= 40rem /* 640px */) {
