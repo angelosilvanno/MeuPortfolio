@@ -61,20 +61,15 @@ h1, h2, h3, h4, h5, h6 {
   visibility: visible;
 }
 
-
-/* ================== Utility Classes ================== */
-
 .hidden {
-  display: none;
+    display: none;
 }
 
-/* Media query  */
 .sm\:flex {
-  @media (width >= 40rem /* 640px */) {
-    display: flex;
-  }
+    @media (width >= 40rem /* 640px */) {
+        display: flex;
+    }
 }
-
 
 /* ================== Cards & Hover Effects ================== */
 
