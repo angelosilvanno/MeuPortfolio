@@ -40,8 +40,6 @@
     --container-xl: 36rem;
     --container-2xl: 42rem;
     --container-3xl: 48rem;
-    --text-xs: 0.75rem;
-    --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
@@ -147,7 +145,7 @@
     list-style: none;
   }
   img, svg, video, canvas, audio, iframe, embed, object {
-    display: inline;
+    display: block;
     vertical-align: middle;
   }
   img, video {
