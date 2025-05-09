@@ -49,7 +49,7 @@ Para visualizar e executar o código do meu portfólio localmente, você precisa
 
 ## 👷 Autor  
 
-- **Ângelo Silvano**  - *Front-End Developer* - [angelodesenvolvedor](https://github.com/angelodesenvolvedor)  
+- **Ângelo Silvano**  - *Front-End Developer* - [angelosilvanno](https://github.com/angelodsilvanno)  
 
 ## 📄 Licença  
 
