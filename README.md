@@ -28,7 +28,7 @@ Para visualizar e executar o código do meu portfólio localmente, você precisa
 
 1. Clone o repositório:  
    ```bash  
-   git clone https://github.com/angelodesenvolvedor/MeuPortfolio.git  
+   git clone https://github.com/angelosilvanno/MeuPortfolio.git  
    ```  
 
 2. Entre na pasta do projeto:  
