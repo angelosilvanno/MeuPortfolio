@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Elementos ---
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
-    const navLinks = mobileMenu.querySelectorAll('a');
-    const menuLinks = document.querySelectorAll('#mobile-menu a');
+    const menuLinks = document.querySelectorAll('#mobile-menu a, header nav #menu a[href^="#"]');
     const contactForm = document.getElementById('contactForm');
     const successMessage = document.getElementById('success-message');
     const errorMessage = document.getElementById('error-message');
@@ -15,69 +13,82 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     const welcomeSection = document.getElementById('welcome');
 
-    // --- Constantes ---
     const TIMEOUT = 5000;
-    const MOBILE_BREAKPOINT = 768; // Ponto de quebra para mobile (Tailwind md: 768px)
+    const MOBILE_BREAKPOINT = 768;
+    const SCROLL_OFFSET_PADDING = 20;
+    const DEBOUNCE_DELAY = 250;
+    const THROTTLE_LIMIT = 200;
 
-    // --- Funções auxiliares ---
+    function debounce(func, delay) {
+        let timeout;
+        return function(...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), delay);
+        };
+    }
 
-    // Função para ajustar a margem superior da seção welcome
+    function throttle(func, limit) {
+        let inThrottle;
+        return function(...args) {
+            const context = this;
+            if (!inThrottle) {
+                func.apply(context, args);
+                inThrottle = true;
+                setTimeout(() => inThrottle = false, limit);
+            }
+        };
+    }
+
     const adjustWelcomeMargin = () => {
         if (!welcomeSection || !mobileMenu || !header) return;
-
-        // Verifica se estamos em visualização mobile E se o menu está aberto
-        if (window.innerWidth < MOBILE_BREAKPOINT && !mobileMenu.classList.contains('hidden')) {
+        if (window.innerWidth < MOBILE_BREAKPOINT && mobileMenu.classList.contains('active')) {
             const menuHeight = mobileMenu.offsetHeight;
             welcomeSection.style.marginTop = `${menuHeight}px`;
-            welcomeSection.style.transition = 'margin-top 0.3s ease-in-out'; // Transição suave (opcional)
         } else {
-            // Remove a margem se estiver no desktop ou se o menu estiver fechado
             welcomeSection.style.marginTop = '0px';
         }
     };
 
-    // closeMenu agora também chama adjustWelcomeMargin
     const closeMenu = () => {
         if (!mobileMenu || !menuToggle) return;
         mobileMenu.classList.add('hidden');
         mobileMenu.classList.remove('active');
         menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
 
-        // Reseta o ícone do botão para 'bars'
         const icon = menuToggle.querySelector('i');
         if (icon) {
             icon.classList.remove('fa-times');
             icon.classList.add('fa-bars');
         }
-        adjustWelcomeMargin(); // Ajusta a margem após fechar
+        adjustWelcomeMargin();
     };
 
-    // Função scrollToSection
     const scrollToSection = (targetId) => {
-        const target = document.querySelector(targetId);
-        if (!target) return;
+        const targetElement = document.querySelector(targetId);
+        if (!targetElement) return;
 
         const headerHeight = header?.offsetHeight || 0;
-        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-        const position = targetPosition - headerHeight;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+        const position = targetPosition - headerHeight - SCROLL_OFFSET_PADDING;
 
         window.scrollTo({ top: position, behavior: 'smooth' });
     };
 
-    // checkScreenSize agora também chama adjustWelcomeMargin
     const checkScreenSize = () => {
         if (window.innerWidth >= MOBILE_BREAKPOINT) {
             closeMenu();
         } else {
-            adjustWelcomeMargin();
-             // Garante que o menu esteja escondido se não estiver ativo
-             if (!mobileMenu.classList.contains('active')) {
+            if (!mobileMenu.classList.contains('active')) {
                 mobileMenu.classList.add('hidden');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                mobileMenu.setAttribute('aria-hidden', 'true');
             }
+            adjustWelcomeMargin();
         }
     };
 
-    // Função showStatusMessage
     const showStatusMessage = (message, isError = false) => {
         if (!successMessage || !errorMessage) return;
 
@@ -93,14 +104,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }, TIMEOUT);
     };
 
-    // Função updateYear
     const updateYear = () => {
         if (currentYearSpan) {
             currentYearSpan.textContent = new Date().getFullYear();
         }
     };
 
-    // Função validateForm
     const validateForm = (formData) => {
         const name = formData.get('name')?.trim();
         const email = formData.get('email')?.trim();
@@ -123,44 +132,43 @@ document.addEventListener('DOMContentLoaded', () => {
         return true;
     };
 
-    // --- Event Listeners ---
-
-    // Listener do menuToggle agora chama adjustWelcomeMargin
     if (menuToggle && mobileMenu) {
         menuToggle.addEventListener('click', () => {
             const isActive = mobileMenu.classList.toggle('active');
             mobileMenu.classList.toggle('hidden', !isActive);
-            const icon = menuToggle.querySelector('i');
+            menuToggle.classList.toggle('active', isActive);
+            menuToggle.setAttribute('aria-expanded', isActive.toString());
+            mobileMenu.setAttribute('aria-hidden', (!isActive).toString());
 
-            if (mobileMenu.classList.contains('hidden')) {
-                icon?.classList.remove('fa-times');
-                icon?.classList.add('fa-bars');
-            } else {
+            const icon = menuToggle.querySelector('i');
+            if (isActive) {
                 icon?.classList.remove('fa-bars');
                 icon?.classList.add('fa-times');
+            } else {
+                icon?.classList.remove('fa-times');
+                icon?.classList.add('fa-bars');
             }
-            adjustWelcomeMargin(); // Ajusta a margem após abrir/fechar
+            adjustWelcomeMargin();
         });
     } else {
         console.error("Menu toggle ou mobile menu não encontrado.");
     }
 
-    // Listener dos links do menu - closeMenu já ajusta a margem
     menuLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
             if (href?.startsWith('#')) {
                 e.preventDefault();
-                closeMenu(); // Fecha o menu E ajusta a margem
-                // Pequeno delay para garantir que a margem foi removida antes de calcular a posição
-                setTimeout(() => {
+                if (window.innerWidth < MOBILE_BREAKPOINT && mobileMenu.classList.contains('active')) {
+                    closeMenu();
+                    setTimeout(() => scrollToSection(href), 50);
+                } else {
                     scrollToSection(href);
-                }, 50); // 50ms de delay
+                }
             }
         });
     });
 
-    // Listener do formulário
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -176,34 +184,34 @@ document.addEventListener('DOMContentLoaded', () => {
             const object = {};
             formData.forEach((value, key) => { object[key] = value; });
             const json = JSON.stringify(object);
+            
+            const headerHeightForScroll = header?.offsetHeight || 0;
+            const formScrollOffset = headerHeightForScroll + SCROLL_OFFSET_PADDING;
 
             try {
                 const response = await fetch(contactForm.action, {
                     method: contactForm.method,
                     body: json,
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    }
+                    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
                 });
 
                 if (response.ok) {
                     successMessage.textContent = "Mensagem enviada com sucesso! Obrigado por entrar em contato. Retornarei em breve.";
                     successMessage.classList.remove('hidden');
                     contactForm.reset();
-                    window.scrollTo({ top: contactForm.offsetTop - 150, behavior: 'smooth' });
+                    window.scrollTo({ top: successMessage.offsetTop - formScrollOffset, behavior: 'smooth' });
                 } else {
                     const data = await response.json().catch(() => ({}));
                     const errorText = data.errors ? data.errors.map(error => error.message).join(", ") : "Ocorreu um erro ao enviar. Tente novamente.";
                     errorMessage.textContent = errorText;
                     errorMessage.classList.remove('hidden');
-                    window.scrollTo({ top: contactForm.offsetTop - 150, behavior: 'smooth' });
+                    window.scrollTo({ top: errorMessage.offsetTop - formScrollOffset, behavior: 'smooth' });
                 }
             } catch (error) {
                 console.error('Erro no envio:', error);
                 errorMessage.textContent = 'Erro de conexão. Verifique sua internet e tente novamente.';
                 errorMessage.classList.remove('hidden');
-                window.scrollTo({ top: contactForm.offsetTop - 150, behavior: 'smooth' });
+                window.scrollTo({ top: errorMessage.offsetTop - formScrollOffset, behavior: 'smooth' });
             } finally {
                 buttonText.classList.remove('hidden');
                 buttonSpinner.classList.add('hidden');
@@ -212,32 +220,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Listener do scroll para o botão "Voltar ao Topo"
     if (scrollToTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
+        window.addEventListener('scroll', throttle(() => {
+            if (window.scrollY > 300) {
                 scrollToTopBtn.classList.add('visible');
             } else {
                 scrollToTopBtn.classList.remove('visible');
             }
-        });
+        }, THROTTLE_LIMIT));
 
         scrollToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 
-    // Listener de resize
-    window.addEventListener('resize', checkScreenSize);
+    window.addEventListener('resize', debounce(checkScreenSize, DEBOUNCE_DELAY));
 
-    // --- Inicialização ---
     updateYear();
     checkScreenSize();
-    adjustWelcomeMargin(); // Garante que a margem inicial esteja correta (0px)
-
+    if (menuToggle && mobileMenu) {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+    }
 });
 
-// --- Código Preloader ---
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     if (preloader) {
@@ -247,6 +253,7 @@ window.addEventListener('load', () => {
         }, 500);
     }
 });
+
 window.addEventListener('beforeunload', () => {
     const preloader = document.getElementById('preloader');
     if (preloader) {
