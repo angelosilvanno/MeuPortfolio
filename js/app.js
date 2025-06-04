@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const SCROLL_OFFSET_PADDING = 20;
     const DEBOUNCE_DELAY = 250;
     const THROTTLE_LIMIT = 200;
+    const HEADER_SCROLL_THRESHOLD = 50;
 
     function debounce(func, delay) {
         let timeout;
@@ -132,6 +133,15 @@ document.addEventListener('DOMContentLoaded', () => {
         return true;
     };
 
+    const handleHeaderScroll = () => {
+        if (!header) return;
+        if (window.scrollY > HEADER_SCROLL_THRESHOLD) {
+            header.classList.add('bg-white', 'shadow-md');
+        } else {
+            header.classList.remove('bg-white', 'shadow-md');
+        }
+    };
+
     if (menuToggle && mobileMenu) {
         menuToggle.addEventListener('click', () => {
             const isActive = mobileMenu.classList.toggle('active');
@@ -144,9 +154,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isActive) {
                 icon?.classList.remove('fa-bars');
                 icon?.classList.add('fa-times');
+                if (!header.classList.contains('bg-white')) {
+                    mobileMenu.classList.add('bg-white', 'shadow-md');
+                }
             } else {
                 icon?.classList.remove('fa-times');
                 icon?.classList.add('fa-bars');
+                mobileMenu.classList.remove('bg-white', 'shadow-md');
             }
             adjustWelcomeMargin();
         });
@@ -234,6 +248,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    if (header) {
+        window.addEventListener('scroll', throttle(handleHeaderScroll, THROTTLE_LIMIT / 2));
+    }
+
     window.addEventListener('resize', debounce(checkScreenSize, DEBOUNCE_DELAY));
 
     updateYear();
@@ -241,6 +259,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuToggle && mobileMenu) {
         menuToggle.setAttribute('aria-expanded', 'false');
         mobileMenu.setAttribute('aria-hidden', 'true');
+    }
+    if(header) {
+        handleHeaderScroll();
     }
 });
 
