@@ -115,19 +115,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const name = formData.get('name')?.trim();
         const email = formData.get('email')?.trim();
         const message = formData.get('message')?.trim();
+
         if (!name || name.length < 2) {
             showStatusMessage('Nome inválido. Mínimo 2 caracteres.', true);
             return false;
         }
+
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email || !emailRegex.test(email)) {
-            showStatusMessage('E-mail inválido.', true);
+            showStatusMessage('Formato de e-mail inválido.', true);
             return false;
         }
+
+        const allowedDomains = ['gmail.com', 'outlook.com', 'hotmail.com', 'yahoo.com', 'icloud.com', 'live.com'];
+        const emailDomain = email.split('@')[1]?.toLowerCase();
+
+        if (!emailDomain || !allowedDomains.includes(emailDomain)) {
+            showStatusMessage('Domínio de e-mail não permitido. Por favor, utilize um provedor conhecido (Ex: Gmail, Outlook).', true);
+            return false;
+        }
+
         if (!message || message.length < 5) {
-            showStatusMessage('Mensagem muito curta.', true);
+            showStatusMessage('Mensagem muito curta. Mínimo 5 caracteres.', true);
             return false;
         }
+
         successMessage?.classList.add('hidden');
         errorMessage?.classList.add('hidden');
         return true;
