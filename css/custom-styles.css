@@ -4,6 +4,13 @@ html {
   scroll-behavior: smooth;
 }
 
+p {
+  line-height: 1.6; /* Um valor ligeiramente maior que 1.5, muito usado para legibilidade */
+}
+
+h1, h2, h3 {
+  line-height: 1.3; /* Títulos geralmente têm um line-height menor */
+}
 
 #welcome {
     transition: margin-top 0.3s ease-in-out;
