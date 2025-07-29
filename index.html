@@ -7,6 +7,7 @@
     <meta name="description" content="Ângelo Silvano | Dev, um desenvolvedor web. Confira meus projetos e entre em contato.">
     <meta name="google-site-verification" content="googlebc5a2f46b8024cde.html" />
     <link rel="shortcut icon" href="./image/portfolio.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/custom-styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./src/output.css">
 </head>
@@ -66,8 +67,14 @@
                     </div>
                 </div>
                 <div class="w-64 md:w-80 lg:w-96 mt-10 md:mt-0 rounded-lg shadow-xl overflow-hidden border-4 border-blue-500 group">
-                    <img src="./image/angeloprogramador.avif" alt="Ilustração de Ângelo Silvano, desenvolvedor web, programando"
-                         class="w-full h-auto transition-transform duration-500 group-hover:scale-110">
+                    <img 
+                        srcset="./image/angeloprogramador.avif 320w,
+                                ./image/angeloprogramador.avif 640w,
+                                ./image/angeloprogramador.avif 960w"
+                        sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
+                        src="./image/angeloprogramador.avif"
+                        alt="Ilustração de Ângelo Silvano, desenvolvedor web, programando"
+                        class="w-full h-auto transition-transform duration-500 group-hover:scale-110">
                 </div>
             </div>
 
@@ -94,7 +101,15 @@
 
      <section id="about" class="container mx-auto px-4 py-16 md:py-20 scroll-mt-20">
       <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
-          <img src="./image/angelo.avif" alt="Foto de Ângelo Silvano, um desenvolvedor web" loading="lazy" class="rounded-full shadow-lg w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 object-cover border-4 border-white">
+          <img 
+              srcset="./image/angelo.avif 256w,
+                      ./image/angelo.avif 384w,
+                      ./image/angelo.avif 512w"
+              sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, 256px"
+              src="./image/angelo.avif"
+              alt="Foto de Ângelo Silvano, um desenvolvedor web" 
+              loading="lazy"
+              class="rounded-full shadow-lg w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 object-cover border-4 border-white">
       <div class="text-center md:text-left max-w-2xl">
          <h2 class="text-3xl font-bold mb-6 section-title text-blue-700">Sobre Mim</h2>
         <p class="text-lg leading-relaxed text-slate-700 space-y-4 text-justify">
@@ -187,7 +202,7 @@
             <p class="text-lg text-center mb-12 text-slate-700 max-w-3xl mx-auto">
             Confira alguns dos projetos que desenvolvi, os desafios que superei e as tecnologias utilizadas:
             </p>
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 project-grid-wrapper">
+            <div class="grid auto-rows-fr gap-8 md:grid-cols-2">
                 <div class="bg-white shadow-md rounded-lg p-6 project-card flex flex-col h-full">
                     <h3 class="text-xl font-semibold mb-2 text-blue-700">VibePlay</h3>
                     <div class="text-sm text-justify text-slate-700 flex-grow mb-2">
