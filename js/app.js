@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- SELEÇÃO DE ELEMENTOS ---
     const header = document.querySelector('header');
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -9,13 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contactForm');
     const welcomeSection = document.getElementById('welcome');
 
-    // --- CONSTANTES DE CONFIGURAÇÃO ---
     const HEADER_SCROLL_THRESHOLD = 50;
     const SCROLL_TOP_THRESHOLD = 300;
     const THROTTLE_DELAY = 100;
     const DEBOUNCE_DELAY = 200;
+    const MENU_TIMEOUT_DURATION = 5000;
 
-    // --- FUNÇÕES DE UTILIDADE (PERFORMANCE) ---
+    let menuTimeout;
+
     function throttle(func, limit) {
         let inThrottle;
         return function(...args) {
@@ -34,8 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
             timeout = setTimeout(() => func.apply(this, args), delay);
         };
     }
-
-    // --- HANDLERS DE EVENTOS ---
 
     const handleHeaderScroll = () => {
         if (window.scrollY > HEADER_SCROLL_THRESHOLD) {
@@ -73,8 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
     
-    // CORREÇÃO APLICADA AQUI
     const toggleMobileMenu = () => {
+        clearTimeout(menuTimeout);
         const isHidden = mobileMenu.classList.toggle('hidden');
         const icon = menuToggle.querySelector('i');
         
@@ -85,16 +83,17 @@ document.addEventListener('DOMContentLoaded', () => {
         
         menuToggle.setAttribute('aria-expanded', !isHidden);
 
-        // Empurra o conteúdo para baixo QUANDO o menu está aberto
         if (!isHidden) {
             const menuHeight = mobileMenu.offsetHeight;
             welcomeSection.style.marginTop = `${menuHeight}px`;
+            menuTimeout = setTimeout(closeMobileMenu, MENU_TIMEOUT_DURATION);
         } else {
             welcomeSection.style.marginTop = '0px';
         }
     };
 
     const closeMobileMenu = () => {
+        clearTimeout(menuTimeout);
         mobileMenu.classList.add('hidden');
         const icon = menuToggle.querySelector('i');
         if (icon) {
@@ -102,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             icon.classList.remove('fa-times');
         }
         menuToggle.setAttribute('aria-expanded', 'false');
-        welcomeSection.style.marginTop = '0px'; // Garante que a margem seja removida ao fechar
+        welcomeSection.style.marginTop = '0px';
     };
 
     const handleFormSubmit = async (event) => {
@@ -178,8 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
             submitButton.disabled = false;
         }
     };
-
-    // --- INICIALIZAÇÃO E EVENT LISTENERS ---
 
     if (menuToggle && mobileMenu) {
         menuToggle.addEventListener('click', toggleMobileMenu);
