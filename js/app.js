@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    // 1. LÓGICA DO MENU MOBILE
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileMenuLinks = mobileMenu.querySelectorAll('a');
@@ -27,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. LÓGICA DO BOTÃO "VOLTAR AO TOPO"
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
     if (scrollToTopBtn) {
         window.addEventListener('scroll', () => {
@@ -43,13 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. ATUALIZAÇÃO DO ANO NO RODAPÉ
     const currentYearSpan = document.getElementById('current-year');
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 
-    // 4. FORMULÁRIO DE CONTATO COM VALIDAÇÃO COMPLETA E ENVIO ASSÍNCRONO
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
@@ -70,21 +65,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const message = formData.get('message').trim();
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-            // VALIDAÇÃO DE NOME
             if (name.length < 2) {
                 errorMessage.querySelector('span').textContent = "Por favor, insira um nome válido (mínimo 2 caracteres).";
                 errorMessage.classList.remove('hidden');
                 return;
             }
 
-            // VALIDAÇÃO DE FORMATO DE E-MAIL
             if (!emailRegex.test(email)) {
                 errorMessage.querySelector('span').textContent = "Por favor, insira um endereço de e-mail válido.";
                 errorMessage.classList.remove('hidden');
                 return;
             }
 
-            // VALIDAÇÃO DE DOMÍNIO DE E-MAIL
             const allowedDomains = ['gmail.com', 'outlook.com', 'hotmail.com', 'yahoo.com', 'icloud.com', 'live.com', 'uol.com.br', 'bol.com.br'];
             const emailDomain = email.split('@')[1];
 
@@ -94,14 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // VALIDAÇÃO DE MENSAGEM
             if (message.length < 10) {
                 errorMessage.querySelector('span').textContent = "Sua mensagem precisa ter pelo menos 10 caracteres.";
                 errorMessage.classList.remove('hidden');
                 return;
             }
 
-            // Inicia o processo de envio
             buttonText.classList.add('hidden');
             buttonSpinner.classList.remove('hidden');
             submitButton.disabled = true;
@@ -132,7 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. INICIALIZAÇÃO DO SCROLLREVEAL
     if (typeof ScrollReveal !== 'undefined') {
         const sr = ScrollReveal({
             origin: 'bottom',
