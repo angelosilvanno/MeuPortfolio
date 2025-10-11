@@ -226,9 +226,6 @@
   }
 }
 @layer utilities {
-  .visible {
-    visibility: visible;
-  }
   .absolute {
     position: absolute;
   }
@@ -270,9 +267,6 @@
   }
   .my-2 {
     margin-block: calc(var(--spacing) * 2);
-  }
-  .-mt-20 {
-    margin-top: calc(var(--spacing) * -20);
   }
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
@@ -639,8 +633,8 @@
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
   }
-  .pt-5 {
-    padding-top: calc(var(--spacing) * 5);
+  .pt-18 {
+    padding-top: calc(var(--spacing) * 18);
   }
   .text-center {
     text-align: center;
@@ -939,11 +933,6 @@
   .sm\:inline {
     @media (width >= 40rem) {
       display: inline;
-    }
-  }
-  .md\:mt-0 {
-    @media (width >= 48rem) {
-      margin-top: calc(var(--spacing) * 0);
     }
   }
   .md\:flex {
