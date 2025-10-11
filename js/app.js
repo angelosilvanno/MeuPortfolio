@@ -1,243 +1,129 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. LÓGICA DO MENU MOBILE
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
-    const menuLinks = document.querySelectorAll('#mobile-menu a, header nav #menu a[href^="#"]');
-    const contactForm = document.getElementById('contactForm');
-    const successMessage = document.getElementById('success-message');
-    const errorMessage = document.getElementById('error-message');
-    const currentYearSpan = document.getElementById('current-year');
-    const submitButton = document.getElementById('submitButton');
-    const buttonText = document.getElementById('buttonText');
-    const buttonSpinner = document.getElementById('buttonSpinner');
-    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-    const header = document.querySelector('header');
-    const welcomeSection = document.getElementById('welcome');
-
-    const TIMEOUT = 5000;
-    const MOBILE_BREAKPOINT = 768;
-    const SCROLL_OFFSET_PADDING = 20;
-    const DEBOUNCE_DELAY = 250;
-    const THROTTLE_LIMIT = 200;
-    const HEADER_SCROLL_THRESHOLD = 50;
-
-    function debounce(func, delay) {
-        let timeout;
-        return function(...args) {
-            clearTimeout(timeout);
-            timeout = setTimeout(() => func.apply(this, args), delay);
-        };
-    }
-
-    function throttle(func, limit) {
-        let inThrottle;
-        return function(...args) {
-            const context = this;
-            if (!inThrottle) {
-                func.apply(context, args);
-                inThrottle = true;
-                setTimeout(() => inThrottle = false, limit);
-            }
-        };
-    }
-
-    const adjustWelcomeMargin = () => {
-        if (!welcomeSection || !mobileMenu || !header) return;
-        if (window.innerWidth < MOBILE_BREAKPOINT && mobileMenu.classList.contains('active')) {
-            const menuHeight = mobileMenu.offsetHeight;
-            welcomeSection.style.marginTop = `${menuHeight}px`;
-        } else {
-            welcomeSection.style.marginTop = '0px';
-        }
-    };
-
-    const closeMenu = () => {
-        if (!mobileMenu || !menuToggle) return;
-        mobileMenu.classList.add('hidden');
-        mobileMenu.classList.remove('active');
-        menuToggle.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        mobileMenu.setAttribute('aria-hidden', 'true');
-
-        const icon = menuToggle.querySelector('i');
-        if (icon) {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        }
-        adjustWelcomeMargin();
-    };
-
-    const scrollToSection = (targetId) => {
-        const targetElement = document.querySelector(targetId);
-        if (!targetElement) return;
-
-        const headerHeight = header?.offsetHeight || 0;
-        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-        const position = targetPosition - headerHeight - SCROLL_OFFSET_PADDING;
-
-        window.scrollTo({ top: position, behavior: 'smooth' });
-    };
-
-    const checkScreenSize = () => {
-        if (window.innerWidth >= MOBILE_BREAKPOINT) {
-            closeMenu();
-        } else {
-            if (!mobileMenu.classList.contains('active')) {
-                mobileMenu.classList.add('hidden');
-                menuToggle.setAttribute('aria-expanded', 'false');
-                mobileMenu.setAttribute('aria-hidden', 'true');
-            }
-            adjustWelcomeMargin();
-        }
-    };
-
-    const showStatusMessage = (message, isError = false) => {
-        if (!successMessage || !errorMessage) return;
-
-        const messageDiv = isError ? errorMessage : successMessage;
-        const otherDiv = isError ? successMessage : errorMessage;
-
-        messageDiv.textContent = message;
-        messageDiv.classList.remove('hidden');
-        otherDiv.classList.add('hidden');
-
-        setTimeout(() => {
-            messageDiv.classList.add('hidden');
-        }, TIMEOUT);
-    };
-
-    const updateYear = () => {
-        if (currentYearSpan) {
-            currentYearSpan.textContent = new Date().getFullYear();
-        }
-    };
-
-    const validateForm = (formData) => {
-        const name = formData.get('name')?.trim();
-        const email = formData.get('email')?.trim();
-        const message = formData.get('message')?.trim();
-
-        if (!name || name.length < 2) {
-            showStatusMessage('Nome inválido. Mínimo 2 caracteres.', true);
-            return false;
-        }
-
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!email || !emailRegex.test(email)) {
-            showStatusMessage('Formato de e-mail inválido.', true);
-            return false;
-        }
-
-        const allowedDomains = ['gmail.com', 'outlook.com', 'hotmail.com', 'yahoo.com', 'icloud.com', 'live.com'];
-        const emailDomain = email.split('@')[1]?.toLowerCase();
-
-        if (!emailDomain || !allowedDomains.includes(emailDomain)) {
-            showStatusMessage('Domínio de e-mail não permitido. Por favor, utilize um provedor conhecido (Ex: Gmail, Outlook).', true);
-            return false;
-        }
-
-        if (!message || message.length < 5) {
-            showStatusMessage('Mensagem muito curta. Mínimo 5 caracteres.', true);
-            return false;
-        }
-
-        successMessage?.classList.add('hidden');
-        errorMessage?.classList.add('hidden');
-        return true;
-    };
-
-    const handleHeaderScroll = () => {
-        if (!header) return;
-        if (window.scrollY > HEADER_SCROLL_THRESHOLD) {
-            header.classList.add('bg-white', 'shadow-md');
-        } else {
-            header.classList.remove('bg-white', 'shadow-md');
-        }
-    };
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
 
     if (menuToggle && mobileMenu) {
         menuToggle.addEventListener('click', () => {
-            const isActive = mobileMenu.classList.toggle('active');
-            mobileMenu.classList.toggle('hidden', !isActive);
-            menuToggle.classList.toggle('active', isActive);
-            menuToggle.setAttribute('aria-expanded', isActive.toString());
-            mobileMenu.setAttribute('aria-hidden', (!isActive).toString());
-
+            mobileMenu.classList.toggle('hidden');
             const icon = menuToggle.querySelector('i');
-            if (isActive) {
-                icon?.classList.remove('fa-bars');
-                icon?.classList.add('fa-times');
-                if (!header.classList.contains('bg-white')) {
-                    mobileMenu.classList.add('bg-white', 'shadow-md');
-                }
-            } else {
-                icon?.classList.remove('fa-times');
-                icon?.classList.add('fa-bars');
-                mobileMenu.classList.remove('bg-white', 'shadow-md');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
             }
-            adjustWelcomeMargin();
         });
-    } else {
-        console.error("Menu toggle ou mobile menu não encontrado.");
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = menuToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
     }
 
-    menuLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            const href = link.getAttribute('href');
-            if (href?.startsWith('#')) {
-                e.preventDefault();
-                if (window.innerWidth < MOBILE_BREAKPOINT && mobileMenu.classList.contains('active')) {
-                    closeMenu();
-                    setTimeout(() => scrollToSection(href), 50);
-                } else {
-                    scrollToSection(href);
-                }
+    // 2. LÓGICA DO BOTÃO "VOLTAR AO TOPO"
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    if (scrollToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
             }
         });
-    });
 
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // 3. ATUALIZAÇÃO DO ANO NO RODAPÉ
+    const currentYearSpan = document.getElementById('current-year');
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
+
+    // 4. FORMULÁRIO DE CONTATO COM VALIDAÇÃO COMPLETA E ENVIO ASSÍNCRONO
+    const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const formData = new FormData(contactForm);
-            if (!validateForm(formData)) return;
 
-            buttonText.classList.add('hidden');
-            buttonSpinner.classList.remove('hidden');
-            submitButton.disabled = true;
+            const submitButton = document.getElementById('submitButton');
+            const buttonText = document.getElementById('buttonText');
+            const buttonSpinner = document.getElementById('buttonSpinner');
+            const successMessage = document.getElementById('success-message');
+            const errorMessage = document.getElementById('error-message');
+            
             successMessage.classList.add('hidden');
             errorMessage.classList.add('hidden');
 
-            const object = {};
-            formData.forEach((value, key) => { object[key] = value; });
-            const json = JSON.stringify(object);
-            
-            const headerHeightForScroll = header?.offsetHeight || 0;
-            const formScrollOffset = headerHeightForScroll + SCROLL_OFFSET_PADDING;
+            const formData = new FormData(contactForm);
+            const name = formData.get('name').trim();
+            const email = formData.get('email').trim();
+            const message = formData.get('message').trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+            // VALIDAÇÃO DE NOME
+            if (name.length < 2) {
+                errorMessage.querySelector('span').textContent = "Por favor, insira um nome válido (mínimo 2 caracteres).";
+                errorMessage.classList.remove('hidden');
+                return;
+            }
+
+            // VALIDAÇÃO DE FORMATO DE E-MAIL
+            if (!emailRegex.test(email)) {
+                errorMessage.querySelector('span').textContent = "Por favor, insira um endereço de e-mail válido.";
+                errorMessage.classList.remove('hidden');
+                return;
+            }
+
+            // VALIDAÇÃO DE DOMÍNIO DE E-MAIL
+            const allowedDomains = ['gmail.com', 'outlook.com', 'hotmail.com', 'yahoo.com', 'icloud.com', 'live.com', 'uol.com.br', 'bol.com.br'];
+            const emailDomain = email.split('@')[1];
+
+            if (!allowedDomains.includes(emailDomain)) {
+                errorMessage.querySelector('span').textContent = "Por favor, utilize um provedor de e-mail conhecido (Ex: Gmail, Outlook).";
+                errorMessage.classList.remove('hidden');
+                return;
+            }
+
+            // VALIDAÇÃO DE MENSAGEM
+            if (message.length < 10) {
+                errorMessage.querySelector('span').textContent = "Sua mensagem precisa ter pelo menos 10 caracteres.";
+                errorMessage.classList.remove('hidden');
+                return;
+            }
+
+            // Inicia o processo de envio
+            buttonText.classList.add('hidden');
+            buttonSpinner.classList.remove('hidden');
+            submitButton.disabled = true;
+            
             try {
                 const response = await fetch(contactForm.action, {
-                    method: contactForm.method,
-                    body: json,
-                    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
                 });
 
                 if (response.ok) {
-                    successMessage.textContent = "Mensagem enviada com sucesso! Obrigado por entrar em contato. Retornarei em breve.";
                     successMessage.classList.remove('hidden');
                     contactForm.reset();
-                    window.scrollTo({ top: successMessage.offsetTop - formScrollOffset, behavior: 'smooth' });
                 } else {
-                    const data = await response.json().catch(() => ({}));
-                    const errorText = data.errors ? data.errors.map(error => error.message).join(", ") : "Ocorreu um erro ao enviar. Tente novamente.";
-                    errorMessage.textContent = errorText;
-                    errorMessage.classList.remove('hidden');
-                    window.scrollTo({ top: errorMessage.offsetTop - formScrollOffset, behavior: 'smooth' });
+                    throw new Error('Falha no envio do formulário.');
                 }
             } catch (error) {
-                console.error('Erro no envio:', error);
-                errorMessage.textContent = 'Erro de conexão. Verifique sua internet e tente novamente.';
+                errorMessage.querySelector('span').textContent = "Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.";
                 errorMessage.classList.remove('hidden');
-                window.scrollTo({ top: errorMessage.offsetTop - formScrollOffset, behavior: 'smooth' });
             } finally {
                 buttonText.classList.remove('hidden');
                 buttonSpinner.classList.add('hidden');
@@ -246,50 +132,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (scrollToTopBtn) {
-        window.addEventListener('scroll', throttle(() => {
-            if (window.scrollY > 300) {
-                scrollToTopBtn.classList.add('visible');
-            } else {
-                scrollToTopBtn.classList.remove('visible');
-            }
-        }, THROTTLE_LIMIT));
-
-        scrollToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+    // 5. INICIALIZAÇÃO DO SCROLLREVEAL
+    if (typeof ScrollReveal !== 'undefined') {
+        const sr = ScrollReveal({
+            origin: 'bottom',
+            distance: '40px',
+            duration: 1000,
+            delay: 200,
+            reset: false,
         });
-    }
 
-    if (header) {
-        window.addEventListener('scroll', throttle(handleHeaderScroll, THROTTLE_LIMIT / 2));
-    }
-
-    window.addEventListener('resize', debounce(checkScreenSize, DEBOUNCE_DELAY));
-
-    updateYear();
-    checkScreenSize();
-    if (menuToggle && mobileMenu) {
-        menuToggle.setAttribute('aria-expanded', 'false');
-        mobileMenu.setAttribute('aria-hidden', 'true');
-    }
-    if(header) {
-        handleHeaderScroll();
-    }
-});
-
-window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-        preloader.classList.add('fade-out');
-        setTimeout(() => {
-            preloader.remove();
-        }, 500);
-    }
-});
-
-window.addEventListener('beforeunload', () => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-        preloader.classList.remove('fade-out');
+        sr.reveal('#welcome h1, #welcome .text-lg, #welcome .text-xl', { origin: 'left' });
+        sr.reveal('#welcome .gap-3, #welcome .gap-4, #welcome .gap-x-6', { origin: 'left', delay: 400 });
+        sr.reveal('#welcome .flex-shrink-0', { origin: 'right', duration: 1200 });
+        
+        sr.reveal('.section-title');
+        
+        sr.reveal('#about > div', { origin: 'left' });
+        sr.reveal('#services .grid > div', { interval: 150 });
+        sr.reveal('#projects .grid > div', { interval: 150 });
+        sr.reveal('#skills .grid > div', { interval: 100 });
+        sr.reveal('#contact form > div, #contact form > button', { interval: 150 });
     }
 });
