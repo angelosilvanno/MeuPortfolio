@@ -293,6 +293,9 @@
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -347,6 +350,9 @@
   .h-56 {
     height: calc(var(--spacing) * 56);
   }
+  .h-full {
+    height: 100%;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
@@ -385,6 +391,9 @@
   }
   .flex-shrink-0 {
     flex-shrink: 0;
+  }
+  .flex-grow {
+    flex-grow: 1;
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
@@ -965,11 +974,6 @@
       height: calc(var(--spacing) * 72);
     }
   }
-  .md\:h-full {
-    @media (width >= 48rem) {
-      height: 100%;
-    }
-  }
   .md\:w-56 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 56);
@@ -1143,6 +1147,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 section#welcome .max-w-xl > h2 {
   margin-bottom: 1.5rem;
+}
+.project-card .project-bottom-area {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+.project-card .project-bottom-area p.text-xs {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+.project-card .project-bottom-area > div.flex-wrap {
+  margin-bottom: 0.75rem;
+}
+.project-card .project-bottom-area > div.flex.justify-between {
+  margin-top: 0;
 }
 @property --tw-rotate-x {
   syntax: "*";
