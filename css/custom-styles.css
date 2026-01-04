@@ -117,30 +117,3 @@ section#welcome .max-w-xl > h2 {
   margin-bottom: 1.5rem;
 }
 
-/* custom-styles.css */
-
-/* Ajustes para alinhar tecnologias e botões nos cards de projeto */
-.project-card .project-bottom-area {
-    /* Garante que o bloco de tecnologias e botões seja um item flex que adere ao fundo */
-    display: flex;
-    flex-direction: column;
-    /* Adiciona um padding-top para o conteúdo dentro da área, criando uma margem superior */
-    padding-top: 1rem; /* Equivalente a mt-4 do Tailwind, ajustável */
-}
-
-.project-card .project-bottom-area p.text-xs {
-    /* Ajusta a margem superior da label "Tecnologias:" se necessário, embora mb-1 já ajude */
-    margin-top: 0; /* Remove qualquer margin-top extra, se houver */
-    margin-bottom: 0.25rem; /* Um pequeno espaço entre a label e as tags, equivalente a mb-1 */
-}
-
-.project-card .project-bottom-area > div.flex-wrap {
-    /* Ajusta a margem inferior das tags de tecnologia, se mb-3 (0.75rem) for muito */
-    margin-bottom: 0.75rem; /* Mantém o mb-3 do HTML ou ajuste para, por exemplo, 0.5rem (mb-2) */
-}
-
-.project-card .project-bottom-area > div.flex.justify-between {
-    /* Garante que os botões não tenham margin-top extra, já que o wrapper tem mt-auto */
-    margin-top: 0;
-}
-
