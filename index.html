@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-M-2023-11-09-08-34-45-763">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ângelo Silvano | Desenvolvedor</title>
     <meta name="description" content="Ângelo Silvano, desenvolvedor front-end. Transformo ideias em aplicações web que as pessoas curtem usar. Confira meus projetos e entre em contato.">
@@ -168,7 +168,6 @@
             <p class="text-lg text-center mb-12 text-slate-700 max-w-3xl mx-auto">
                 Confira alguns dos projetos que desenvolvi, os desafios que superei e as tecnologias utilizadas:
             </p>
-            <!-- Alterado para grid-cols-1 em todas as telas -->
             <div class="grid grid-cols-1 gap-8 items-stretch"> 
                 <div class="bg-white shadow-md rounded-lg p-6 project-card flex flex-col h-full">
                     <div class="flex-grow">
@@ -367,56 +366,41 @@
             </div>
         </section>
 
-        <section id="skills" class="container mx-auto px-4 py-16 md:py-20 bg-white scroll-mt-20">
+        <!-- SEÇÃO Hard Skills COM ALPINE.JS -->
+        <section id="skills" class="container mx-auto px-4 py-16 md:py-20 bg-white scroll-mt-20" 
+            x-data="{ 
+                skills: [
+                    { name: 'HTML5', icon: 'fab fa-html5 text-orange-500' },
+                    { name: 'CSS3', icon: 'fab fa-css3-alt text-blue-500' },
+                    { name: 'JavaScript', icon: 'fab fa-js-square text-yellow-500' },
+                    { name: 'Angular', icon: 'fab fa-angular text-red-600' },
+                    { name: 'Next.js', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+                    { name: 'Tailwind CSS', img: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tailwindcss.svg' },
+                    { name: 'TypeScript', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+                    { name: 'Bootstrap', icon: 'fab fa-bootstrap text-purple-600' },
+                    { name: 'Vite', img: 'https://vitejs.dev/logo.svg' },
+                    { name: 'Java', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
+                    { name: 'PostgreSQL', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' }
+                ]
+            }">
             <div class="mb-16">
                 <h2 class="text-3xl font-bold text-center mb-4 section-title text-blue-700">Hard Skills</h2>
                 <div class="w-16 h-1 bg-blue-600 mx-auto mb-6"></div>
                 <p class="text-lg text-center mb-12 text-slate-700">Tecnologias e ferramentas que utilizo para construir projetos:</p>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 justify-center">
-                    <div class="flex flex-col items-center text-center p-4 bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <i class="fab fa-html5 text-5xl text-orange-500 mb-2"></i>
-                        <span class="font-medium text-slate-700">HTML5</span>
-                    </div>
-                    <div class="flex flex-col items-center text-center p-4 bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <i class="fab fa-css3-alt text-5xl text-blue-500 mb-2"></i>
-                        <span class="font-medium text-slate-700">CSS3</span>
-                    </div>
-                    <div class="flex flex-col items-center text-center p-4 bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <i class="fab fa-js-square text-5xl text-yellow-500 mb-2"></i>
-                        <span class="font-medium text-slate-700">JavaScript</span>
-                    </div>
-                    <div class="flex flex-col items-center text-center p-4 bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <i class="fab fa-angular text-5xl text-red-600 mb-2"></i>
-                        <span class="font-medium text-slate-700">Angular</span>
-                    </div>
-                    <div class="flex flex-col items-center text-center p-4 bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" class="w-12 h-12 mb-2" />
-                        <span class="font-medium text-slate-700">Next.js</span>
-                    </div>
-                    <div class="flex flex-col items-center text-center p-4 bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tailwindcss.svg" alt="Tailwind CSS" class="w-12 h-12 mb-2" />
-                        <span class="font-medium text-slate-700">Tailwind CSS</span>
-                    </div>
-                    <div class="flex flex-col items-center text-center p-4 bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="w-12 h-12 mb-2" />
-                        <span class="font-medium text-slate-700">TypeScript</span>
-                    </div>
-                    <div class="flex flex-col items-center text-center p-4 bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <i class="fab fa-bootstrap text-5xl text-purple-600 mb-2"></i>
-                        <span class="font-medium text-slate-700">Bootstrap</span>
-                    </div>
-                    <div class="flex flex-col items-center text-center p-4 bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <img src="https://vitejs.dev/logo.svg" alt="Vite" class="w-12 h-12 mb-2" />
-                        <span class="font-medium text-slate-700">Vite</span>
-                    </div>
-                    <div class="flex flex-col items-center text-center p-4 bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="w-12 h-12 mb-2" />
-                        <span class="font-medium text-slate-700">Java</span>
-                    </div>
-                    <div class="flex flex-col items-center text-center p-4 bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="w-12 h-12 mb-2" />
-                        <span class="font-medium text-slate-700">PostgreSQL</span>
-                    </div>
+                    
+                    <template x-for="skill in skills" :key="skill.name">
+                        <div class="flex flex-col items-center text-center p-4 bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <template x-if="skill.icon">
+                                <i :class="skill.icon + ' text-5xl mb-2'"></i>
+                            </template>
+                            <template x-if="skill.img">
+                                <img :src="skill.img" :alt="skill.name" class="w-12 h-12 mb-2" />
+                            </template>
+                            <span class="font-medium text-slate-700" x-text="skill.name"></span>
+                        </div>
+                    </template>
+
                 </div>
             </div>
         </section>
