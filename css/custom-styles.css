@@ -1,119 +1,58 @@
-/* ================== Global Styles & Resets ================== */
-
-html {
-  scroll-behavior: smooth;
+:root {
+  --primary: #1e40af;
+  --accent: #0ea5e9;
 }
 
-p {
-  line-height: 1.6; /* Um valor ligeiramente maior que 1.5, muito usado para legibilidade */
-}
-
-h1, h2, h3 {
-  line-height: 1.3; /* Títulos geralmente têm um line-height menor */
-}
-
-#welcome {
-    transition: margin-top 0.3s ease-in-out;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f8fafc;
-  color: #374151;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+  font-family: 'Inter', sans-serif; /* Certifique-se de importar a fonte */
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-  font-weight: 600;
-}
-
-.project-grid-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-@media (max-width: 600px) {
-  .project-grid-wrapper {
-    grid-template-columns: 1fr; 
-  }
-}
-
-
-/* ================== Section Titles ================== */
-
+/* Títulos com linha decorativa */
 .section-title::after {
   content: '';
   display: block;
   width: 50px;
   height: 3px;
-  background-color: #0ea5e9;
-  margin: 8px auto 0;
+  background-color: var(--accent);
+  margin-top: 8px;
 }
 
+.text-center.section-title::after { margin-left: auto; margin-right: auto; }
 
-/* ================== Scroll to Top Button ================== */
-
+/* Botão de Scroll */
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #1e40af; 
+  background-color: var(--primary);
   color: white;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  display: none; 
+  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .scroll-to-top.show {
   opacity: 1;
-  transform: translateY(0);
+  visibility: visible;
 }
 
-.scroll-to-top:hover {
-  background-color: #1d4ed8; 
-    transform: translateY(-5px);
-}
-
-@media (min-width: 768px) { 
-    .scroll-to-top {
-      display: flex; 
-    }
-}
-
-/* ================== Cards & Hover Effects ================== */
-
-.project-card,
-.skill-item {
+/* Hover Effects unificados */
+.project-card, .skill-item {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover,
-.skill-item:hover {
+.project-card:hover, .skill-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
-
-
-/* ================== Section-Specific Adjustments ================== */
-
-section#welcome .max-w-xl > h2 {
-  margin-bottom: 1.5rem;
-}
-
