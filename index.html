@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,13 +10,11 @@
 <link rel="stylesheet" href="css/custom-styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-<!-- Tailwind via CDN para garantir funcionamento imediato no teste, mantenha seu output.css local se preferir -->
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="./src/output.css">
 </head>
 <body class="font-sans bg-gradient-to-b from-slate-50 to-white text-slate-800">
-code
-Code
+
 <header class="fixed w-full top-0 z-50 transition-all duration-300 ease-in-out bg-white/90 backdrop-blur-md shadow-sm">
     <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
         <a href="#welcome" aria-label="Ângelo Silvano - Voltar ao início" class="text-xl font-mono font-bold text-blue-700 hover:text-blue-600 transition-colors">
@@ -175,11 +172,8 @@ Code
     
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch"> 
             
-            <!-- CARD VibePlay -->
             <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col h-full overflow-hidden">
-                <!-- ÁREA DA IMAGEM (Preview) -->
                 <div class="h-48 bg-slate-100 w-full overflow-hidden group relative">
-                    <!-- Substitua este src pela imagem real do seu projeto (ex: print da tela) -->
                     <img src="https://placehold.co/600x400/2563eb/white?text=Preview+VibePlay" alt="Preview do VibePlay" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <a href="https://vibeplay-web.vercel.app/" target="_blank" class="text-white font-semibold border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition-colors">Visitar Site</a>
@@ -204,8 +198,10 @@ Code
                             <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">TypeScript</span>
                         </div>
                         <div class="flex gap-3">
-                            <a href="https://vibeplay-web.vercel.app/" target="_blank" class="flex-1 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm">Ver Projeto</a>
-                            <a href="https://github.com/angelosilvanno/vibe-play" target="_blank" class="px-4 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors" title="Código no GitHub">
+                            <a href="https://vibeplay-web.vercel.app/" target="_blank" class="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5">
+                                Ver Projeto <i class="fas fa-external-link-alt text-xs"></i>
+                            </a>
+                            <a href="https://github.com/angelosilvanno/vibe-play" target="_blank" class="px-4 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors flex items-center justify-center" title="Código no GitHub">
                                 <i class="fab fa-github text-lg"></i>
                             </a>
                         </div>
@@ -213,7 +209,6 @@ Code
                 </div>
             </div>
 
-            <!-- CARD FootCoder -->
             <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col h-full overflow-hidden">
                 <div class="h-48 bg-slate-100 w-full overflow-hidden group relative">
                     <img src="https://placehold.co/600x400/1e293b/white?text=Preview+FootCoder" alt="Preview do FootCoder" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
@@ -241,8 +236,10 @@ Code
                             <span class="bg-purple-50 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-md">Bootstrap</span>
                         </div>
                         <div class="flex gap-3">
-                            <a href="https://foot-coder.vercel.app/" target="_blank" class="flex-1 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm">Ver Projeto</a>
-                            <a href="https://github.com/angelosilvanno/FootCoder" target="_blank" class="px-4 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors" title="Código no GitHub">
+                            <a href="https://foot-coder.vercel.app/" target="_blank" class="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5">
+                                Ver Projeto <i class="fas fa-external-link-alt text-xs"></i>
+                            </a>
+                            <a href="https://github.com/angelosilvanno/FootCoder" target="_blank" class="px-4 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors flex items-center justify-center" title="Código no GitHub">
                                 <i class="fab fa-github text-lg"></i>
                             </a>
                         </div>
@@ -250,7 +247,6 @@ Code
                 </div>
             </div>
 
-            <!-- CARD Lógica Quiz -->
             <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col h-full overflow-hidden">
                 <div class="h-48 bg-slate-100 w-full overflow-hidden group relative">
                     <img src="https://placehold.co/600x400/ea580c/white?text=Preview+LogicaQuiz" alt="Preview do Lógica Quiz" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
@@ -274,12 +270,13 @@ Code
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-yellow-50 text-yellow-700 text-xs font-semibold px-2.5 py-1 rounded-md">JavaScript</span>
                             <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">TypeScript</span>
-                            <span class="bg-orange-50 text-orange-700 text-xs font-semibold px-2.5 py-1 rounded-md">HTM5</span>
-                            <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">CSS3</span>
+                            <span class="bg-orange-50 text-orange-700 text-xs font-semibold px-2.5 py-1 rounded-md">HTML/CSS</span>
                         </div>
                         <div class="flex gap-3">
-                            <a href="https://logicaquiz.vercel.app/" target="_blank" class="flex-1 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm">Ver Projeto</a>
-                            <a href="https://github.com/angelosilvanno/LogicaQuiz" target="_blank" class="px-4 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors" title="Código no GitHub">
+                            <a href="https://logicaquiz.vercel.app/" target="_blank" class="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5">
+                                Ver Projeto <i class="fas fa-external-link-alt text-xs"></i>
+                            </a>
+                            <a href="https://github.com/angelosilvanno/LogicaQuiz" target="_blank" class="px-4 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors flex items-center justify-center" title="Código no GitHub">
                                 <i class="fab fa-github text-lg"></i>
                             </a>
                         </div>
@@ -287,7 +284,6 @@ Code
                 </div>
             </div>
 
-            <!-- CARD Coffee Delivery -->
             <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col h-full overflow-hidden">
                 <div class="h-48 bg-slate-100 w-full overflow-hidden group relative">
                     <img src="https://placehold.co/600x400/78350f/white?text=Preview+CoffeeDelivery" alt="Preview do Coffee Delivery" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
@@ -314,8 +310,10 @@ Code
                             <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">CSS3</span>
                         </div>
                         <div class="flex gap-3">
-                            <a href="https://coffeeexpresso.vercel.app/" target="_blank" class="flex-1 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm">Ver Projeto</a>
-                            <a href="https://github.com/angelosilvanno/CoffeeDelivery" target="_blank" class="px-4 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors" title="Código no GitHub">
+                            <a href="https://coffeeexpresso.vercel.app/" target="_blank" class="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5">
+                                Ver Projeto <i class="fas fa-external-link-alt text-xs"></i>
+                            </a>
+                            <a href="https://github.com/angelosilvanno/CoffeeDelivery" target="_blank" class="px-4 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors flex items-center justify-center" title="Código no GitHub">
                                 <i class="fab fa-github text-lg"></i>
                             </a>
                         </div>
@@ -323,7 +321,6 @@ Code
                 </div>
             </div>
 
-            <!-- CARD RunTech -->
             <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col h-full overflow-hidden">
                 <div class="h-48 bg-slate-100 w-full overflow-hidden group relative">
                     <img src="https://placehold.co/600x400/0f172a/white?text=Preview+RunTech" alt="Preview do RunTech" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
@@ -350,8 +347,10 @@ Code
                             <span class="bg-orange-50 text-orange-700 text-xs font-semibold px-2.5 py-1 rounded-md">HTML5</span>
                         </div>
                         <div class="flex gap-3">
-                            <a href="https://runtechweb.vercel.app/" target="_blank" class="flex-1 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm">Ver Projeto</a>
-                            <a href="https://github.com/angelosilvanno/RunTech" target="_blank" class="px-4 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors" title="Código no GitHub">
+                            <a href="https://runtechweb.vercel.app/" target="_blank" class="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5">
+                                Ver Projeto <i class="fas fa-external-link-alt text-xs"></i>
+                            </a>
+                            <a href="https://github.com/angelosilvanno/RunTech" target="_blank" class="px-4 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors flex items-center justify-center" title="Código no GitHub">
                                 <i class="fab fa-github text-lg"></i>
                             </a>
                         </div>
@@ -359,7 +358,6 @@ Code
                 </div>
             </div>
 
-            <!-- CARD Show do Código -->
             <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col h-full overflow-hidden">
                 <div class="h-48 bg-slate-100 w-full overflow-hidden group relative">
                     <img src="https://placehold.co/600x400/16a34a/white?text=Preview+ShowDoCodigo" alt="Preview do Show do Código" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
@@ -386,8 +384,10 @@ Code
                             <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">TypeScript</span>
                         </div>
                         <div class="flex gap-3">
-                            <a href="https://showdocodigo.vercel.app/" target="_blank" class="flex-1 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm">Ver Projeto</a>
-                            <a href="https://github.com/angelosilvanno/show-do-codigo" target="_blank" class="px-4 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors" title="Código no GitHub">
+                            <a href="https://showdocodigo.vercel.app/" target="_blank" class="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5">
+                                Ver Projeto <i class="fas fa-external-link-alt text-xs"></i>
+                            </a>
+                            <a href="https://github.com/angelosilvanno/show-do-codigo" target="_blank" class="px-4 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors flex items-center justify-center" title="Código no GitHub">
                                 <i class="fab fa-github text-lg"></i>
                             </a>
                         </div>
@@ -405,7 +405,6 @@ Code
         </div>
     </section>
 
-    <!-- SEÇÃO Skills Separadas por Stack -->
     <section id="skills" class="container mx-auto px-4 py-16 md:py-24 bg-white scroll-mt-20" 
         x-data="{ 
             frontSkills: [
@@ -421,7 +420,9 @@ Code
             ],
             backSkills: [
                 { name: 'Java', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
-                { name: 'PostgreSQL', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+                { name: 'PostgreSQL', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' }
+            ],
+            toolSkills: [
                 { name: 'Git', icon: 'fab fa-git-alt text-red-500' },
                 { name: 'GitHub', icon: 'fab fa-github text-slate-800' }
             ]
@@ -431,7 +432,6 @@ Code
         <p class="text-lg text-center mb-16 text-slate-600">Tecnologias que domino e ferramentas que uso no dia a dia</p>
 
         <div class="max-w-5xl mx-auto space-y-12">
-            <!-- Front-end -->
             <div>
                 <h3 class="text-2xl font-bold text-slate-700 mb-6 flex items-center gap-3">
                     <span class="p-2 bg-blue-100 rounded-lg text-blue-600"><i class="fas fa-code"></i></span>
@@ -452,11 +452,10 @@ Code
                 </div>
             </div>
 
-            <!-- Back-end & Tools -->
             <div>
                 <h3 class="text-2xl font-bold text-slate-700 mb-6 flex items-center gap-3">
-                    <span class="p-2 bg-green-100 rounded-lg text-green-600"><i class="fas fa-database"></i></span>
-                    Back-end & Ferramentas
+                    <span class="p-2 bg-green-100 rounded-lg text-green-600"><i class="fas fa-server"></i></span>
+                    Back-end
                 </h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
                     <template x-for="skill in backSkills" :key="skill.name">
@@ -472,10 +471,29 @@ Code
                     </template>
                 </div>
             </div>
+
+            <div>
+                <h3 class="text-2xl font-bold text-slate-700 mb-6 flex items-center gap-3">
+                    <span class="p-2 bg-purple-100 rounded-lg text-purple-600"><i class="fas fa-tools"></i></span>
+                    Ferramentas
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    <template x-for="skill in toolSkills" :key="skill.name">
+                        <div class="flex flex-col items-center justify-center p-4 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-md hover:border-purple-200 transition-all duration-300 group">
+                            <template x-if="skill.icon">
+                                <i :class="skill.icon + ' text-4xl mb-3 group-hover:scale-110 transition-transform'"></i>
+                            </template>
+                            <template x-if="skill.img">
+                                <img :src="skill.img" :alt="skill.name" class="w-10 h-10 mb-3 group-hover:scale-110 transition-transform" />
+                            </template>
+                            <span class="font-medium text-slate-600 text-sm" x-text="skill.name"></span>
+                        </div>
+                    </template>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Seção CONTATO com Destaque e Infos Diretas -->
     <section id="contact" class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20">
         <h2 class="text-3xl font-bold text-center mb-4 section-title text-blue-700">Vamos Conversar?</h2>
         <div class="w-16 h-1 bg-blue-600 mx-auto mb-6"></div>
@@ -484,7 +502,6 @@ Code
         <div class="bg-blue-50 rounded-2xl p-6 md:p-10 shadow-lg border border-blue-100 max-w-5xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
                 
-                <!-- Lado Esquerdo: Infos Diretas -->
                 <div class="flex flex-col justify-center space-y-8">
                     <div>
                         <h3 class="text-2xl font-bold text-slate-800 mb-4">Entre em contato</h3>
@@ -498,7 +515,7 @@ Code
                             </div>
                             <div class="min-w-0">
                                 <p class="text-xs text-slate-500 uppercase font-semibold">E-mail</p>
-                                <p class="text-slate-800 font-medium">angelosilvano.dev@gmail.com</p>
+                                <p class="text-slate-800 font-medium break-all">angelosilvano.dev@gmail.com</p>
                             </div>
                         </a>
 
@@ -519,7 +536,6 @@ Code
                     </div>
                 </div>
 
-                <!-- Lado Direito: Formulário -->
                 <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-slate-200">
                     <h3 class="text-xl font-bold text-slate-800 mb-6">Envie uma mensagem</h3>
                     
