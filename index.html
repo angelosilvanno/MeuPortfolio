@@ -13,32 +13,34 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="./src/output.css">
 </head>
-<body class="font-sans bg-white text-slate-800">
+<body class="font-sans bg-slate-50 text-slate-800">
 
-<header class="fixed w-full top-0 z-50 transition-all duration-300 ease-in-out bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100">
+<header class="fixed w-full top-0 z-50 transition-all duration-300 ease-in-out bg-white/90 backdrop-blur-md shadow-sm border-b border-indigo-100">
     <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="#welcome" aria-label="Ângelo Silvano - Voltar ao início" class="text-xl font-mono font-bold text-blue-700 hover:text-blue-600 transition-colors">
+        <a href="#welcome" aria-label="Ângelo Silvano - Voltar ao início" class="text-xl font-mono font-bold text-indigo-600 hover:text-indigo-500 transition-colors">
           &lt; Ângelo /&gt;
         </a>
-        <button id="menu-toggle" class="md:hidden focus:outline-none text-gray-600 hover:text-blue-500" aria-label="Abrir menu">
+        <button id="menu-toggle" class="md:hidden focus:outline-none text-gray-600 hover:text-indigo-500" aria-label="Abrir menu">
             <i class="fas fa-bars text-2xl"></i>
         </button>
         <ul id="menu" class="hidden md:flex gap-x-6 text-gray-600 font-medium">
-            <li><a href="#welcome" class="hover:text-blue-500 transition-colors">Início</a></li>
-            <li><a href="#about" class="hover:text-blue-500 transition-colors">Sobre</a></li>
-            <li><a href="#services" class="hover:text-blue-500 transition-colors">Serviços</a></li>
-            <li><a href="#projects" class="hover:text-blue-500 transition-colors">Projetos</a></li>
-            <li><a href="#skills" class="hover:text-blue-500 transition-colors">Habilidades</a></li>
-            <li><a href="#contact" class="hover:text-blue-500 transition-colors">Contato</a></li>
+            <li><a href="#welcome" class="hover:text-indigo-500 transition-colors">Início</a></li>
+            <li><a href="#about" class="hover:text-indigo-500 transition-colors">Sobre</a></li>
+            <li><a href="#experience" class="hover:text-indigo-500 transition-colors">Experiência</a></li>
+            <li><a href="#services" class="hover:text-indigo-500 transition-colors">Serviços</a></li>
+            <li><a href="#projects" class="hover:text-indigo-500 transition-colors">Projetos</a></li>
+            <li><a href="#skills" class="hover:text-indigo-500 transition-colors">Habilidades</a></li>
+            <li><a href="#contact" class="hover:text-indigo-500 transition-colors">Contato</a></li>
         </ul>
     </nav>
-    <ul id="mobile-menu" class="hidden md:hidden bg-white w-full absolute left-0 shadow-md py-4 space-y-3 text-gray-600 font-medium">
-        <li><a href="#welcome" class="hover:text-blue-500 transition-colors block w-full text-center py-2">Início</a></li>
-        <li><a href="#about" class="hover:text-blue-500 transition-colors block w-full text-center py-2">Sobre</a></li>
-        <li><a href="#services" class="hover:text-blue-500 transition-colors block w-full text-center py-2">Serviços</a></li>
-        <li><a href="#projects" class="hover:text-blue-500 transition-colors block w-full text-center py-2">Projetos</a></li>
-        <li><a href="#skills" class="hover:text-blue-500 transition-colors block w-full text-center py-2">Habilidades</a></li>
-        <li><a href="#contact" class="hover:text-blue-500 transition-colors block w-full text-center py-2">Contato</a></li>
+    <ul id="mobile-menu" class="hidden md:hidden bg-white w-full absolute left-0 shadow-md py-4 space-y-3 text-gray-600 font-medium border-b border-indigo-100">
+        <li><a href="#welcome" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Início</a></li>
+        <li><a href="#about" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Sobre</a></li>
+        <li><a href="#experience" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Experiência</a></li>
+        <li><a href="#services" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Serviços</a></li>
+        <li><a href="#projects" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Projetos</a></li>
+        <li><a href="#skills" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Habilidades</a></li>
+        <li><a href="#contact" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Contato</a></li>
     </ul>
 </header>
 
@@ -49,11 +51,11 @@
                 <p class="text-lg text-slate-500 font-medium">Olá, eu sou</p>
                 <h1 class="text-5xl md:text-7xl font-bold text-slate-800 my-2">Ângelo Silvano</h1>
                 <div class="flex items-center justify-center md:justify-start gap-3">
-                    <div class="w-10 h-1 bg-blue-600 rounded-full"></div>
-                    <p class="text-xl text-blue-600 font-semibold tracking-wide">Desenvolvedor Front-end</p>
+                    <div class="w-10 h-1 bg-indigo-600 rounded-full"></div>
+                    <p class="text-xl text-indigo-600 font-semibold tracking-wide">Desenvolvedor Front-end</p>
                 </div>
                 <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
-                    <a href="./curriculo/Curriculo Angelo.pdf" download="Currículo - Angelo.pdf" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-blue-500/30">
+                    <a href="./curriculo/Curriculo Angelo.pdf" download="Currículo - Angelo.pdf" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors duration-300 shadow-lg hover:shadow-indigo-500/30">
                         Download CV
                     </a>
                     <a href="#contact" class="bg-transparent border-2 border-slate-800 text-slate-800 font-bold py-3 px-8 rounded-lg hover:bg-slate-800 hover:text-white transition-colors duration-300">
@@ -61,35 +63,35 @@
                     </a>
                 </div>
                 <div class="mt-8 flex justify-center md:justify-start gap-x-6">
-                    <a href="https://github.com/angelosilvanno" target="_blank" rel="noopener noreferrer" title="GitHub" class="text-slate-600 hover:text-blue-600 transition-transform hover:-translate-y-1">
+                    <a href="https://github.com/angelosilvanno" target="_blank" rel="noopener noreferrer" title="GitHub" class="text-slate-600 hover:text-indigo-600 transition-transform hover:-translate-y-1">
                         <i class="fab fa-github text-3xl"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/angelosilvanno/" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="text-slate-600 hover:text-blue-600 transition-transform hover:-translate-y-1">
+                    <a href="https://www.linkedin.com/in/angelosilvanno/" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="text-slate-600 hover:text-indigo-600 transition-transform hover:-translate-y-1">
                         <i class="fab fa-linkedin-in text-3xl"></i>
                     </a>
                 </div>
             </div>
             <div class="flex-shrink-0 relative group">
-                <div class="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                <div class="absolute inset-0 bg-indigo-600 rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
                 <img src="./image/angelodev.avif" alt="Foto de Ângelo Silvano" fetchpriority="high" class="relative rounded-full w-56 h-56 md:w-72 md:h-72 object-cover border-8 border-white shadow-2xl">
             </div>
         </div>
     </section>
 
-    <div class="w-full h-px bg-slate-100"></div>
+    <div class="w-full h-px bg-indigo-100"></div>
 
-    <section id="about" class="bg-slate-50">
+    <section id="about" class="bg-white">
         <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20">
             <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
-                <img srcset="./image/angelo.avif 256w, ./image/angelo.avif 384w, ./image/angelo.avif 512w" sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, 256px" src="./image/angelo.avif" alt="Foto de Ângelo Silvano, um desenvolvedor web" loading="lazy" class="rounded-full shadow-lg w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 object-cover border-4 border-white ring-2 ring-blue-100">
+                <img srcset="./image/angelo.avif 256w, ./image/angelo.avif 384w, ./image/angelo.avif 512w" sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, 256px" src="./image/angelo.avif" alt="Foto de Ângelo Silvano, um desenvolvedor web" loading="lazy" class="rounded-full shadow-lg w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 object-cover border-4 border-white ring-2 ring-indigo-50">
                 <div class="text-center md:text-left max-w-2xl">
-                    <h2 class="text-3xl font-bold mb-6 section-title text-blue-700">Sobre Mim</h2>
+                    <h2 class="text-3xl font-bold mb-6 section-title text-indigo-600">Sobre Mim</h2>
                     <div class="text-lg leading-relaxed text-slate-700 space-y-4 text-justify">
                         <p>
-                            Olá! Me chamo <span class="font-semibold text-blue-700">Ângelo Silvano</span> e trabalho com <strong class="text-blue-700">desenvolvimento front-end</strong> há cerca de <strong class="text-blue-700">3 anos</strong>.
+                            Olá! Me chamo <span class="font-semibold text-indigo-600">Ângelo Silvano</span> e trabalho com <strong class="text-indigo-600">desenvolvimento front-end</strong> há cerca de <strong class="text-indigo-600">3 anos</strong>.
                         </p>
                         <p>
-                            Comecei na área quando entrei no curso de <span class="font-semibold">Tecnologia da Informação</span> na <span class="font-semibold text-blue-700">UFERSA – Campus Pau dos Ferros</span>, bem no meio da pandemia. Na época, me interessei por vídeos do canal <span class="font-semibold">Curso em Vídeo</span> e foi ali que tive o primeiro contato com <span class="font-semibold">HTML</span> e <span class="font-semibold">CSS</span>.
+                            Comecei na área quando entrei no curso de <span class="font-semibold">Tecnologia da Informação</span> na <span class="font-semibold text-indigo-600">UFERSA – Campus Pau dos Ferros</span>, bem no meio da pandemia. Na época, me interessei por vídeos do canal <span class="font-semibold">Curso em Vídeo</span> e foi ali que tive o primeiro contato com <span class="font-semibold">HTML</span> e <span class="font-semibold">CSS</span>.
                         </p>
                         <p>
                             Desde então, sigo me desenvolvendo e focando em criar aplicações web que entreguem boa experiência em qualquer tela. No dia a dia, gosto de usar <span class="font-semibold">Next.js</span> e <span class="font-semibold">Tailwind CSS</span> pra manter tudo limpo, funcional e bonito.
@@ -102,15 +104,66 @@
 
     <div class="w-full h-px bg-slate-200"></div>
 
+    <section id="experience" class="bg-slate-50">
+        <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-4 section-title text-indigo-600">Experiência</h2>
+            <p class="text-lg text-center mb-16 text-slate-600">Minha trajetória profissional e acadêmica no desenvolvimento</p>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="relative pl-8 border-l-2 border-indigo-200">
+                    <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-indigo-50 hover:shadow-md transition-shadow">
+                        <span class="text-sm font-semibold text-indigo-500 uppercase tracking-wider">Fev/2025 — Ago/2025</span>
+                        <h3 class="text-xl font-bold text-slate-800 mt-1">Desenvolvedor Front-End (Bolsista) — Projeto Carcará</h3>
+                        <p class="text-indigo-600 font-medium mb-3">LISA - UFERSA</p>
+                        <ul class="list-disc list-inside text-slate-600 space-y-1 text-sm md:text-base">
+                            <li>Desenvolvimento da nova interface do site institucional.</li>
+                            <li>Melhorias de navegação e organização das telas.</li>
+                            <li>Trabalho em conjunto com equipe do projeto para entregas por etapa.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 border-l-2 border-indigo-200">
+                    <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-indigo-50 hover:shadow-md transition-shadow">
+                        <span class="text-sm font-semibold text-indigo-500 uppercase tracking-wider">Jul/2024 — Nov/2024</span>
+                        <h3 class="text-xl font-bold text-slate-800 mt-1">Monitor | Disciplina Qualidade de Software</h3>
+                        <p class="text-indigo-600 font-medium mb-3">UFERSA</p>
+                        <ul class="list-disc list-inside text-slate-600 space-y-1 text-sm md:text-base">
+                            <li>Auxílio no entendimento de conceitos teóricos como usabilidade e manutenibilidade.</li>
+                            <li>Organização do processo de acompanhamento de atividades para suporte aos alunos.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 border-l-2 border-indigo-200">
+                    <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-[9px] top-1 border-4 border-white shadow-sm"></div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-indigo-50 hover:shadow-md transition-shadow">
+                        <span class="text-sm font-semibold text-indigo-500 uppercase tracking-wider">Jul/2023 — Jul/2024</span>
+                        <h3 class="text-xl font-bold text-slate-800 mt-1">Assistente de Pesquisa</h3>
+                        <p class="text-indigo-600 font-medium mb-3">UFERSA</p>
+                        <ul class="list-disc list-inside text-slate-600 space-y-1 text-sm md:text-base">
+                            <li>Análise de dados com Python para identificar fatores ligados à evasão.</li>
+                            <li>Geração de relatórios para apoiar decisões do projeto.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full h-px bg-slate-200"></div>
+
     <section id="services" class="bg-white">
         <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20">
-            <h2 class="text-3xl font-bold text-center mb-4 section-title text-blue-700">O que eu faço na prática</h2>
+            <h2 class="text-3xl font-bold text-center mb-4 section-title text-indigo-600">O que eu faço na prática</h2>
             <p class="text-lg text-center mb-12 text-slate-700 max-w-3xl mx-auto">
                 Com minhas habilidades, sua ideia se torna uma presença online de sucesso. Veja como posso te ajudar:
             </p>
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <div class="bg-slate-50 border border-slate-100 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
-                    <div class="mb-4 text-blue-600 bg-blue-100/50 rounded-full p-4 inline-block">
+                <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
+                    <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
                         <i class="fas fa-laptop-code fa-2x w-8 h-8 flex items-center justify-center"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-slate-800">Criação de Sites</h3>
@@ -118,8 +171,8 @@
                         Crio seu cartão de visita online ou página moderna e rápida para seus serviços.
                     </p>
                 </div>
-                <div class="bg-slate-50 border border-slate-100 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
-                    <div class="mb-4 text-blue-600 bg-blue-100/50 rounded-full p-4 inline-block">
+                <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
+                    <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
                         <i class="fas fa-store fa-2x w-8 h-8 flex items-center justify-center"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-slate-800">Loja Virtual</h3>
@@ -127,8 +180,8 @@
                         Monto sua loja virtual com vitrine, carrinho e pagamentos, pronta pra vender 24h por dia.
                     </p>
                 </div>
-                <div class="bg-slate-50 border border-slate-100 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
-                    <div class="mb-4 text-blue-600 bg-blue-100/50 rounded-full p-4 inline-block">
+                <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
+                    <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
                         <i class="fas fa-mobile-alt fa-2x w-8 h-8 flex items-center justify-center"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-slate-800">Responsividade</h3>
@@ -136,8 +189,8 @@
                         Seu site bonito e funcional em qualquer tela: celular, tablet ou computador.
                     </p>
                 </div>
-                <div class="bg-slate-50 border border-slate-100 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
-                    <div class="mb-4 text-blue-600 bg-blue-100/50 rounded-full p-4 inline-block">
+                <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
+                    <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
                         <i class="fas fa-tachometer-alt fa-2x w-8 h-8 flex items-center justify-center"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-slate-800">Otimização</h3>
@@ -145,8 +198,8 @@
                         Faço seu site carregar rápido, agradando visitantes e os motores de busca.
                     </p>
                 </div>
-                <div class="bg-slate-50 border border-slate-100 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
-                    <div class="mb-4 text-blue-600 bg-blue-100/50 rounded-full p-4 inline-block">
+                <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
+                    <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
                         <i class="fas fa-tools fa-2x w-8 h-8 flex items-center justify-center"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-slate-800">Manutenção</h3>
@@ -154,8 +207,8 @@
                         Deixo seu site sempre seguro, atualizado e funcionando bem, sem preocupações para você.
                     </p>
                 </div>
-                <div class="bg-slate-50 border border-slate-100 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
-                    <div class="mb-4 text-blue-600 bg-blue-100/50 rounded-full p-4 inline-block">
+                <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
+                    <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
                         <i class="fas fa-search fa-2x w-8 h-8 flex items-center justify-center"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-slate-800">Visibilidade no Google</h3>
@@ -165,27 +218,27 @@
                 </div>
             </div>
             <div class="text-center mt-12">
-                <a href="https://wa.me/5584999566634?text=Olá,%20Ângelo!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" class="inline-flex items-center gap-2 bg-blue-700 text-white text-lg font-semibold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors duration-300 shadow hover:shadow-md transform hover:-translate-y-1">
+                <a href="https://wa.me/5584999566634?text=Olá,%20Ângelo!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white text-lg font-semibold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors duration-300 shadow hover:shadow-md transform hover:-translate-y-1">
                     <i class="fab fa-whatsapp text-2xl"></i> Vamos conversar sobre seu projeto?
                 </a>
             </div>
         </div>
     </section>
 
-    <div class="w-full h-px bg-slate-100"></div>
+    <div class="w-full h-px bg-indigo-100"></div>
 
     <section id="projects" class="bg-slate-50">
         <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20">
-            <h2 class="text-3xl font-bold text-center mb-4 section-title text-blue-700">Meus Projetos</h2>
+            <h2 class="text-3xl font-bold text-center mb-4 section-title text-indigo-600">Meus Projetos</h2>
             <p class="text-lg text-center mb-12 text-slate-700 max-w-3xl mx-auto">
                 Confira alguns dos projetos que desenvolvi, com prévias visuais e tecnologias utilizadas:
             </p>
         
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch"> 
                 
-                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col h-full overflow-hidden">
+                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
                     <div class="h-48 bg-slate-200 w-full overflow-hidden group relative text-slate-400 flex items-center justify-center font-bold">
-                        <img src="https://placehold.co/600x400/2563eb/white?text=Preview+VibePlay" alt="Preview do VibePlay" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <img src="https://placehold.co/600x400/4f46e5/white?text=Preview+VibePlay" alt="Preview do VibePlay" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                             <a href="https://vibeplay-web.vercel.app/" target="_blank" class="text-white font-semibold border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition-colors">Visitar Site</a>
                         </div>
@@ -204,15 +257,15 @@
                         
                         <div class="pt-4 border-t border-slate-100">
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-slate-100 text-slate-700 text-xs font-semibold px-2.5 py-1 rounded-md">Next.js</span>
-                                <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-md">Tailwind</span>
-                                <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">TypeScript</span>
+                                <span class="bg-indigo-100 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-md">Next.js</span>
+                                <span class="bg-violet-100 text-violet-700 text-xs font-semibold px-2.5 py-1 rounded-md">Tailwind</span>
+                                <span class="bg-slate-200 text-slate-700 text-xs font-semibold px-2.5 py-1 rounded-md">TypeScript</span>
                             </div>
                             <div class="flex gap-3">
-                                <a href="https://vibeplay-web.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
+                                <a href="https://vibeplay-web.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
                                     Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
                                 </a>
-                                <a href="https://github.com/angelosilvanno/vibe-play" target="_blank" class="px-3 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors flex items-center justify-center" title="Código no GitHub">
+                                <a href="https://github.com/angelosilvanno/vibe-play" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
                                     <i class="fab fa-github text-lg"></i>
                                 </a>
                             </div>
@@ -220,7 +273,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col h-full overflow-hidden">
+                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
                     <div class="h-48 bg-slate-200 w-full overflow-hidden group relative text-slate-400 flex items-center justify-center font-bold">
                         <img src="https://placehold.co/600x400/1e293b/white?text=Preview+FootCoder" alt="Preview do FootCoder" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -242,15 +295,15 @@
                         <div class="pt-4 border-t border-slate-100">
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="bg-orange-50 text-orange-700 text-xs font-semibold px-2.5 py-1 rounded-md">HTML5</span>
-                                <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">CSS3</span>
+                                <span class="bg-indigo-100 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-md">CSS3</span>
                                 <span class="bg-yellow-50 text-yellow-700 text-xs font-semibold px-2.5 py-1 rounded-md">JavaScript</span>
-                                <span class="bg-purple-50 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-md">Bootstrap</span>
+                                <span class="bg-violet-100 text-violet-700 text-xs font-semibold px-2.5 py-1 rounded-md">Bootstrap</span>
                             </div>
                             <div class="flex gap-3">
-                                <a href="https://foot-coder.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
+                                <a href="https://foot-coder.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
                                     Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
                                 </a>
-                                <a href="https://github.com/angelosilvanno/FootCoder" target="_blank" class="px-3 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors flex items-center justify-center" title="Código no GitHub">
+                                <a href="https://github.com/angelosilvanno/FootCoder" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
                                     <i class="fab fa-github text-lg"></i>
                                 </a>
                             </div>
@@ -258,7 +311,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col h-full overflow-hidden">
+                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
                     <div class="h-48 bg-slate-200 w-full overflow-hidden group relative text-slate-400 flex items-center justify-center font-bold">
                         <img src="https://placehold.co/600x400/ea580c/white?text=Preview+LogicaQuiz" alt="Preview do Lógica Quiz" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -280,14 +333,14 @@
                         <div class="pt-4 border-t border-slate-100">
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="bg-yellow-50 text-yellow-700 text-xs font-semibold px-2.5 py-1 rounded-md">JavaScript</span>
-                                <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">TypeScript</span>
-                                <span class="bg-orange-50 text-orange-700 text-xs font-semibold px-2.5 py-1 rounded-md">HTML/CSS</span>
+                                <span class="bg-indigo-100 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-md">TypeScript</span>
+                                <span class="bg-orange-100 text-orange-700 text-xs font-semibold px-2.5 py-1 rounded-md">HTML/CSS</span>
                             </div>
                             <div class="flex gap-3">
-                                <a href="https://logicaquiz.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
+                                <a href="https://logicaquiz.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
                                     Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
                                 </a>
-                                <a href="https://github.com/angelosilvanno/LogicaQuiz" target="_blank" class="px-3 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors flex items-center justify-center" title="Código no GitHub">
+                                <a href="https://github.com/angelosilvanno/LogicaQuiz" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
                                     <i class="fab fa-github text-lg"></i>
                                 </a>
                             </div>
@@ -295,7 +348,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col h-full overflow-hidden">
+                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
                     <div class="h-48 bg-slate-200 w-full overflow-hidden group relative text-slate-400 flex items-center justify-center font-bold">
                         <img src="https://placehold.co/600x400/78350f/white?text=Preview+CoffeeDelivery" alt="Preview do Coffee Delivery" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -316,15 +369,15 @@
                         
                         <div class="pt-4 border-t border-slate-100">
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-purple-50 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-md">Bootstrap</span>
-                                <span class="bg-yellow-50 text-yellow-700 text-xs font-semibold px-2.5 py-1 rounded-md">JavaScript</span>
-                                <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">CSS3</span>
+                                <span class="bg-violet-50 text-violet-700 text-xs font-semibold px-2.5 py-1 rounded-md">Bootstrap</span>
+                                <span class="bg-yellow-100 text-yellow-700 text-xs font-semibold px-2.5 py-1 rounded-md">JavaScript</span>
+                                <span class="bg-indigo-100 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-md">CSS3</span>
                             </div>
                             <div class="flex gap-3">
-                                <a href="https://coffeeexpresso.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
+                                <a href="https://coffeeexpresso.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
                                     Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
                                 </a>
-                                <a href="https://github.com/angelosilvanno/CoffeeDelivery" target="_blank" class="px-3 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors flex items-center justify-center" title="Código no GitHub">
+                                <a href="https://github.com/angelosilvanno/CoffeeDelivery" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
                                     <i class="fab fa-github text-lg"></i>
                                 </a>
                             </div>
@@ -332,7 +385,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col h-full overflow-hidden">
+                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
                     <div class="h-48 bg-slate-200 w-full overflow-hidden group relative text-slate-400 flex items-center justify-center font-bold">
                         <img src="https://placehold.co/600x400/0f172a/white?text=Preview+RunTech" alt="Preview do RunTech" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -353,15 +406,15 @@
                         
                         <div class="pt-4 border-t border-slate-100">
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">TypeScript</span>
-                                <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">CSS3</span>
-                                <span class="bg-orange-50 text-orange-700 text-xs font-semibold px-2.5 py-1 rounded-md">HTML5</span>
+                                <span class="bg-indigo-100 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-md">TypeScript</span>
+                                <span class="bg-slate-200 text-slate-700 text-xs font-semibold px-2.5 py-1 rounded-md">CSS3</span>
+                                <span class="bg-orange-100 text-orange-700 text-xs font-semibold px-2.5 py-1 rounded-md">HTML5</span>
                             </div>
                             <div class="flex gap-3">
-                                <a href="https://runtechweb.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
+                                <a href="https://runtechweb.vercel.app/" target="_blank" class="px-6 inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold py-2.5 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
                                     Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
                                 </a>
-                                <a href="https://github.com/angelosilvanno/RunTech" target="_blank" class="px-3 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors flex items-center justify-center" title="Código no GitHub">
+                                <a href="https://github.com/angelosilvanno/RunTech" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
                                     <i class="fab fa-github text-lg"></i>
                                 </a>
                             </div>
@@ -369,7 +422,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col h-full overflow-hidden">
+                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
                     <div class="h-48 bg-slate-200 w-full overflow-hidden group relative text-slate-400 flex items-center justify-center font-bold">
                         <img src="https://placehold.co/600x400/16a34a/white?text=Preview+ShowDoCodigo" alt="Preview do Show do Código" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -391,14 +444,14 @@
                         <div class="pt-4 border-t border-slate-100">
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="bg-green-50 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-md">Vite</span>
-                                <span class="bg-purple-50 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-md">React</span>
-                                <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">TypeScript</span>
+                                <span class="bg-violet-100 text-violet-700 text-xs font-semibold px-2.5 py-1 rounded-md">React</span>
+                                <span class="bg-indigo-100 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-md">TypeScript</span>
                             </div>
                             <div class="flex gap-3">
-                                <a href="https://showdocodigo.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
+                                <a href="https://showdocodigo.vercel.app/" target="_blank" class="flex-1 inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
                                     Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
                                 </a>
-                                <a href="https://github.com/angelosilvanno/show-do-codigo" target="_blank" class="px-3 py-2 border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors flex items-center justify-center" title="Código no GitHub">
+                                <a href="https://github.com/angelosilvanno/show-do-codigo" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
                                     <i class="fab fa-github text-lg"></i>
                                 </a>
                             </div>
@@ -417,20 +470,20 @@
         </div>
     </section>
 
-    <div class="w-full h-px bg-slate-100"></div>
+    <div class="w-full h-px bg-indigo-100"></div>
 
     <section id="skills" class="bg-white">
         <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20" 
             x-data="{ 
                 frontSkills: [
                     { name: 'HTML5', icon: 'fab fa-html5 text-orange-500' },
-                    { name: 'CSS3', icon: 'fab fa-css3-alt text-blue-500' },
+                    { name: 'CSS3', icon: 'fab fa-css3-alt text-indigo-500' },
                     { name: 'JavaScript', icon: 'fab fa-js-square text-yellow-500' },
-                    { name: 'React', icon: 'fab fa-react text-blue-400' },
+                    { name: 'React', icon: 'fab fa-react text-indigo-400' },
                     { name: 'Next.js', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
                     { name: 'Tailwind', img: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tailwindcss.svg' },
                     { name: 'TypeScript', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
-                    { name: 'Bootstrap', icon: 'fab fa-bootstrap text-purple-600' },
+                    { name: 'Bootstrap', icon: 'fab fa-bootstrap text-violet-600' },
                     { name: 'Vite', img: 'https://vitejs.dev/logo.svg' }
                 ],
                 backSkills: [
@@ -443,18 +496,18 @@
                 ]
             }">
             
-            <h2 class="text-3xl font-bold text-center mb-4 section-title text-blue-700">Hard Skills</h2>
+            <h2 class="text-3xl font-bold text-center mb-4 section-title text-indigo-600">Hard Skills</h2>
             <p class="text-lg text-center mb-16 text-slate-600">Tecnologias que domino e ferramentas que uso no dia a dia</p>
 
             <div class="max-w-5xl mx-auto space-y-12">
                 <div>
                     <h3 class="text-2xl font-bold text-slate-700 mb-6 flex items-center gap-3">
-                        <span class="p-2 bg-blue-100 rounded-lg text-blue-600"><i class="fas fa-code"></i></span>
+                        <span class="p-2 bg-indigo-100 rounded-lg text-indigo-600"><i class="fas fa-code"></i></span>
                         Front-end
                     </h3>
                     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
                         <template x-for="skill in frontSkills" :key="skill.name">
-                            <div class="flex flex-col items-center justify-center p-4 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-md hover:border-blue-200 transition-all duration-300 group">
+                            <div class="flex flex-col items-center justify-center p-4 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-md hover:border-indigo-200 transition-all duration-300 group">
                                 <template x-if="skill.icon">
                                     <i :class="skill.icon + ' text-4xl mb-3 group-hover:scale-110 transition-transform'"></i>
                                 </template>
@@ -469,12 +522,12 @@
 
                 <div>
                     <h3 class="text-2xl font-bold text-slate-700 mb-6 flex items-center gap-3">
-                        <span class="p-2 bg-green-100 rounded-lg text-green-600"><i class="fas fa-server"></i></span>
+                        <span class="p-2 bg-emerald-100 rounded-lg text-emerald-600"><i class="fas fa-server"></i></span>
                         Back-end
                     </h3>
                     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
                         <template x-for="skill in backSkills" :key="skill.name">
-                            <div class="flex flex-col items-center justify-center p-4 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-md hover:border-green-200 transition-all duration-300 group">
+                            <div class="flex flex-col items-center justify-center p-4 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-md hover:border-emerald-200 transition-all duration-300 group">
                                 <template x-if="skill.icon">
                                     <i :class="skill.icon + ' text-4xl mb-3 group-hover:scale-110 transition-transform'"></i>
                                 </template>
@@ -489,12 +542,12 @@
 
                 <div>
                     <h3 class="text-2xl font-bold text-slate-700 mb-6 flex items-center gap-3">
-                        <span class="p-2 bg-purple-100 rounded-lg text-purple-600"><i class="fas fa-tools"></i></span>
+                        <span class="p-2 bg-violet-100 rounded-lg text-violet-600"><i class="fas fa-tools"></i></span>
                         Ferramentas
                     </h3>
                     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
                         <template x-for="skill in toolSkills" :key="skill.name">
-                            <div class="flex flex-col items-center justify-center p-4 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-md hover:border-purple-200 transition-all duration-300 group">
+                            <div class="flex flex-col items-center justify-center p-4 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-md hover:border-violet-200 transition-all duration-300 group">
                                 <template x-if="skill.icon">
                                     <i :class="skill.icon + ' text-4xl mb-3 group-hover:scale-110 transition-transform'"></i>
                                 </template>
@@ -510,15 +563,15 @@
         </div>
     </section>
 
-    <div class="w-full h-px bg-slate-100"></div>
+    <div class="w-full h-px bg-indigo-100"></div>
 
     <section id="contact" class="bg-slate-50">
         <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20">
-            <h2 class="text-3xl font-bold text-center mb-4 section-title text-blue-700">Vamos Conversar?</h2>
-            <div class="w-16 h-1 bg-blue-600 mx-auto mb-6"></div>
+            <h2 class="text-3xl font-bold text-center mb-4 section-title text-indigo-600">Vamos Conversar?</h2>
+            <div class="w-16 h-1 bg-indigo-600 mx-auto mb-6"></div>
             <p class="text-lg text-center mb-12 text-slate-600 max-w-2xl mx-auto">Seja para um projeto, uma oportunidade ou apenas networking, estou à disposição.</p>
 
-            <div class="bg-blue-50/50 rounded-2xl p-6 md:p-10 shadow-lg border border-blue-100 max-w-5xl mx-auto">
+            <div class="bg-indigo-50/30 rounded-2xl p-6 md:p-10 shadow-lg border border-indigo-100 max-w-5xl mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
                     
                     <div class="flex flex-col justify-center space-y-8">
@@ -528,8 +581,8 @@
                         </div>
 
                         <div class="space-y-6">
-                            <a href="mailto:angeloestudante1@gmail.com" class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-blue-100 group">
-                                <div class="bg-blue-100 p-3 rounded-full text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <a href="mailto:angeloestudante1@gmail.com" class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-indigo-100 group">
+                                <div class="bg-blue-100 p-3 rounded-full text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                                     <i class="fas fa-envelope text-xl"></i>
                                 </div>
                                 <div class="min-w-0">
@@ -538,8 +591,8 @@
                                 </div>
                             </a>
 
-                            <a href="https://wa.me/5584999566634" target="_blank" class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-green-100 group">
-                                <div class="bg-green-100 p-3 rounded-full text-green-600 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                            <a href="https://wa.me/5584999566634" target="_blank" class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-emerald-100 group">
+                                <div class="bg-green-100 p-3 rounded-full text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                                     <i class="fab fa-whatsapp text-xl"></i>
                                 </div>
                                 <div>
@@ -549,7 +602,7 @@
                             </a>
 
                             <div class="flex gap-4 mt-4 pl-2">
-                                <a href="https://www.linkedin.com/in/angelosilvanno/" target="_blank" class="text-slate-400 hover:text-blue-700 transition-colors"><i class="fab fa-linkedin text-3xl"></i></a>
+                                <a href="https://www.linkedin.com/in/angelosilvanno/" target="_blank" class="text-slate-400 hover:text-indigo-700 transition-colors"><i class="fab fa-linkedin text-3xl"></i></a>
                                 <a href="https://github.com/angelosilvanno" target="_blank" class="text-slate-400 hover:text-slate-900 transition-colors"><i class="fab fa-github text-3xl"></i></a>
                             </div>
                         </div>
@@ -558,24 +611,24 @@
                     <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-slate-200">
                         <h3 class="text-xl font-bold text-slate-800 mb-6">Envie uma mensagem</h3>
                         
-                        <div id="success-message" class="hidden bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg mb-6 text-sm">
+                        <div id="success-message" class="hidden bg-emerald-50 border border-emerald-200 text-emerald-700 px-4 py-3 rounded-lg mb-6 text-sm">
                             <i class="fas fa-check-circle mr-2"></i> Mensagem enviada com sucesso!
                         </div>
 
                         <form id="contactForm" action="https://formspree.io/f/xpwpwprz" method="POST" class="space-y-4">
                             <div>
                                 <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Nome</label>
-                                <input type="text" id="name" name="name" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition" placeholder="Seu nome" required>
+                                <input type="text" id="name" name="name" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition" placeholder="Seu nome" required>
                             </div>
                             <div>
                                 <label for="email" class="block text-sm font-medium text-slate-700 mb-1">E-mail</label>
-                                <input type="email" id="email" name="email" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition" placeholder="seu@email.com" required>
+                                <input type="email" id="email" name="email" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition" placeholder="seu@email.com" required>
                             </div>
                             <div>
                                 <label for="message" class="block text-sm font-medium text-slate-700 mb-1">Mensagem</label>
                                 <textarea id="message" name="message" rows="4" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition resize-none" placeholder="Como posso te ajudar?" required></textarea>
                             </div>
-                            <button type="submit" id="submitButton" class="w-full bg-blue-700 text-white py-3 px-6 rounded-lg font-bold hover:bg-blue-800 transition-all shadow-lg shadow-blue-700/20 hover:shadow-blue-700/40">
+                            <button type="submit" id="submitButton" class="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-700/20 hover:shadow-indigo-700/40">
                                 Enviar Mensagem
                             </button>
                         </form>
@@ -597,7 +650,7 @@
     </div>
 </footer>
 
-<button id="scrollToTopBtn" class="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-700 focus:outline-none z-40" title="Voltar ao topo">
+<button id="scrollToTopBtn" class="fixed bottom-6 right-6 bg-indigo-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-indigo-700 focus:outline-none z-40" title="Voltar ao topo">
     <i class="fas fa-arrow-up"></i>
 </button>
 
