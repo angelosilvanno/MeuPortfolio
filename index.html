@@ -1,665 +1,677 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ângelo Silvano | Desenvolvedor</title>
-<meta name="description" content="Ângelo Silvano, desenvolvedor front-end. Transformo ideias em aplicações web que as pessoas curtem usar. Confira meus projetos e entre em contato.">
-<meta name="google-site-verification" content="googlebc5a2f46b8024cde.html" />
-<link rel="shortcut icon" href="./image/portfolio.png" type="image/x-icon">
-<link rel="stylesheet" href="css/custom-styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="./src/output.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Ângelo Silvano | Desenvolvedor</title>
+ <meta name="description" content="Ângelo Silvano, desenvolvedor front-end. Transformo ideias em aplicações web que as pessoas curtem usar. Confira meus projetos e entre em contato.">
+ <meta name="google-site-verification" content="googlebc5a2f46b8024cde.html" />
+ <link rel="shortcut icon" href="./image/portfolio.png" type="image/x-icon">
+ <link rel="stylesheet" href="css/custom-styles.css">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+ <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="stylesheet" href="./src/output.css">
 </head>
+
 <body class="font-sans bg-slate-50 text-slate-800">
 
-<header class="fixed w-full top-0 z-50 transition-all duration-300 ease-in-out bg-white/90 backdrop-blur-md shadow-sm border-b border-indigo-100">
-    <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="#welcome" aria-label="Ângelo Silvano - Voltar ao início" class="text-xl font-mono font-bold text-indigo-600 hover:text-indigo-500 transition-colors">
-          &lt; Ângelo /&gt;
-        </a>
-        <button id="menu-toggle" class="md:hidden focus:outline-none text-gray-600 hover:text-indigo-500" aria-label="Abrir menu">
-            <i class="fas fa-bars text-2xl"></i>
-        </button>
-        <ul id="menu" class="hidden md:flex gap-x-6 text-gray-600 font-medium">
-            <li><a href="#welcome" class="hover:text-indigo-500 transition-colors">Início</a></li>
-            <li><a href="#about" class="hover:text-indigo-500 transition-colors">Sobre</a></li>
-            <li><a href="#experience" class="hover:text-indigo-500 transition-colors">Experiência</a></li>
-            <li><a href="#services" class="hover:text-indigo-500 transition-colors">Serviços</a></li>
-            <li><a href="#projects" class="hover:text-indigo-500 transition-colors">Projetos</a></li>
-            <li><a href="#skills" class="hover:text-indigo-500 transition-colors">Habilidades</a></li>
-            <li><a href="#contact" class="hover:text-indigo-500 transition-colors">Contato</a></li>
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 ease-in-out bg-white/90 backdrop-blur-md shadow-sm border-b border-indigo-100">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#welcome" aria-label="Ângelo Silvano - Voltar ao início" class="text-xl font-mono font-bold text-indigo-600 hover:text-indigo-500 transition-colors">
+             &lt; Ângelo /&gt;
+            </a>
+            <button id="menu-toggle" class="md:hidden focus:outline-none text-gray-600 hover:text-indigo-500" aria-label="Abrir menu">
+             <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <ul id="menu" class="hidden md:flex gap-x-6 text-gray-600 font-medium">
+              <li><a href="#welcome" class="hover:text-indigo-500 transition-colors">Início</a></li>
+              <li><a href="#about" class="hover:text-indigo-500 transition-colors">Sobre</a></li>
+              <li><a href="#experience" class="hover:text-indigo-500 transition-colors">Experiência</a></li>
+              <li><a href="#services" class="hover:text-indigo-500 transition-colors">Serviços</a></li>
+              <li><a href="#projects" class="hover:text-indigo-500 transition-colors">Projetos</a></li>
+              <li><a href="#skills" class="hover:text-indigo-500 transition-colors">Habilidades</a></li>
+              <li><a href="#contact" class="hover:text-indigo-500 transition-colors">Contato</a></li>
+            </ul>
+        </nav>
+
+        <ul id="mobile-menu" class="hidden md:hidden bg-white w-full absolute left-0 shadow-md py-4 space-y-3 text-gray-600 font-medium border-b border-indigo-100">
+         <li><a href="#welcome" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Início</a></li>
+         <li><a href="#about" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Sobre</a></li>
+         <li><a href="#experience" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Experiência</a></li>
+         <li><a href="#services" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Serviços</a></li>
+         <li><a href="#projects" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Projetos</a></li>
+         <li><a href="#skills" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Habilidades</a></li>
+         <li><a href="#contact" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Contato</a></li>
         </ul>
-    </nav>
-    <ul id="mobile-menu" class="hidden md:hidden bg-white w-full absolute left-0 shadow-md py-4 space-y-3 text-gray-600 font-medium border-b border-indigo-100">
-        <li><a href="#welcome" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Início</a></li>
-        <li><a href="#about" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Sobre</a></li>
-        <li><a href="#experience" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Experiência</a></li>
-        <li><a href="#services" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Serviços</a></li>
-        <li><a href="#projects" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Projetos</a></li>
-        <li><a href="#skills" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Habilidades</a></li>
-        <li><a href="#contact" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Contato</a></li>
-    </ul>
-</header>
 
-<main>
-    <section id="welcome" class="container mx-auto px-4 min-h-screen flex items-center justify-center pt-20 md:pt-0">
-        <div class="flex flex-col-reverse md:flex-row items-center justify-between w-full max-w-5xl gap-10">
-            <div class="text-center md:text-left">
-                <p class="text-lg text-slate-500 font-medium">Olá, eu sou</p>
-                <h1 class="text-5xl md:text-7xl font-bold text-slate-800 my-2">Ângelo Silvano</h1>
-                <div class="flex items-center justify-center md:justify-start gap-3">
-                    <div class="w-10 h-1 bg-indigo-600 rounded-full"></div>
-                    <p class="text-xl text-indigo-600 font-semibold tracking-wide">Desenvolvedor Front-end</p>
-                </div>
-                <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
-                    <a href="./curriculo/Curriculo Angelo.pdf" download="Currículo - Angelo.pdf" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors duration-300 shadow-lg hover:shadow-indigo-500/30">
-                        Download CV
-                    </a>
-                    <a href="#contact" class="bg-transparent border-2 border-slate-800 text-slate-800 font-bold py-3 px-8 rounded-lg hover:bg-slate-800 hover:text-white transition-colors duration-300">
-                        Entrar em Contato
-                    </a>
-                </div>
-                <div class="mt-8 flex justify-center md:justify-start gap-x-6">
-                    <a href="https://github.com/angelosilvanno" target="_blank" rel="noopener noreferrer" title="GitHub" class="text-slate-600 hover:text-indigo-600 transition-transform hover:-translate-y-1">
-                        <i class="fab fa-github text-3xl"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/angelosilvanno/" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="text-slate-600 hover:text-indigo-600 transition-transform hover:-translate-y-1">
-                        <i class="fab fa-linkedin-in text-3xl"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="shrink-0 relative group">
-                <div class="absolute inset-0 bg-indigo-600 rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
-                <img src="./image/angelodev.avif" alt="Foto de Ângelo Silvano" fetchpriority="high" class="relative rounded-full w-56 h-56 md:w-72 md:h-72 object-cover border-8 border-white shadow-2xl">
-            </div>
-        </div>
-    </section>
+    </header>
 
-    <div class="w-full h-px bg-indigo-100"></div>
+<main> 
 
-    <section id="about" class="bg-white">
-        <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20">
-            <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
-                <img srcset="./image/angelo.avif 256w, ./image/angelo.avif 384w, ./image/angelo.avif 512w" sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, 256px" src="./image/angelo.avif" alt="Foto de Ângelo Silvano, um desenvolvedor web" loading="lazy" class="rounded-full shadow-lg w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 object-cover border-4 border-white ring-2 ring-indigo-50">
-                <div class="text-center md:text-left max-w-2xl">
-                    <h2 class="text-3xl font-bold mb-6 section-title text-indigo-600">Sobre Mim</h2>
-                    <div class="text-lg leading-relaxed text-slate-700 space-y-4 text-justify">
-                        <p>
-                            Olá! Me chamo <span class="font-semibold text-indigo-600">Ângelo Silvano</span> e trabalho com <strong class="text-indigo-600">desenvolvimento front-end</strong> há cerca de <strong class="text-indigo-600">3 anos</strong>.
-                        </p>
-                        <p>
-                            Comecei na área quando entrei no curso de <span class="font-semibold">Tecnologia da Informação</span> na <span class="font-semibold text-indigo-600">UFERSA – Campus Pau dos Ferros</span>, bem no meio da pandemia. Na época, me interessei por vídeos do canal <span class="font-semibold">Curso em Vídeo</span> e foi ali que tive o primeiro contato com <span class="font-semibold">HTML</span> e <span class="font-semibold">CSS</span>.
-                        </p>
-                        <p>
-                            Desde então, sigo me desenvolvendo e focando em criar aplicações web que entreguem boa experiência em qualquer tela. No dia a dia, gosto de usar <span class="font-semibold">Next.js</span> e <span class="font-semibold">Tailwind CSS</span> pra manter tudo limpo, funcional e bonito.
-                        </p>
-                    </div>
+    <section id="welcome" class="relative overflow-hidden bg-linear-to-b from-indigo-50/50 to-slate-50">
+       <div class="container mx-auto px-4 min-h-screen flex items-center justify-center pt-20 md:pt-0">
+       <div class="flex flex-col-reverse md:flex-row items-center justify-between w-full max-w-5xl gap-10">
+<div class="text-center md:text-left">
+<p class="text-lg text-slate-500 font-medium">Olá, eu sou</p>
+<h1 class="text-5xl md:text-7xl font-bold text-slate-800 my-2">Ângelo Silvano</h1>
+<div class="flex items-center justify-center md:justify-start gap-3">
+<div class="w-10 h-1 bg-indigo-600 rounded-full"></div>
+<p class="text-xl text-indigo-600 font-semibold tracking-wide">Desenvolvedor Front-end</p>
+</div>
+<div class="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
+<a href="./curriculo/Curriculo Angelo.pdf" download="Currículo - Angelo.pdf" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors duration-300 shadow-lg hover:shadow-indigo-500/30">
+Download CV
+</a>
+<a href="#contact" class="bg-transparent border-2 border-slate-800 text-slate-800 font-bold py-3 px-8 rounded-lg hover:bg-slate-800 hover:text-white transition-colors duration-300">
+Entrar em Contato
+</a>
+</div>
+<div class="mt-8 flex justify-center md:justify-start gap-x-6">
+<a href="https://github.com/angelosilvanno" target="_blank" rel="noopener noreferrer" title="GitHub" class="text-slate-600 hover:text-indigo-600 transition-transform hover:-translate-y-1">
+<i class="fab fa-github text-3xl"></i>
+</a>
+<a href="https://www.linkedin.com/in/angelosilvanno/" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="text-slate-600 hover:text-indigo-600 transition-transform hover:-translate-y-1">
+<i class="fab fa-linkedin-in text-3xl"></i>
+</a>
+</div>
+</div>
+<div class="shrink-0 relative group">
+<div class="absolute inset-0 bg-indigo-600 rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+<img src="./image/angelodev.avif" alt="Foto de Ângelo Silvano" fetchpriority="high" class="relative rounded-full w-56 h-56 md:w-72 md:h-72 object-cover border-8 border-white shadow-2xl">
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full overflow-hidden leading-0">
+<svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-12 md:h-20 fill-white">
+<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C57.23,103.19,115,110.57,172,110.57c62,0,123-11.41,149.39-54.13Z"></path>
+</svg>
+</div>
+</section>
+<section id="about" class="bg-white">
+    <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
+            <img srcset="./image/angelo.avif 256w, ./image/angelo.avif 384w, ./image/angelo.avif 512w" sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, 256px" src="./image/angelo.avif" alt="Foto de Ângelo Silvano, um desenvolvedor web" loading="lazy" class="rounded-full shadow-lg w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 object-cover border-4 border-white ring-2 ring-indigo-50">
+            <div class="text-center md:text-left max-w-2xl">
+                <h2 class="text-3xl font-bold mb-6 section-title text-indigo-600">Sobre Mim</h2>
+                <div class="text-lg leading-relaxed text-slate-700 space-y-4 text-justify">
+                    <p>
+                        Olá! Me chamo <span class="font-semibold text-indigo-600">Ângelo Silvano</span> e trabalho com <strong class="text-indigo-600">desenvolvimento front-end</strong> há cerca de <strong class="text-indigo-600">3 anos</strong>.
+                    </p>
+                    <p>
+                        Comecei na área quando entrei no curso de <span class="font-semibold">Tecnologia da Informação</span> na <span class="font-semibold text-indigo-600">UFERSA – Campus Pau dos Ferros</span>, bem no meio da pandemia. Na época, me interessei por vídeos do canal <span class="font-semibold">Curso em Vídeo</span> e foi ali que tive o primeiro contato com <span class="font-semibold">HTML</span> e <span class="font-semibold">CSS</span>.
+                    </p>
+                    <p>
+                        Desde então, sigo me desenvolvendo e focando em criar aplicações web que entreguem boa experiência em qualquer tela. No dia a dia, gosto de usar <span class="font-semibold">Next.js</span> e <span class="font-semibold">Tailwind CSS</span> pra manter tudo limpo, funcional e bonito.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <div class="w-full h-px bg-slate-200"></div>
+<div class="w-full h-px bg-slate-200"></div>
 
-    <section id="experience" class="bg-slate-50">
-        <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20">
-            <h2 class="text-3xl font-bold text-center mb-4 section-title text-indigo-600">Experiência</h2>
-            <p class="text-lg text-center mb-16 text-slate-600">Minha trajetória profissional e acadêmica no desenvolvimento</p>
-            
-            <div class="max-w-4xl mx-auto space-y-8">
-                <div class="relative pl-8 border-l-2 border-indigo-200">
-                    <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-2.25 top-1 border-4 border-white shadow-sm"></div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-indigo-50 hover:shadow-md transition-shadow">
-                        <span class="text-sm font-semibold text-indigo-500 uppercase tracking-wider">Fev/2025 — Ago/2025</span>
-                        <h3 class="text-xl font-bold text-slate-800 mt-1">Desenvolvedor Front-End (Bolsista) — Projeto Carcará</h3>
-                        <p class="text-indigo-600 font-medium mb-3">LISA - UFERSA</p>
-                        <ul class="list-disc list-inside text-slate-600 space-y-1 text-sm md:text-base">
-                            <li>Desenvolvimento da nova interface do site institucional.</li>
-                            <li>Melhorias de navegação e organização das telas.</li>
-                            <li>Trabalho em conjunto com equipe do projeto para entregas por etapa.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="relative pl-8 border-l-2 border-indigo-200">
-                    <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-2.25 top-1 border-4 border-white shadow-sm"></div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-indigo-50 hover:shadow-md transition-shadow">
-                        <span class="text-sm font-semibold text-indigo-500 uppercase tracking-wider">Jul/2024 — Nov/2024</span>
-                        <h3 class="text-xl font-bold text-slate-800 mt-1">Monitor | Disciplina Qualidade de Software</h3>
-                        <p class="text-indigo-600 font-medium mb-3">UFERSA</p>
-                        <ul class="list-disc list-inside text-slate-600 space-y-1 text-sm md:text-base">
-                            <li>Auxílio no entendimento de conceitos teóricos como usabilidade e manutenibilidade.</li>
-                            <li>Organização do processo de acompanhamento de atividades para suporte aos alunos.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="relative pl-8 border-l-2 border-indigo-200">
-                    <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-2.25 top-1 border-4 border-white shadow-sm"></div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-indigo-50 hover:shadow-md transition-shadow">
-                        <span class="text-sm font-semibold text-indigo-500 uppercase tracking-wider">Jul/2023 — Jul/2024</span>
-                        <h3 class="text-xl font-bold text-slate-800 mt-1">Assistente de Pesquisa</h3>
-                        <p class="text-indigo-600 font-medium mb-3">UFERSA</p>
-                        <ul class="list-disc list-inside text-slate-600 space-y-1 text-sm md:text-base">
-                            <li>Análise de dados com Python para identificar fatores ligados à evasão.</li>
-                            <li>Geração de relatórios para apoiar decisões do projeto.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="w-full h-px bg-slate-200"></div>
-
-    <section id="services" class="bg-white">
-        <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20">
-            <h2 class="text-3xl font-bold text-center mb-4 section-title text-indigo-600">O que eu faço na prática</h2>
-            <p class="text-lg text-center mb-12 text-slate-700 max-w-3xl mx-auto">
-                Com minhas habilidades, sua ideia se torna uma presença online de sucesso. Veja como posso te ajudar:
-            </p>
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
-                    <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
-                        <i class="fas fa-laptop-code fa-2x w-8 h-8 flex items-center justify-center"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-slate-800">Criação de Sites</h3>
-                    <p class="text-slate-600 leading-relaxed">
-                        Crio seu cartão de visita online ou página moderna e rápida para seus serviços.
-                    </p>
-                </div>
-                <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
-                    <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
-                        <i class="fas fa-store fa-2x w-8 h-8 flex items-center justify-center"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-slate-800">Loja Virtual</h3>
-                    <p class="text-slate-600 leading-relaxed">
-                        Monto sua loja virtual com vitrine, carrinho e pagamentos, pronta pra vender 24h por dia.
-                    </p>
-                </div>
-                <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
-                    <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
-                        <i class="fas fa-mobile-alt fa-2x w-8 h-8 flex items-center justify-center"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-slate-800">Responsividade</h3>
-                    <p class="text-slate-600 leading-relaxed">
-                        Seu site bonito e funcional em qualquer tela: celular, tablet ou computador.
-                    </p>
-                </div>
-                <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
-                    <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
-                        <i class="fas fa-tachometer-alt fa-2x w-8 h-8 flex items-center justify-center"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-slate-800">Otimização</h3>
-                    <p class="text-slate-600 leading-relaxed">
-                        Faço seu site carregar rápido, agradando visitantes e os motores de busca.
-                    </p>
-                </div>
-                <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
-                    <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
-                        <i class="fas fa-tools fa-2x w-8 h-8 flex items-center justify-center"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-slate-800">Manutenção</h3>
-                    <p class="text-slate-600 leading-relaxed">
-                        Deixo seu site sempre seguro, atualizado e funcionando bem, sem preocupações para você.
-                    </p>
-                </div>
-                <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
-                    <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
-                        <i class="fas fa-search fa-2x w-8 h-8 flex items-center justify-center"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-slate-800">Visibilidade no Google</h3>
-                    <p class="text-slate-600 leading-relaxed">
-                        Ajusto seu site para aparecer bem no Google, trazendo mais gente interessada.
-                    </p>
-                </div>
-            </div>
-            <div class="text-center mt-12">
-                <a href="https://wa.me/5584999566634?text=Olá,%20Ângelo!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white text-lg font-semibold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors duration-300 shadow hover:shadow-md transform hover:-translate-y-1">
-                    <i class="fab fa-whatsapp text-2xl"></i> Vamos conversar sobre seu projeto?
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <div class="w-full h-px bg-indigo-100"></div>
-
-    <section id="projects" class="bg-slate-50">
-        <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20">
-            <h2 class="text-3xl font-bold text-center mb-4 section-title text-indigo-600">Meus Projetos</h2>
-            <p class="text-lg text-center mb-12 text-slate-700 max-w-3xl mx-auto">
-                Confira alguns dos projetos que desenvolvi, com prévias visuais e tecnologias utilizadas:
-            </p>
+<section id="experience" class="bg-slate-50">
+    <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20">
+        <h2 class="text-3xl font-bold text-center mb-4 section-title text-indigo-600">Experiência</h2>
+        <p class="text-lg text-center mb-16 text-slate-600">Minha trajetória profissional e acadêmica no desenvolvimento</p>
         
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch"> 
-                
-                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
-                    <div class="h-48 bg-indigo-600 w-full overflow-hidden group relative flex items-center justify-center">
-                        <i class="fas fa-music text-white/20 text-6xl absolute"></i>
-                        <img src="https://placehold.co/600x400/4f46e5/4f46e5" alt="VibePlay" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="https://vibeplay-web.vercel.app/" target="_blank" class="text-white font-semibold border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition-colors">Visitar Site</a>
-                        </div>
-                    </div>
-
-                    <div class="p-6 flex flex-col grow">
-                        <h3 class="text-2xl font-bold mb-3 text-slate-800">VibePlay</h3>
-                        <div class="text-sm text-slate-600 leading-relaxed mb-4 grow">
-                            <p class="mb-3">Desenvolvi o VibePlay para ser um player de música intuitivo e focado em interatividade. A ideia foi criar uma experiência onde o usuário tem controle total do som, podendo não apenas ouvir suas faixas favoritas, mas também explorar novos gêneros e conhecer a história por trás dos artistas de um jeito simples e direto.</p>
-                            <ul class="list-disc list-inside space-y-1 text-slate-500">
-                                <li>Controle de áudio completo com ajuste individual de volume.</li>
-                                <li>Sistema de busca por nome e navegação por gêneros.</li>
-                                <li>Seção dedicada para biografias e curiosidades sobre artistas.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="pt-4 border-t border-slate-100">
-                            <div class="flex flex-wrap gap-2 mb-4 font-semibold">
-                                <span class="bg-indigo-100 text-indigo-700 text-xs px-2.5 py-1 rounded-md">Next.js</span>
-                                <span class="bg-violet-100 text-violet-700 text-xs px-2.5 py-1 rounded-md">Tailwind CSS</span>
-                                <span class="bg-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded-md">TypeScript</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <a href="https://vibeplay-web.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
-                                    Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
-                                </a>
-                                <a href="https://github.com/angelosilvanno/vibe-play" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
-                                    <i class="fab fa-github text-lg"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+        <div class="max-w-4xl mx-auto space-y-8">
+            <div class="relative pl-8 border-l-2 border-indigo-200">
+                <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-2.25 top-1 border-4 border-white shadow-sm"></div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-indigo-50 hover:shadow-md transition-shadow">
+                    <span class="text-sm font-semibold text-indigo-500 uppercase tracking-wider">Fev/2025 — Ago/2025</span>
+                    <h3 class="text-xl font-bold text-slate-800 mt-1">Desenvolvedor Front-End (Bolsista) — Projeto Carcará</h3>
+                    <p class="text-indigo-600 font-medium mb-3">LISA - UFERSA</p>
+                    <ul class="list-disc list-inside text-slate-600 space-y-1 text-sm md:text-base">
+                        <li>Desenvolvimento da nova interface do site institucional.</li>
+                        <li>Melhorias de navegação e organização das telas.</li>
+                        <li>Trabalho em conjunto com equipe do projeto para entregas por etapa.</li>
+                    </ul>
                 </div>
-
-                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
-                    <div class="h-48 bg-slate-800 w-full overflow-hidden group relative flex items-center justify-center">
-                        <i class="fas fa-futbol text-white/20 text-6xl absolute"></i>
-                        <img src="https://placehold.co/600x400/1e293b/1e293b" alt="FootCoder" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="https://foot-coder.vercel.app/" target="_blank" class="text-white font-semibold border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition-colors">Visitar Site</a>
-                        </div>
-                    </div>
-
-                    <div class="p-6 flex flex-col grow">
-                        <h3 class="text-2xl font-bold mb-3 text-slate-800">FootCoder</h3>
-                        <div class="text-sm text-slate-600 leading-relaxed mb-4 grow">
-                            <p class="mb-3">Criei esta loja de camisetas de futebol com o foco em simular um fluxo de compra real e completo. O objetivo foi garantir uma experiência intuitiva para o usuário, cobrindo todas as etapas: desde a navegação na vitrine de times até o gerenciamento dinâmico do carrinho e a finalização no checkout.</p>
-                            <ul class="list-disc list-inside space-y-1 text-slate-500">
-                                <li>Catálogo organizado com visualização clara de produtos.</li>
-                                <li>Carrinho de compras para gerenciamento dinâmico de itens.</li>
-                                <li>Simulação de checkout com opções de pagamento.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="pt-4 border-t border-slate-100">
-                            <div class="flex flex-wrap gap-2 mb-4 font-semibold">
-                                <span class="bg-orange-100 text-orange-700 text-xs px-2.5 py-1 rounded-md">HTML5</span>
-                                <span class="bg-indigo-100 text-indigo-700 text-xs px-2.5 py-1 rounded-md">CSS3</span>
-                                <span class="bg-yellow-100 text-yellow-700 text-xs px-2.5 py-1 rounded-md">JavaScript</span>
-                                <span class="bg-violet-100 text-violet-700 text-xs px-2.5 py-1 rounded-md">Bootstrap</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <a href="https://foot-coder.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
-                                    Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
-                                </a>
-                                <a href="https://github.com/angelosilvanno/FootCoder" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
-                                    <i class="fab fa-github text-lg"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
-                    <div class="h-48 bg-orange-600 w-full overflow-hidden group relative flex items-center justify-center">
-                        <i class="fas fa-lightbulb text-white/20 text-6xl absolute"></i>
-                        <img src="https://placehold.co/600x400/ea580c/ea580c" alt="Lógica Quiz" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="https://logicaquiz.vercel.app/" target="_blank" class="text-white font-semibold border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition-colors">Visitar Site</a>
-                        </div>
-                    </div>
-
-                    <div class="p-6 flex flex-col grow">
-                        <h3 class="text-2xl font-bold mb-3 text-slate-800">Lógica Quiz</h3>
-                        <div class="text-sm text-slate-600 leading-relaxed mb-4 grow">
-                            <p class="mb-3">Um jogo educativo voltado para o estudo de Matemática Discreta, focado em tornar o aprendizado de lógica proposicional mais prático e envolvente. O quiz desafia o conhecimento técnico com um feedback visual imediato.</p>
-                            <ul class="list-disc list-inside space-y-1 text-slate-500">
-                                <li>Feedback instantâneo para reforço do aprendizado.</li>
-                                <li>Sistema de pontuação e progressão gamificada.</li>
-                                <li>Interface intuitiva focada na experiência do estudante.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="pt-4 border-t border-slate-100">
-                            <div class="flex flex-wrap gap-2 mb-4 font-semibold">
-                                <span class="bg-yellow-100 text-yellow-700 text-xs px-2.5 py-1 rounded-md">JavaScript</span>
-                                <span class="bg-indigo-100 text-indigo-700 text-xs px-2.5 py-1 rounded-md">TypeScript</span>
-                                <span class="bg-orange-100 text-orange-700 text-xs px-2.5 py-1 rounded-md">HTML5</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <a href="https://logicaquiz.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
-                                    Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
-                                </a>
-                                <a href="https://github.com/angelosilvanno/LogicaQuiz" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
-                                    <i class="fab fa-github text-lg"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
-                    <div class="h-48 bg-amber-900 w-full overflow-hidden group relative flex items-center justify-center">
-                        <i class="fas fa-mug-hot text-white/20 text-6xl absolute"></i>
-                        <img src="https://placehold.co/600x400/78350f/78350f" alt="Coffee Delivery" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="https://coffeeexpresso.vercel.app/" target="_blank" class="text-white font-semibold border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition-colors">Visitar Site</a>
-                        </div>
-                    </div>
-
-                    <div class="p-6 flex flex-col grow">
-                        <h3 class="text-2xl font-bold mb-3 text-slate-800">Coffee Delivery</h3>
-                        <div class="text-sm text-slate-600 leading-relaxed mb-4 grow">
-                            <p class="mb-3">Landing page de um serviço de entrega de café, com foco em um design limpo e um processo de escolha rápido para o cliente. O projeto prioriza a apresentação visual dos produtos para converter visitas em pedidos.</p>
-                            <ul class="list-disc list-inside space-y-1 text-slate-500">
-                                <li>Cardápio visual imersivo com fotos detalhadas.</li>
-                                <li>Fluxo de adição ao carrinho simplificado.</li>
-                                <li>Design responsivo otimizado para dispositivos móveis.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="pt-4 border-t border-slate-100">
-                            <div class="flex flex-wrap gap-2 mb-4 font-semibold">
-                                <span class="bg-violet-100 text-violet-700 text-xs px-2.5 py-1 rounded-md">Bootstrap</span>
-                                <span class="bg-yellow-100 text-yellow-700 text-xs px-2.5 py-1 rounded-md">JavaScript</span>
-                                <span class="bg-indigo-100 text-indigo-700 text-xs px-2.5 py-1 rounded-md">CSS3</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <a href="https://coffeeexpresso.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
-                                    Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
-                                </a>
-                                <a href="https://github.com/angelosilvanno/CoffeeDelivery" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
-                                    <i class="fab fa-github text-lg"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
-                    <div class="h-48 bg-slate-900 w-full overflow-hidden group relative flex items-center justify-center">
-                        <i class="fas fa-running text-white/20 text-6xl absolute"></i>
-                        <img src="https://placehold.co/600x400/0f172a/0f172a" alt="RunTech" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="https://runtechweb.vercel.app/" target="_blank" class="text-white font-semibold border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition-colors">Visitar Site</a>
-                        </div>
-                    </div>
-
-                    <div class="p-6 flex flex-col grow">
-                        <h3 class="text-2xl font-bold mb-3 text-slate-800">RunTech</h3>
-                        <div class="text-sm text-slate-600 leading-relaxed mb-4 grow">
-                            <p class="mb-3">O RunTech é um e-commerce que criei focado em quem pratica corrida. O objetivo foi construir uma experiência de compra completa e fluida, onde o usuário consegue navegar pelo catálogo, filtrar o que precisa e gerenciar o carrinho de um jeito bem intuitivo, como em uma loja real.</p>
-                            <ul class="list-disc list-inside space-y-1 text-slate-500">
-                                <li>Fluxo de compra completo do catálogo ao checkout simulado.</li>
-                                <li>Filtros por categoria para busca rápida de equipamentos.</li>
-                                <li>Interface responsiva otimizada para desktops e celulares.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="pt-4 border-t border-slate-100">
-                            <div class="flex flex-wrap gap-2 mb-4 font-semibold">
-                                <span class="bg-indigo-100 text-indigo-700 text-xs px-2.5 py-1 rounded-md">TypeScript</span>
-                                <span class="bg-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded-md">CSS3</span>
-                                <span class="bg-orange-100 text-orange-700 text-xs px-2.5 py-1 rounded-md">HTML5</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <a href="https://runtechweb.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
-                                    Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
-                                </a>
-                                <a href="https://github.com/angelosilvanno/RunTech" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
-                                    <i class="fab fa-github text-lg"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
-                    <div class="h-48 bg-green-700 w-full overflow-hidden group relative flex items-center justify-center">
-                        <i class="fas fa-terminal text-white/20 text-6xl absolute"></i>
-                        <img src="https://placehold.co/600x400/16a34a/16a34a" alt="O Show do Código" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="https://showdocodigo.vercel.app/" target="_blank" class="text-white font-semibold border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition-colors">Visitar Site</a>
-                        </div>
-                    </div>
-
-                    <div class="p-6 flex flex-col grow">
-                        <h3 class="text-2xl font-bold mb-3 text-slate-800">O Show do Código</h3>
-                        <div class="text-sm text-slate-600 leading-relaxed mb-4 grow">
-                            <p class="mb-3">Criei o Show do Código para ser um quiz em formato de jogo, totalmente inspirado no clássico Show do Milhão. A ideia é testar o que você sabe sobre programação de um jeito divertido: as perguntas vão ficando mais difíceis conforme você avança e você ainda conta com sistemas de ajuda para chegar ao prêmio máximo virtual.</p>
-                            <ul class="list-disc list-inside space-y-1 text-slate-500">
-                                <li>Trilhas de conhecimento em Frontend, Backend, Mobile e Fullstack.</li>
-                                <li>Sistema de ajudas (Pular, Eliminar e Universitários).</li>
-                                <li>Mecânicas imersivas com feedback sonoro e visual.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="pt-4 border-t border-slate-100">
-                            <div class="flex flex-wrap gap-2 mb-4 font-semibold">
-                                <span class="bg-green-100 text-green-700 text-xs px-2.5 py-1 rounded-md">Vite</span>
-                                <span class="bg-violet-100 text-violet-700 text-xs px-2.5 py-1 rounded-md">React</span>
-                                <span class="bg-indigo-100 text-indigo-700 text-xs px-2.5 py-1 rounded-md">TypeScript</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <a href="https://showdocodigo.vercel.app/" target="_blank" class= "inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
-                                    Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
-                                </a>
-                                <a href="https://github.com/angelosilvanno/show-do-codigo" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
-                                    <i class="fab fa-github text-lg"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-            
-            <div class="text-center mt-16">
-                <a href="https://github.com/angelosilvanno?tab=repositories" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border-2 border-slate-800 text-slate-800 font-bold py-3 px-8 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
-                    <i class="fab fa-github"></i>
-                    Ver mais no GitHub
-                </a>
+
+            <div class="relative pl-8 border-l-2 border-indigo-200">
+                <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-2.25 top-1 border-4 border-white shadow-sm"></div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-indigo-50 hover:shadow-md transition-shadow">
+                    <span class="text-sm font-semibold text-indigo-500 uppercase tracking-wider">Jul/2024 — Nov/2024</span>
+                    <h3 class="text-xl font-bold text-slate-800 mt-1">Monitor | Disciplina Qualidade de Software</h3>
+                    <p class="text-indigo-600 font-medium mb-3">UFERSA</p>
+                    <ul class="list-disc list-inside text-slate-600 space-y-1 text-sm md:text-base">
+                        <li>Auxílio no entendimento de conceitos teóricos como usabilidade e manutenibilidade.</li>
+                        <li>Organização do processo de acompanhamento de atividades para suporte aos alunos.</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <div class="w-full h-px bg-indigo-100"></div>
-
-    <section id="skills" class="bg-white">
-        <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20" 
-            x-data="{ 
-                frontSkills: [
-                    { name: 'HTML5', icon: 'fab fa-html5 text-orange-500' },
-                    { name: 'CSS3', icon: 'fab fa-css3-alt text-indigo-500' },
-                    { name: 'JavaScript', icon: 'fab fa-js-square text-yellow-500' },
-                    { name: 'React', icon: 'fab fa-react text-indigo-400' },
-                    { name: 'Next.js', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
-                    { name: 'Tailwind', img: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tailwindcss.svg' },
-                    { name: 'TypeScript', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
-                    { name: 'Bootstrap', icon: 'fab fa-bootstrap text-violet-600' },
-                    { name: 'Vite', img: 'https://vitejs.dev/logo.svg' }
-                ],
-                backSkills: [
-                    { name: 'Java', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
-                    { name: 'PostgreSQL', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' }
-                ],
-                toolSkills: [
-                    { name: 'Git', icon: 'fab fa-git-alt text-red-500' },
-                    { name: 'GitHub', icon: 'fab fa-github text-slate-800' }
-                ]
-            }">
-            
-            <h2 class="text-3xl font-bold text-center mb-4 section-title text-indigo-600">Hard Skills</h2>
-            <p class="text-lg text-center mb-16 text-slate-600">Tecnologias que domino e ferramentas que uso no dia a dia</p>
-
-            <div class="max-w-5xl mx-auto space-y-12">
-                <div>
-                    <h3 class="text-2xl font-bold text-slate-700 mb-6 flex items-center gap-3">
-                        <span class="p-2 bg-indigo-100 rounded-lg text-indigo-600"><i class="fas fa-code"></i></span>
-                        Front-end
-                    </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 font-semibold">
-                        <template x-for="skill in frontSkills" :key="skill.name">
-                            <div class="flex flex-col items-center justify-center p-4 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-md hover:border-indigo-200 transition-all duration-300 group">
-                                <template x-if="skill.icon">
-                                    <i :class="skill.icon + ' text-4xl mb-3 group-hover:scale-110 transition-transform'"></i>
-                                </template>
-                                <template x-if="skill.img">
-                                    <img :src="skill.img" :alt="skill.name" class="w-10 h-10 mb-3 group-hover:scale-110 transition-transform" />
-                                </template>
-                                <span class="text-slate-600 text-sm" x-text="skill.name"></span>
-                            </div>
-                        </template>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="text-2xl font-bold text-slate-700 mb-6 flex items-center gap-3">
-                        <span class="p-2 bg-emerald-100 rounded-lg text-emerald-600"><i class="fas fa-server"></i></span>
-                        Back-end
-                    </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 font-semibold">
-                        <template x-for="skill in backSkills" :key="skill.name">
-                            <div class="flex flex-col items-center justify-center p-4 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-md hover:border-emerald-200 transition-all duration-300 group">
-                                <template x-if="skill.icon">
-                                    <i :class="skill.icon + ' text-4xl mb-3 group-hover:scale-110 transition-transform'"></i>
-                                </template>
-                                <template x-if="skill.img">
-                                    <img :src="skill.img" :alt="skill.name" class="w-10 h-10 mb-3 group-hover:scale-110 transition-transform" />
-                                </template>
-                                <span class="text-slate-600 text-sm" x-text="skill.name"></span>
-                            </div>
-                        </template>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="text-2xl font-bold text-slate-700 mb-6 flex items-center gap-3">
-                        <span class="p-2 bg-violet-100 rounded-lg text-violet-600"><i class="fas fa-tools"></i></span>
-                        Ferramentas
-                    </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 font-semibold">
-                        <template x-for="skill in toolSkills" :key="skill.name">
-                            <div class="flex flex-col items-center justify-center p-4 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-md hover:border-violet-200 transition-all duration-300 group">
-                                <template x-if="skill.icon">
-                                    <i :class="skill.icon + ' text-4xl mb-3 group-hover:scale-110 transition-transform'"></i>
-                                </template>
-                                <template x-if="skill.img">
-                                    <img :src="skill.img" :alt="skill.name" class="w-10 h-10 mb-3 group-hover:scale-110 transition-transform" />
-                                </template>
-                                <span class="text-slate-600 text-sm" x-text="skill.name"></span>
-                            </div>
-                        </template>
-                    </div>
+            <div class="relative pl-8 border-l-2 border-indigo-200">
+                <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-2.25 top-1 border-4 border-white shadow-sm"></div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-indigo-50 hover:shadow-md transition-shadow">
+                    <span class="text-sm font-semibold text-indigo-500 uppercase tracking-wider">Jul/2023 — Jul/2024</span>
+                    <h3 class="text-xl font-bold text-slate-800 mt-1">Assistente de Pesquisa</h3>
+                    <p class="text-indigo-600 font-medium mb-3">UFERSA</p>
+                    <ul class="list-disc list-inside text-slate-600 space-y-1 text-sm md:text-base">
+                        <li>Análise de dados com Python para identificar fatores ligados à evasão.</li>
+                        <li>Geração de relatórios para apoiar decisões do projeto.</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <div class="w-full h-px bg-indigo-100"></div>
+<div class="w-full h-px bg-slate-200"></div>
 
-    <section id="contact" class="bg-slate-50">
-        <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20">
-            <h2 class="text-3xl font-bold text-center mb-4 section-title text-indigo-600">Vamos Conversar?</h2>
-            <div class="w-16 h-1 bg-indigo-600 mx-auto mb-6"></div>
-            <p class="text-lg text-center mb-12 text-slate-600 max-w-2xl mx-auto">Seja para um projeto, uma oportunidade ou apenas networking, estou à disposição.</p>
+<section id="services" class="bg-white">
+    <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20">
+        <h2 class="text-3xl font-bold text-center mb-4 section-title text-indigo-600">O que eu faço na prática</h2>
+        <p class="text-lg text-center mb-12 text-slate-700 max-w-3xl mx-auto">
+            Com minhas habilidades, sua ideia se torna uma presença online de sucesso. Veja como posso te ajudar:
+        </p>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
+                <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
+                    <i class="fas fa-laptop-code fa-2x w-8 h-8 flex items-center justify-center"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-slate-800">Criação de Sites</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Crio seu cartão de visita online ou página moderna e rápida para seus serviços.
+                </p>
+            </div>
+            <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
+                <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
+                    <i class="fas fa-store fa-2x w-8 h-8 flex items-center justify-center"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-slate-800">Loja Virtual</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Monto sua loja virtual com vitrine, carrinho e pagamentos, pronta pra vender 24h por dia.
+                </p>
+            </div>
+            <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
+                <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
+                    <i class="fas fa-mobile-alt fa-2x w-8 h-8 flex items-center justify-center"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-slate-800">Responsividade</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Seu site bonito e funcional em qualquer tela: celular, tablet ou computador.
+                </p>
+            </div>
+            <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
+                <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
+                    <i class="fas fa-tachometer-alt fa-2x w-8 h-8 flex items-center justify-center"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-slate-800">Otimização</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Faço seu site carregar rápido, agradando visitantes e os motores de busca.
+                </p>
+            </div>
+            <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
+                <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
+                    <i class="fas fa-tools fa-2x w-8 h-8 flex items-center justify-center"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-slate-800">Manutenção</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Deixo seu site sempre seguro, atualizado e funcionando bem, sem preocupações para você.
+                </p>
+            </div>
+            <div class="bg-slate-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
+                <div class="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
+                    <i class="fas fa-search fa-2x w-8 h-8 flex items-center justify-center"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-slate-800">Visibilidade no Google</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Ajusto seu site para aparecer bem no Google, trazendo mais gente interessada.
+                </p>
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <a href="https://wa.me/5584999566634?text=Olá,%20Ângelo!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white text-lg font-semibold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors duration-300 shadow hover:shadow-md transform hover:-translate-y-1">
+                <i class="fab fa-whatsapp text-2xl"></i> Vamos conversar sobre seu projeto?
+            </a>
+        </div>
+    </div>
+</section>
 
-            <div class="bg-indigo-50/30 rounded-2xl p-6 md:p-10 shadow-lg border border-indigo-100 max-w-5xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
+<div class="w-full h-px bg-slate-200"></div>
+
+<section id="projects" class="bg-slate-50">
+    <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20">
+        <h2 class="text-3xl font-bold text-center mb-4 section-title text-indigo-600">Meus Projetos</h2>
+        <p class="text-lg text-center mb-12 text-slate-700 max-w-3xl mx-auto">
+            Confira alguns dos projetos que desenvolvi, com prévias visuais e tecnologias utilizadas:
+        </p>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch"> 
+            
+            <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
+                <div class="h-48 bg-indigo-600 w-full overflow-hidden group relative flex items-center justify-center">
+                    <i class="fas fa-music text-white/20 text-6xl absolute"></i>
+                    <img src="https://placehold.co/600x400/4f46e5/4f46e5" alt="VibePlay" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="https://vibeplay-web.vercel.app/" target="_blank" class="text-white font-semibold border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition-colors">Visitar Site</a>
+                    </div>
+                </div>
+
+                <div class="p-6 flex flex-col grow">
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">VibePlay</h3>
+                    <div class="text-sm text-slate-600 leading-relaxed mb-4 grow">
+                        <p class="mb-3">Desenvolvi o VibePlay para ser um player de música intuitivo e focado em interatividade. A ideia foi criar uma experiência onde o usuário tem controle total do som, podendo não apenas ouvir suas faixas favoritas, mas também explorar novos gêneros e conhecer a história por trás dos artistas de um jeito simples e direto.</p>
+                        <ul class="list-disc list-inside space-y-1 text-slate-500">
+                            <li>Controle de áudio completo com ajuste individual de volume.</li>
+                            <li>Sistema de busca por nome e navegação por gêneros.</li>
+                            <li>Seção dedicada para biografias e curiosidades sobre artistas.</li>
+                        </ul>
+                    </div>
                     
-                    <div class="flex flex-col justify-center space-y-8">
-                        <div>
-                            <h3 class="text-2xl font-bold text-slate-800 mb-4">Entre em contato</h3>
-                            <p class="text-slate-600 mb-6">Escolha o canal que preferir e manda um oi. Costumo responder bem rápido!</p>
+                    <div class="pt-4 border-t border-slate-100">
+                        <div class="flex flex-wrap gap-2 mb-4 font-semibold">
+                            <span class="bg-indigo-100 text-indigo-700 text-xs px-2.5 py-1 rounded-md">Next.js</span>
+                            <span class="bg-violet-100 text-violet-700 text-xs px-2.5 py-1 rounded-md">Tailwind CSS</span>
+                            <span class="bg-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded-md">TypeScript</span>
                         </div>
-
-                        <div class="space-y-6">
-                            <a href="mailto:angeloestudante1@gmail.com" class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-indigo-100 group">
-                                <div class="bg-blue-100 p-3 rounded-full text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                                    <i class="fas fa-envelope text-xl"></i>
-                                </div>
-                                <div class="min-w-0">
-                                    <p class="text-xs text-slate-500 uppercase font-semibold">E-mail</p>
-                                    <p class="text-slate-800 font-medium wrap-break-word text-sm">angelosilvano.dev@gmail.com</p>
-                                </div>
+                        <div class="flex gap-3">
+                            <a href="https://vibeplay-web.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
+                                Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
                             </a>
-
-                            <a href="https://wa.me/5584999566634" target="_blank" class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-emerald-100 group">
-                                <div class="bg-green-100 p-3 rounded-full text-green-600 group-hover:bg-green-600 group-hover:text-white transition-colors">
-                                    <i class="fab fa-whatsapp text-xl"></i>
-                                </div>
-                                <div>
-                                    <p class="text-xs text-slate-500 uppercase font-semibold">WhatsApp</p>
-                                    <p class="text-slate-800 font-medium">+55 (84) 99956-6634</p>
-                                </div>
+                            <a href="https://github.com/angelosilvanno/vibe-play" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
+                                <i class="fab fa-github text-lg"></i>
                             </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                            <div class="flex gap-4 mt-4 pl-2">
-                                <a href="https://www.linkedin.com/in/angelosilvanno/" target="_blank" class="text-slate-400 hover:text-indigo-700 transition-colors"><i class="fab fa-linkedin text-3xl"></i></a>
-                                <a href="https://github.com/angelosilvanno" target="_blank" class="text-slate-400 hover:text-slate-900 transition-colors"><i class="fab fa-github text-3xl"></i></a>
-                            </div>
+            <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
+                <div class="h-48 bg-slate-800 w-full overflow-hidden group relative flex items-center justify-center">
+                    <i class="fas fa-futbol text-white/20 text-6xl absolute"></i>
+                    <img src="https://placehold.co/600x400/1e293b/1e293b" alt="FootCoder" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="https://foot-coder.vercel.app/" target="_blank" class="text-white font-semibold border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition-colors">Visitar Site</a>
+                    </div>
+                </div>
+
+                <div class="p-6 flex flex-col grow">
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">FootCoder</h3>
+                    <div class="text-sm text-slate-600 leading-relaxed mb-4 grow">
+                        <p class="mb-3">Criei esta loja de camisetas de futebol com o foco em simular um fluxo de compra real e completo. O objetivo foi garantir uma experiência intuitiva para o usuário, cobrindo todas as etapas: desde a navegação na vitrine de times até o gerenciamento dinâmico do carrinho e a finalização no checkout.</p>
+                        <ul class="list-disc list-inside space-y-1 text-slate-500">
+                            <li>Catálogo organizado com visualização clara de produtos.</li>
+                            <li>Carrinho de compras para gerenciamento dinâmico de itens.</li>
+                            <li>Simulação de checkout com opções de pagamento.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pt-4 border-t border-slate-100">
+                        <div class="flex flex-wrap gap-2 mb-4 font-semibold">
+                            <span class="bg-orange-100 text-orange-700 text-xs px-2.5 py-1 rounded-md">HTML5</span>
+                            <span class="bg-indigo-100 text-indigo-700 text-xs px-2.5 py-1 rounded-md">CSS3</span>
+                            <span class="bg-yellow-100 text-yellow-700 text-xs px-2.5 py-1 rounded-md">JavaScript</span>
+                            <span class="bg-violet-100 text-violet-700 text-xs px-2.5 py-1 rounded-md">Bootstrap</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://foot-coder.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
+                                Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                            <a href="https://github.com/angelosilvanno/FootCoder" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
+                                <i class="fab fa-github text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
+                <div class="h-48 bg-orange-600 w-full overflow-hidden group relative flex items-center justify-center">
+                    <i class="fas fa-lightbulb text-white/20 text-6xl absolute"></i>
+                    <img src="https://placehold.co/600x400/ea580c/ea580c" alt="Lógica Quiz" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="https://logicaquiz.vercel.app/" target="_blank" class="text-white font-semibold border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition-colors">Visitar Site</a>
+                    </div>
+                </div>
+
+                <div class="p-6 flex flex-col grow">
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Lógica Quiz</h3>
+                    <div class="text-sm text-slate-600 leading-relaxed mb-4 grow">
+                        <p class="mb-3">Um jogo educativo voltado para o estudo de Matemática Discreta, focado em tornar o aprendizado de lógica proposicional mais prático e envolvente. O quiz desafia o conhecimento técnico com um feedback visual imediato.</p>
+                        <ul class="list-disc list-inside space-y-1 text-slate-500">
+                            <li>Feedback instantâneo para reforço do aprendizado.</li>
+                            <li>Sistema de pontuação e progressão gamificada.</li>
+                            <li>Interface intuitiva focada na experiência do estudante.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pt-4 border-t border-slate-100">
+                        <div class="flex flex-wrap gap-2 mb-4 font-semibold">
+                            <span class="bg-yellow-100 text-yellow-700 text-xs px-2.5 py-1 rounded-md">JavaScript</span>
+                            <span class="bg-indigo-100 text-indigo-700 text-xs px-2.5 py-1 rounded-md">TypeScript</span>
+                            <span class="bg-orange-100 text-orange-700 text-xs px-2.5 py-1 rounded-md">HTML5</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://logicaquiz.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
+                                Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                            <a href="https://github.com/angelosilvanno/LogicaQuiz" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
+                                <i class="fab fa-github text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
+                <div class="h-48 bg-amber-900 w-full overflow-hidden group relative flex items-center justify-center">
+                    <i class="fas fa-mug-hot text-white/20 text-6xl absolute"></i>
+                    <img src="https://placehold.co/600x400/78350f/78350f" alt="Coffee Delivery" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="https://coffeeexpresso.vercel.app/" target="_blank" class="text-white font-semibold border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition-colors">Visitar Site</a>
+                    </div>
+                </div>
+
+                <div class="p-6 flex flex-col grow">
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Coffee Delivery</h3>
+                    <div class="text-sm text-slate-600 leading-relaxed mb-4 grow">
+                        <p class="mb-3">Landing page de um serviço de entrega de café, com foco em um design limpo e um processo de escolha rápido para o cliente. O projeto prioriza a apresentação visual dos produtos para converter visitas em pedidos.</p>
+                        <ul class="list-disc list-inside space-y-1 text-slate-500">
+                            <li>Cardápio visual imersivo com fotos detalhadas.</li>
+                            <li>Fluxo de adição ao carrinho simplificado.</li>
+                            <li>Design responsivo otimizado para dispositivos móveis.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pt-4 border-t border-slate-100">
+                        <div class="flex flex-wrap gap-2 mb-4 font-semibold">
+                            <span class="bg-violet-100 text-violet-700 text-xs px-2.5 py-1 rounded-md">Bootstrap</span>
+                            <span class="bg-yellow-100 text-yellow-700 text-xs px-2.5 py-1 rounded-md">JavaScript</span>
+                            <span class="bg-indigo-100 text-indigo-700 text-xs px-2.5 py-1 rounded-md">CSS3</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://coffeeexpresso.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
+                                Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                            <a href="https://github.com/angelosilvanno/CoffeeDelivery" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
+                                <i class="fab fa-github text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
+                <div class="h-48 bg-slate-900 w-full overflow-hidden group relative flex items-center justify-center">
+                    <i class="fas fa-running text-white/20 text-6xl absolute"></i>
+                    <img src="https://placehold.co/600x400/0f172a/0f172a" alt="RunTech" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="https://runtechweb.vercel.app/" target="_blank" class="text-white font-semibold border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition-colors">Visitar Site</a>
+                    </div>
+                </div>
+
+                <div class="p-6 flex flex-col grow">
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">RunTech</h3>
+                    <div class="text-sm text-slate-600 leading-relaxed mb-4 grow">
+                        <p class="mb-3">O RunTech é um e-commerce que criei focado em quem pratica corrida. O objetivo foi construir uma experiência de compra completa e fluida, onde o usuário consegue navegar pelo catálogo, filtrar o que precisa e gerenciar o carrinho de um jeito bem intuitivo, como em uma loja real.</p>
+                        <ul class="list-disc list-inside space-y-1 text-slate-500">
+                            <li>Fluxo de compra completo do catálogo ao checkout simulado.</li>
+                            <li>Filtros por categoria para busca rápida de equipamentos.</li>
+                            <li>Interface responsiva otimizada para desktops e celulares.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pt-4 border-t border-slate-100">
+                        <div class="flex flex-wrap gap-2 mb-4 font-semibold">
+                            <span class="bg-indigo-100 text-indigo-700 text-xs px-2.5 py-1 rounded-md">TypeScript</span>
+                            <span class="bg-slate-200 text-slate-700 text-xs px-2.5 py-1 rounded-md">CSS3</span>
+                            <span class="bg-orange-100 text-orange-700 text-xs px-2.5 py-1 rounded-md">HTML5</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://runtechweb.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
+                                Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                            <a href="https://github.com/angelosilvanno/RunTech" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
+                                <i class="fab fa-github text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-xl hover:shadow-xl transition-shadow duration-300 border border-slate-200 flex flex-col h-full overflow-hidden">
+                <div class="h-48 bg-green-700 w-full overflow-hidden group relative flex items-center justify-center">
+                    <i class="fas fa-terminal text-white/20 text-6xl absolute"></i>
+                    <img src="https://placehold.co/600x400/16a34a/16a34a" alt="O Show do Código" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <a href="https://showdocodigo.vercel.app/" target="_blank" class="text-white font-semibold border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition-colors">Visitar Site</a>
+                    </div>
+                </div>
+
+                <div class="p-6 flex flex-col grow">
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">O Show do Código</h3>
+                    <div class="text-sm text-slate-600 leading-relaxed mb-4 grow">
+                        <p class="mb-3">Criei o Show do Código para ser um quiz em formato de jogo, totalmente inspirado no clássico Show do Milhão. A ideia é testar o que você sabe sobre programação de um jeito divertido: as perguntas vão ficando mais difíceis conforme você avança e você ainda conta com sistemas de ajuda para chegar ao prêmio máximo virtual.</p>
+                        <ul class="list-disc list-inside space-y-1 text-slate-500">
+                            <li>Trilhas de conhecimento em Frontend, Backend, Mobile e Fullstack.</li>
+                            <li>Sistema de ajudas (Pular, Eliminar e Universitários).</li>
+                            <li>Mecânicas imersivas com feedback sonoro e visual.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pt-4 border-t border-slate-100">
+                        <div class="flex flex-wrap gap-2 mb-4 font-semibold">
+                            <span class="bg-green-100 text-green-700 text-xs px-2.5 py-1 rounded-md">Vite</span>
+                            <span class="bg-violet-100 text-violet-700 text-xs px-2.5 py-1 rounded-md">React</span>
+                            <span class="bg-indigo-100 text-indigo-700 text-xs px-2.5 py-1 rounded-md">TypeScript</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://showdocodigo.vercel.app/" target="_blank" class= "inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
+                                Ver Projeto <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                            <a href="https://github.com/angelosilvanno/show-do-codigo" target="_blank" class="px-3 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-white transition-colors flex items-center justify-center" title="Código no GitHub">
+                                <i class="fab fa-github text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="text-center mt-16">
+            <a href="https://github.com/angelosilvanno?tab=repositories" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border-2 border-slate-800 text-slate-800 font-bold py-3 px-8 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+                <i class="fab fa-github"></i>
+                Ver mais no GitHub
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="w-full h-px bg-indigo-100"></div>
+
+<section id="skills" class="bg-white">
+    <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20" 
+        x-data="{ 
+            frontSkills: [
+                { name: 'HTML5', icon: 'fab fa-html5 text-orange-500' },
+                { name: 'CSS3', icon: 'fab fa-css3-alt text-indigo-500' },
+                { name: 'JavaScript', icon: 'fab fa-js-square text-yellow-500' },
+                { name: 'React', icon: 'fab fa-react text-indigo-400' },
+                { name: 'Next.js', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+                { name: 'Tailwind', img: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tailwindcss.svg' },
+                { name: 'TypeScript', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+                { name: 'Bootstrap', icon: 'fab fa-bootstrap text-violet-600' },
+                { name: 'Vite', img: 'https://vitejs.dev/logo.svg' }
+            ],
+            backSkills: [
+                { name: 'Java', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
+                { name: 'PostgreSQL', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' }
+            ],
+            toolSkills: [
+                { name: 'Git', icon: 'fab fa-git-alt text-red-500' },
+                { name: 'GitHub', icon: 'fab fa-github text-slate-800' }
+            ]
+        }">
+        
+        <h2 class="text-3xl font-bold text-center mb-4 section-title text-indigo-600">Hard Skills</h2>
+        <p class="text-lg text-center mb-16 text-slate-600">Tecnologias que domino e ferramentas que uso no dia a dia</p>
+
+        <div class="max-w-5xl mx-auto space-y-12">
+            <div>
+                <h3 class="text-2xl font-bold text-slate-700 mb-6 flex items-center gap-3">
+                    <span class="p-2 bg-indigo-100 rounded-lg text-indigo-600"><i class="fas fa-code"></i></span>
+                    Front-end
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 font-semibold">
+                    <template x-for="skill in frontSkills" :key="skill.name">
+                        <div class="flex flex-col items-center justify-center p-4 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-md hover:border-indigo-200 transition-all duration-300 group">
+                            <template x-if="skill.icon">
+                                <i :class="skill.icon + ' text-4xl mb-3 group-hover:scale-110 transition-transform'"></i>
+                            </template>
+                            <template x-if="skill.img">
+                                <img :src="skill.img" :alt="skill.name" class="w-10 h-10 mb-3 group-hover:scale-110 transition-transform" />
+                            </template>
+                            <span class="text-slate-600 text-sm" x-text="skill.name"></span>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold text-slate-700 mb-6 flex items-center gap-3">
+                    <span class="p-2 bg-emerald-100 rounded-lg text-emerald-600"><i class="fas fa-server"></i></span>
+                    Back-end
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 font-semibold">
+                    <template x-for="skill in backSkills" :key="skill.name">
+                        <div class="flex flex-col items-center justify-center p-4 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-md hover:border-emerald-200 transition-all duration-300 group">
+                            <template x-if="skill.icon">
+                                <i :class="skill.icon + ' text-4xl mb-3 group-hover:scale-110 transition-transform'"></i>
+                            </template>
+                            <template x-if="skill.img">
+                                <img :src="skill.img" :alt="skill.name" class="w-10 h-10 mb-3 group-hover:scale-110 transition-transform" />
+                            </template>
+                            <span class="text-slate-600 text-sm" x-text="skill.name"></span>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold text-slate-700 mb-6 flex items-center gap-3">
+                    <span class="p-2 bg-violet-100 rounded-lg text-violet-600"><i class="fas fa-tools"></i></span>
+                    Ferramentas
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 font-semibold">
+                    <template x-for="skill in toolSkills" :key="skill.name">
+                        <div class="flex flex-col items-center justify-center p-4 bg-slate-50 border border-slate-100 rounded-xl hover:shadow-md hover:border-violet-200 transition-all duration-300 group">
+                            <template x-if="skill.icon">
+                                <i :class="skill.icon + ' text-4xl mb-3 group-hover:scale-110 transition-transform'"></i>
+                            </template>
+                            <template x-if="skill.img">
+                                <img :src="skill.img" :alt="skill.name" class="w-10 h-10 mb-3 group-hover:scale-110 transition-transform" />
+                            </template>
+                            <span class="text-slate-600 text-sm" x-text="skill.name"></span>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="w-full h-px bg-indigo-100"></div>
+
+<section id="contact" class="bg-slate-50 text-slate-800 border-b border-indigo-50">
+    <div class="container mx-auto px-4 py-16 md:py-24 scroll-mt-20">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col items-center text-center mb-16">
+                <span class="inline-block p-3 rounded-full bg-indigo-100 text-indigo-600 mb-4 animate-pulse">
+                    <i class="fas fa-comment-dots text-2xl"></i>
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-slate-900 tracking-tight">Vamos Conversar?</h2>
+                <p class="text-lg text-slate-600 max-w-2xl">Seja para um projeto, uma oportunidade ou apenas networking, estou à disposição para transformar suas ideias em realidade.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="bg-white border border-slate-200 p-6 rounded-3xl shadow-sm hover:border-indigo-500/50 transition-all group">
+                        <h3 class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-4">Disponibilidade</h3>
+                        <div class="flex items-center gap-3">
+                            <span class="relative flex h-3 w-3">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                            </span>
+                            <p class="text-slate-800 font-medium">Aberto a novos projetos</p>
                         </div>
                     </div>
 
-                    <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-slate-200">
-                        <h3 class="text-xl font-bold text-slate-800 mb-6">Envie uma mensagem</h3>
+                    <a href="mailto:angelosilvano.dev@gmail.com" class="block bg-white border border-slate-200 p-6 rounded-3xl shadow-sm hover:bg-slate-50 transition-all group">
+                        <div class="bg-indigo-100 w-12 h-12 rounded-2xl flex items-center justify-center text-indigo-600 mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">E-mail</p>
+                        <p class="text-slate-800 font-medium break-all text-sm">angelosilvano.dev@gmail.com</p>
+                    </a>
+
+                    <a href="https://wa.me/5584999566634" target="_blank" class="block bg-white border border-slate-200 p-6 rounded-3xl shadow-sm hover:bg-slate-50 transition-all group">
+                        <div class="bg-emerald-100 w-12 h-12 rounded-2xl flex items-center justify-center text-emerald-600 mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </div>
+                        <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">WhatsApp</p>
+                        <p class="text-white font-medium text-slate-800">+55 (84) 99956-6634</p>
+                    </a>
+
+                    <div class="flex justify-between p-2">
+                        <a href="https://www.linkedin.com/in/angelosilvanno/" target="_blank" class="w-full py-4 flex justify-center text-slate-400 hover:text-indigo-600 hover:bg-white rounded-2xl transition-all border border-transparent hover:border-slate-200 shadow-sm md:shadow-none"><i class="fab fa-linkedin text-2xl"></i></a>
+                        <a href="https://github.com/angelosilvanno" target="_blank" class="w-full py-4 flex justify-center text-slate-400 hover:text-slate-900 hover:bg-white rounded-2xl transition-all border border-transparent hover:border-slate-200 shadow-sm md:shadow-none"><i class="fab fa-github text-2xl"></i></a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-8">
+                    <div class="bg-white border border-slate-200 rounded-[2rem] p-8 md:p-10 shadow-xl shadow-indigo-500/5">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-8">Envie uma mensagem direta</h3>
                         
-                        <div id="success-message" class="hidden bg-emerald-50 border border-emerald-200 text-emerald-700 px-4 py-3 rounded-lg mb-6 text-sm">
+                        <div id="success-message" class="hidden bg-emerald-50 border border-emerald-200 text-emerald-700 px-4 py-3 rounded-xl mb-6 text-sm">
                             <i class="fas fa-check-circle mr-2"></i> Mensagem enviada com sucesso!
                         </div>
 
-                        <form id="contactForm" action="https://formspree.io/f/xpwpwprz" method="POST" class="space-y-4">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Nome</label>
-                                <input type="text" id="name" name="name" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition" placeholder="Seu nome" required>
+                        <form id="contactForm" action="https://formspree.io/f/xpwpwprz" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="name" class="block text-sm font-bold text-slate-700 ml-1">Seu Nome</label>
+                                <input type="text" id="name" name="name" class="w-full p-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition text-slate-900" placeholder="Como te chamam?" required>
                             </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-slate-700 mb-1">E-mail</label>
-                                <input type="email" id="email" name="email" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition" placeholder="seu@email.com" required>
+                            <div class="space-y-2">
+                                <label for="email" class="block text-sm font-bold text-slate-700 ml-1">Seu E-mail</label>
+                                <input type="email" id="email" name="email" class="w-full p-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition text-slate-900" placeholder="seu@email.com" required>
                             </div>
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-slate-700 mb-1">Mensagem</label>
-                                <textarea id="message" name="message" rows="4" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition resize-none" placeholder="Como posso te ajudar?" required></textarea>
+                            <div class="md:col-span-2 space-y-2">
+                                <label for="message" class="block text-sm font-bold text-slate-700 ml-1">Sua Mensagem</label>
+                                <textarea id="message" name="message" rows="5" class="w-full p-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition resize-none text-slate-900" placeholder="No que eu posso te ajudar hoje?" required></textarea>
                             </div>
-                            <button type="submit" id="submitButton" class="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-700/20 hover:shadow-indigo-700/40">
-                                Enviar Mensagem
-                            </button>
+                            <div class="md:col-span-2 pt-2">
+                                <button type="submit" id="submitButton" class="w-full bg-indigo-600 text-white py-5 px-8 rounded-2xl font-bold hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-600/20 flex items-center justify-center gap-3 group">
+                                    Enviar Proposta <i class="fas fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-</main>
-
-<footer class="bg-slate-900 text-slate-400 border-t border-slate-800">
-    <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-sm">© <span id="current-year"></span> Ângelo Silvano. Todos os direitos reservados.</p>
-        <div class="flex items-center gap-x-6">
-            <a href="https://github.com/angelosilvanno" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
-            <a href="https://www.linkedin.com/in/angelosilvanno/" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-linkedin-in text-xl"></i></a>
-            <a href="mailto:angeloestudante1@gmail.com" class="hover:text-white transition-colors"><i class="fas fa-envelope text-xl"></i></a>
-        </div>
     </div>
+</section>
+</main>
+<footer class="bg-slate-900 text-slate-400 border-t border-slate-800">
+<div class="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm">© <span id="current-year">2026</span> Ângelo Silvano. Todos os direitos reservados.</p>
+<div class="flex items-center gap-x-6">
+<a href="https://github.com/angelosilvanno" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
+<a href="https://www.linkedin.com/in/angelosilvanno/" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-linkedin-in text-xl"></i></a>
+<a href="mailto:angelosilvano.dev@gmail.com" class="hover:text-white transition-colors"><i class="fas fa-envelope text-xl"></i></a>
+</div>
+</div>
 </footer>
-
 <button id="scrollToTopBtn" class="fixed bottom-6 right-6 bg-indigo-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-indigo-700 focus:outline-none z-40" title="Voltar ao topo">
-    <i class="fas fa-arrow-up"></i>
+<i class="fas fa-arrow-up"></i>
 </button>
-
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 <script src="https://unpkg.com/scrollreveal" defer></script>
 <script src="js/app.js" defer></script>
