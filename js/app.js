@@ -1,15 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Seleção de Elementos ---
     const header = document.querySelector('header');
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
-    const welcomeSection = document.getElementById('welcome'); // Recuperado
+    const welcomeSection = document.getElementById('welcome'); 
     const menuLinks = document.querySelectorAll('#menu a[href^="#"], #mobile-menu a[href^="#"]');
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
     const currentYearSpan = document.getElementById('current-year');
     const contactForm = document.getElementById('contactForm');
-    const sections = document.querySelectorAll('section[id]'); // Seleção para Scroll Spy
+    const sections = document.querySelectorAll('section[id]'); 
     
+    const projectsTitle = document.querySelector('#projects .section-title');
+    if (projectsTitle) {
+        projectsTitle.classList.add('text-indigo-600');
+    }
+
     // --- Configurações ---
     const HEADER_SCROLL_THRESHOLD = 50;
     const SCROLL_TOP_THRESHOLD = 300;
@@ -51,11 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Acessibilidade
         menuToggle.setAttribute('aria-expanded', !isHidden);
 
-        // Lógica de "Empurrar o conteúdo" restaurada
         if (!isHidden && welcomeSection) {
-            const menuHeight = mobileMenu.scrollHeight; // Pega a altura real do menu
+            const menuHeight = mobileMenu.scrollHeight; 
             welcomeSection.style.marginTop = `${menuHeight}px`;
-            welcomeSection.style.transition = 'margin-top 0.3s ease-in-out'; // Adicionei uma transição suave
+            welcomeSection.style.transition = 'margin-top 0.3s ease-in-out'; 
         } else if (welcomeSection) {
             welcomeSection.style.marginTop = '0px';
         }
@@ -109,7 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // --- Nova Funcionalidade: Scroll Spy (Active Links) ---
     const scrollSpyOptions = { threshold: 0.4 };
     const scrollSpyObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -162,7 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const message = formData.get('message').trim();
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        // Estilização visual básica de erro (Melhoria de UX)
         const inputs = contactForm.querySelectorAll('input, textarea');
         inputs.forEach(i => i.classList.remove('border-red-500'));
 
@@ -221,7 +222,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Event Listeners ---
     
-    // Botão do Menu Mobile (Agora controlando o empurrão do conteúdo)
     if (menuToggle) {
         menuToggle.addEventListener('click', toggleMobileMenu);
     }
