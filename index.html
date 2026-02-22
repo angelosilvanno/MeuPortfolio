@@ -16,33 +16,33 @@
 
 <body class="font-sans bg-zinc-50 text-slate-800">
 
-<header class="fixed w-full top-0 z-50 transition-all duration-300 ease-in-out bg-white/90 backdrop-blur-md shadow-sm border-b border-indigo-100">
+<header class="fixed w-full top-0 z-50 transition-all duration-500 ease-in-out bg-white/95 backdrop-blur-md shadow-md border-b border-indigo-50">
     <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="#welcome" aria-label="Ângelo Silvano - Voltar ao início" class="text-xl font-mono font-bold text-indigo-600 hover:text-indigo-500 transition-colors">
+        <a href="#welcome" aria-label="Ângelo Silvano - Voltar ao início" class="text-xl font-mono font-bold text-indigo-600 hover:text-indigo-500 transition-all transform hover:scale-105 active:scale-95">
             &lt; Ângelo /&gt;
         </a>
-        <button id="menu-toggle" class="md:hidden focus:outline-none text-gray-600 hover:text-indigo-500" aria-label="Abrir menu">
+        <button id="menu-toggle" class="md:hidden focus:outline-none text-slate-700 hover:text-indigo-600 transition-transform active:scale-90" aria-label="Abrir menu">
             <i class="fas fa-bars text-2xl"></i>
         </button>
-        <ul id="menu" class="hidden md:flex gap-x-6 text-gray-600 font-medium">
-            <li><a href="#welcome" class="hover:text-indigo-500 transition-colors">Início</a></li>
-            <li><a href="#about" class="hover:text-indigo-500 transition-colors">Sobre</a></li>
-            <li><a href="#experience" class="hover:text-indigo-500 transition-colors">Experiência</a></li>
-            <li><a href="#services" class="hover:text-indigo-500 transition-colors">Serviços</a></li>
-            <li><a href="#projects" class="hover:text-indigo-500 transition-colors">Projetos</a></li>
-            <li><a href="#skills" class="hover:text-indigo-500 transition-colors">Habilidades</a></li>
-            <li><a href="#contact" class="hover:text-indigo-500 transition-colors">Contato</a></li>
+        <ul id="menu" class="hidden md:flex gap-x-8 text-slate-700 font-semibold">
+            <li><a href="#welcome" class="hover:text-indigo-600 transition-all hover:underline hover:underline-offset-8 hover:decoration-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none rounded-md px-1">Início</a></li>
+            <li><a href="#about" class="hover:text-indigo-600 transition-all hover:underline hover:underline-offset-8 hover:decoration-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none rounded-md px-1">Sobre</a></li>
+            <li><a href="#experience" class="hover:text-indigo-600 transition-all hover:underline hover:underline-offset-8 hover:decoration-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none rounded-md px-1">Experiência</a></li>
+            <li><a href="#services" class="hover:text-indigo-600 transition-all hover:underline hover:underline-offset-8 hover:decoration-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none rounded-md px-1">Serviços</a></li>
+            <li><a href="#projects" class="hover:text-indigo-600 transition-all hover:underline hover:underline-offset-8 hover:decoration-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none rounded-md px-1">Projetos</a></li>
+            <li><a href="#skills" class="hover:text-indigo-600 transition-all hover:underline hover:underline-offset-8 hover:decoration-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none rounded-md px-1">Habilidades</a></li>
+            <li><a href="#contact" class="hover:text-indigo-600 transition-all hover:underline hover:underline-offset-8 hover:decoration-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none rounded-md px-1">Contato</a></li>
         </ul>
     </nav>
 
-    <ul id="mobile-menu" class="hidden md:hidden bg-white w-full absolute left-0 shadow-md py-4 space-y-3 text-gray-600 font-medium border-b border-indigo-100">
-        <li><a href="#welcome" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Início</a></li>
-        <li><a href="#about" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Sobre</a></li>
-        <li><a href="#experience" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Experiência</a></li>
-        <li><a href="#services" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Serviços</a></li>
-        <li><a href="#projects" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Projetos</a></li>
-        <li><a href="#skills" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Habilidades</a></li>
-        <li><a href="#contact" class="hover:text-indigo-500 transition-colors block w-full text-center py-2">Contato</a></li>
+    <ul id="mobile-menu" class="hidden md:hidden bg-white/98 w-full absolute left-0 shadow-xl py-6 space-y-4 text-slate-700 font-bold border-b-2 border-indigo-500 transition-all duration-300 origin-top transform">
+        <li><a href="#welcome" class="hover:text-indigo-600 hover:bg-indigo-50 transition-colors block w-full text-center py-3">Início</a></li>
+        <li><a href="#about" class="hover:text-indigo-600 hover:bg-indigo-50 transition-colors block w-full text-center py-3">Sobre</a></li>
+        <li><a href="#experience" class="hover:text-indigo-600 hover:bg-indigo-50 transition-colors block w-full text-center py-3">Experiência</a></li>
+        <li><a href="#services" class="hover:text-indigo-600 hover:bg-indigo-50 transition-colors block w-full text-center py-3">Serviços</a></li>
+        <li><a href="#projects" class="hover:text-indigo-600 hover:bg-indigo-50 transition-colors block w-full text-center py-3">Projetos</a></li>
+        <li><a href="#skills" class="hover:text-indigo-600 hover:bg-indigo-50 transition-colors block w-full text-center py-3">Habilidades</a></li>
+        <li><a href="#contact" class="hover:text-indigo-600 hover:bg-indigo-50 transition-colors block w-full text-center py-3">Contato</a></li>
     </ul>
 </header>
 
