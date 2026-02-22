@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
     const currentYearSpan = document.getElementById('current-year');
     const contactForm = document.getElementById('contactForm');
+    const sections = document.querySelectorAll('section[id]'); // Seleção para Scroll Spy
     
     // --- Configurações ---
     const HEADER_SCROLL_THRESHOLD = 50;
@@ -79,7 +80,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // --- Manipulação do Header e Scroll ---
+    // --- Nova Funcionalidade: Fechamento por clique externo ---
+    document.addEventListener('click', (event) => {
+        const isClickInsideMenu = mobileMenu.contains(event.target);
+        const isClickOnToggle = menuToggle.contains(event.target);
+        if (!mobileMenu.classList.contains('hidden') && !isClickInsideMenu && !isClickOnToggle) {
+            closeMobileMenu();
+        }
+    });
+
+    // --- Manipulação do Header e Scroll (Melhorado com IntersectionObserver) ---
     const handleHeaderScroll = () => {
         if (window.scrollY > HEADER_SCROLL_THRESHOLD) {
             header.classList.add('shadow-md', 'bg-white/95');
@@ -98,6 +108,23 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollToTopBtn.classList.add('opacity-0', 'invisible');
         }
     };
+
+    // --- Nova Funcionalidade: Scroll Spy (Active Links) ---
+    const scrollSpyOptions = { threshold: 0.4 };
+    const scrollSpyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                menuLinks.forEach(link => {
+                    link.classList.remove('text-indigo-600', 'font-bold');
+                    if (link.getAttribute('href') === `#${entry.target.id}`) {
+                        link.classList.add('text-indigo-600', 'font-bold');
+                    }
+                });
+            }
+        });
+    }, scrollSpyOptions);
+
+    sections.forEach(section => scrollSpyObserver.observe(section));
     
     // --- Navegação Suave ---
     const scrollToSection = (event) => {
@@ -135,12 +162,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const message = formData.get('message').trim();
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+        // Estilização visual básica de erro (Melhoria de UX)
+        const inputs = contactForm.querySelectorAll('input, textarea');
+        inputs.forEach(i => i.classList.remove('border-red-500'));
+
         if (name.length < 2) {
+            document.getElementById('name').classList.add('border-red-500');
             alert("Por favor, insira um nome válido.");
             return;
         }
 
         if (!emailRegex.test(email)) {
+            document.getElementById('email').classList.add('border-red-500');
             alert("Por favor, insira um endereço de e-mail válido.");
             return;
         }
@@ -154,6 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (message.length < 10) {
+            document.getElementById('message').classList.add('border-red-500');
             alert("Sua mensagem precisa ser um pouco mais detalhada (mínimo 10 caracteres).");
             return;
         }
