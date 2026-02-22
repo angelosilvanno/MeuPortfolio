@@ -1,22 +1,24 @@
 :root {
-  --primary: #1e40af;
-  --accent: #0ea5e9;
+  --primary: #4f46e5; 
+  --accent: #818cf8; 
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', sans-serif; /* Certifique-se de importar a fonte */
+  font-family: 'Inter', sans-serif; 
+  line-height: 1.7; 
+  letter-spacing: -0.01em; 
 }
 
-/* Títulos com linha decorativa */
 .section-title::after {
   content: '';
   display: block;
-  width: 50px;
-  height: 3px;
-  background-color: var(--accent);
-  margin-top: 8px;
+  width: 60px; 
+  height: 4px; 
+  background: linear-gradient(to right, var(--primary), var(--accent)); 
+  margin-top: 10px;
+  border-radius: 10px; 
 }
 
 .text-center.section-title::after { margin-left: auto; margin-right: auto; }
@@ -24,8 +26,8 @@ body {
 /* Botão de Scroll */
 .scroll-to-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 25px; 
+  right: 25px;
   background-color: var(--primary);
   color: white;
   width: 50px;
@@ -37,22 +39,23 @@ body {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease-in-out;
+  transform: scale(0.5); 
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3); 
 }
 
 .scroll-to-top.show {
   opacity: 1;
   visibility: visible;
+  transform: scale(1); 
 }
 
-/* Hover Effects unificados */
 .project-card, .skill-item {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
 }
 
 .project-card:hover, .skill-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transform: translateY(-8px); 
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
 }
