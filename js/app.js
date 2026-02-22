@@ -40,13 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    // --- Lógica do Menu Mobile (Restaurada) ---
     const toggleMobileMenu = () => {
-        // Alterna a classe hidden
         const isHidden = mobileMenu.classList.toggle('hidden');
         const icon = menuToggle.querySelector('i');
         
-        // Troca o ícone (Hamburger <-> X)
         if (icon) {
             icon.classList.toggle('fa-bars', isHidden);
             icon.classList.toggle('fa-times', !isHidden);
