@@ -1,4 +1,4 @@
-Ângelo Silvano | Portfólio
+# Ângelo Silvano | Portfólio
 Meu espaço pessoal na web para mostrar meus projetos e como eu trabalho como desenvolvedor front-end.
 
 🔥 Introdução
