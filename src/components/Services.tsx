@@ -2,56 +2,58 @@ import React from 'react';
 
 const Services: React.FC = () => {
     return (
-        <section id="services" className="bg-white">
-            <div className="container mx-auto px-4 py-16 md:py-24 scroll-mt-20">
-                <h2 className="text-3xl font-bold text-center mb-4 section-title text-indigo-600">O que eu faço na prática</h2>
-                <p className="text-lg text-center mb-12 text-slate-700 max-w-3xl mx-auto">
+        <section id="services" className="bg-white border-b border-slate-100">
+            <div className="container mx-auto px-6 py-16 md:py-24 scroll-mt-20">
+                {/* Título e Subtítulo com tamanhos reduzidos para maior precisão visual */}
+                <h2 className="text-2xl md:text-3xl font-black text-center mb-3 section-title text-slate-950 tracking-tight">O que eu faço na prática</h2>
+                <p className="text-[11px] md:text-xs text-center mb-16 text-slate-500 font-bold uppercase tracking-[0.2em] max-w-3xl mx-auto">
                     Com minhas habilidades, sua ideia se torna uma presença online de sucesso. Veja como posso te ajudar:
                 </p>
                 
                 <div className="grid gap-8 md:grid-cols-3">
                     {/* Serviço 1: Desenvolvimento Web */}
-                    <div className="bg-zinc-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
-                        <div className="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
-                            <i className="fas fa-laptop-code fa-2x w-8 h-8 flex items-center justify-center"></i>
+                    <div className="bg-slate-50/50 border border-slate-100 rounded-3xl p-8 text-center shadow-sm hover:shadow-xl hover:border-indigo-200 transition-all duration-500 flex flex-col items-center hover:-translate-y-1.5 group">
+                        <div className="mb-5 text-slate-950 bg-white shadow-sm ring-1 ring-slate-100 rounded-2xl p-4 inline-block group-hover:scale-105 transition-transform duration-500">
+                            <i className="fas fa-laptop-code fa-lg w-6 h-6 flex items-center justify-center"></i>
                         </div>
-                        <h3 className="text-xl font-semibold mb-2 text-slate-800">Desenvolvimento Web</h3>
-                        <p className="text-slate-600 leading-relaxed text-sm md:text-base">
+                        <h3 className="text-lg font-bold mb-2 text-slate-900">Desenvolvimento Web</h3>
+                        <p className="text-slate-600 leading-relaxed text-[13px] md:text-sm font-medium">
                             Desenvolvo sites rápidos e modernos, com navegação fácil em qualquer dispositivo.
                         </p>
                     </div>
 
                     {/* Serviço 2: Loja Virtual */}
-                    <div className="bg-zinc-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
-                        <div className="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
-                            <i className="fas fa-store fa-2x w-8 h-8 flex items-center justify-center"></i>
+                    <div className="bg-slate-50/50 border border-slate-100 rounded-3xl p-8 text-center shadow-sm hover:shadow-xl hover:border-indigo-200 transition-all duration-500 flex flex-col items-center hover:-translate-y-1.5 group">
+                        <div className="mb-5 text-slate-950 bg-white shadow-sm ring-1 ring-slate-100 rounded-2xl p-4 inline-block group-hover:scale-105 transition-transform duration-500">
+                            <i className="fas fa-store fa-lg w-6 h-6 flex items-center justify-center"></i>
                         </div>
-                        <h3 className="text-xl font-semibold mb-2 text-slate-800">Loja Virtual</h3>
-                        <p className="text-slate-600 leading-relaxed text-sm md:text-base">
+                        <h3 className="text-lg font-bold mb-2 text-slate-900">Loja Virtual</h3>
+                        <p className="text-slate-600 leading-relaxed text-[13px] md:text-sm font-medium">
                             Monto sua loja virtual com vitrine, carrinho e pagamentos, pronta pra vender 24h por dia.
                         </p>
                     </div>
 
                     {/* Serviço 3: Manutenção */}
-                    <div className="bg-zinc-50 border border-indigo-50 rounded-xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center hover:-translate-y-1">
-                        <div className="mb-4 text-indigo-600 bg-indigo-50 rounded-full p-4 inline-block">
-                            <i className="fas fa-tools fa-2x w-8 h-8 flex items-center justify-center"></i>
+                    <div className="bg-slate-50/50 border border-slate-100 rounded-3xl p-8 text-center shadow-sm hover:shadow-xl hover:border-indigo-200 transition-all duration-500 flex flex-col items-center hover:-translate-y-1.5 group">
+                        <div className="mb-5 text-slate-950 bg-white shadow-sm ring-1 ring-slate-100 rounded-2xl p-4 inline-block group-hover:scale-105 transition-transform duration-500">
+                            <i className="fas fa-tools fa-lg w-6 h-6 flex items-center justify-center"></i>
                         </div>
-                        <h3 className="text-xl font-semibold mb-2 text-slate-800">Manutenção</h3>
-                        <p className="text-slate-600 leading-relaxed text-sm md:text-base">
+                        <h3 className="text-lg font-bold mb-2 text-slate-900">Manutenção</h3>
+                        <p className="text-slate-600 leading-relaxed text-[13px] md:text-sm font-medium">
                             Deixo seu site sempre seguro, atualizado e funcionando bem, sem preocupações para você.
                         </p>
                     </div>
                 </div>
 
-                <div className="text-center mt-12">
+                {/* Botão de Contato mais compacto e elegante */}
+                <div className="text-center mt-16">
                     <a 
                         href="https://wa.me/5584999566634?text=Olá,%20Ângelo!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-indigo-600 text-white text-lg font-semibold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors duration-300 shadow hover:shadow-md transform hover:-translate-y-1"
+                        className="inline-flex items-center gap-2.5 bg-slate-950 text-white text-[13px] md:text-sm font-bold py-3.5 px-8 rounded-full hover:bg-slate-800 transition-all duration-300 shadow-lg shadow-slate-200 active:scale-95"
                     >
-                        <i className="fab fa-whatsapp text-2xl"></i> Vamos conversar sobre seu projeto?
+                        <i className="fab fa-whatsapp text-xl text-emerald-400"></i> Vamos conversar sobre seu projeto?
                     </a>
                 </div>
             </div>
