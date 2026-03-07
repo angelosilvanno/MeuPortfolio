@@ -1,57 +1,73 @@
-# Ângelo Dev
+# React + TypeScript + Vite
 
-Este é o meu portfólio, um site que apresenta meus projetos, habilidades e informações de contato.  
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🔥 Introdução  
+Currently, two official plugins are available:
 
-Este portfólio foi criado para demonstrar minhas habilidades como desenvolvedor web, meus projetos e minhas áreas de atuação. O objetivo é oferecer uma visão geral do meu trabalho e facilitar o contato para novas oportunidades.  
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### **Funcionalidades**  
-- Apresentação de projetos com descrições e links para GitHub e deploy.  
-- Lista de Soft Skills com descrições simples.  
-- Lista de Hard Skills com descrição de como uso as ferramentas no dia a dia.  
-- Formulário de contato para mensagens e propostas.  
-- Links para GitHub e LinkedIn no rodapé.  
+## React Compiler
 
-## ⚙️ Pré-requisitos  
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-Para visualizar e executar o código do meu portfólio localmente, você precisará:  
+## Expanding the ESLint configuration
 
-1. **Git:** (Para clonar o repositório)  
-   - Baixe e instale em: [https://git-scm.com/](https://git-scm.com/)  
-2. **Node.js** (Recomendado: versão 16 ou superior):  
-   - Baixe e instale em: [https://nodejs.org/](https://nodejs.org/)  
-3. **Gerenciador de Pacotes (npm):**  
-   - O **npm** já vem com o Node.js: 
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## 🔨 Guia de Instalação  
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-1. Clone o repositório:  
-   ```bash  
-   git clone https://github.com/angelosilvanno/MeuPortfolio.git  
-   ```  
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-2. Entre na pasta do projeto:  
-   ```bash  
-   cd MeuPortfolio  
-   ```  
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
-## 📦 Tecnologias Utilizadas  
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-### **Front-end:**  
-- <img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">  
-- <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">  
-- <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">  
-- <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">  
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-### **Ferramentas:**  
-- <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">  
-
-## 👷 Autor  
-
-- **Ângelo Silvano**  - *Front-End Developer* - [angelosilvanno](https://github.com/angelodsilvanno)  
-
-## 📄 Licença  
-
-- Esse projeto está sob a licença MIT license - acesse os detalhes [LICENSE.md](https://github.com/angelodesenvolvedor/MeuPortfolio?tab=MIT-1-ov-file).  
-
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
