@@ -19,15 +19,11 @@ const About: React.FC = () => {
                     />
                     <div className="text-center md:text-left max-w-2xl">
                         <h2 className="text-3xl md:text-4xl font-black mb-8 section-title text-slate-900 tracking-tight">Sobre Mim</h2>
-                        <div className="text-base md:text-lg leading-relaxed text-slate-600 space-y-6 text-left">
+                        
+                        {/* Texto em parágrafo único e justificado */}
+                        <div className="text-base md:text-lg leading-relaxed text-slate-600 text-justify hyphens-auto">
                             <p>
-                                Olá! Me chamo <span className="font-bold text-slate-900 underline decoration-indigo-500 decoration-4 underline-offset-4">Ângelo Silvano</span> e trabalho com <strong className="text-slate-950 font-extrabold">desenvolvimento front-end</strong> há cerca de <strong className="text-slate-950 font-extrabold">{anosExperiencia} anos</strong>.
-                            </p>
-                            <p>
-                                Sou graduando em <span className="font-semibold text-slate-800">Tecnologia da Informação</span> na <span className="font-semibold text-slate-800">UFERSA</span> e, ao longo da minha trajetória, acumulei experiências práticas importantes. Atuei como desenvolvedor front-end no <span className="font-semibold text-slate-800">Projeto Carcará (LISA/UFERSA)</span> e também realizei projetos como freelancer na <span className="font-semibold text-slate-800">CraftSix</span>, focando sempre em interfaces modernas e responsivas.
-                            </p>
-                            <p>
-                                Hoje, minhas tecnologias principais são <span className="font-bold text-indigo-600">Next.js</span>, <span className="font-bold text-indigo-600">TypeScript</span> e <span className="font-bold text-indigo-600">Tailwind CSS</span>. Busco unir o conhecimento acadêmico com a vivência de mercado para criar aplicações que sejam rápidas, acessíveis e fáceis de usar.
+                                Olá! Me chamo <span className="font-bold text-slate-900">Ângelo Silvano</span> e atuo como <strong className="text-slate-950 font-bold">desenvolvedor front-end</strong> há cerca de <strong className="text-slate-950 font-bold">{anosExperiencia} anos</strong>. Sou graduando em <span className="font-semibold text-slate-800">Tecnologia da Informação</span> na <span className="font-semibold text-indigo-600">UFERSA</span> e, ao longo da minha trajetória, acumulei experiências práticas como desenvolvedor no <span className="font-semibold text-slate-800">Projeto Carcará (LISA/UFERSA)</span> e freelancer na <span className="font-semibold text-slate-800">CraftSix</span>, focando na criação de interfaces modernas e responsivas. Hoje, minhas tecnologias principais envolvem <span className="font-bold text-indigo-600">Next.js</span>, <span className="font-bold text-indigo-600">TypeScript</span> e <span className="font-bold text-indigo-600">Tailwind CSS</span>, ferramentas que utilizo para unir o conhecimento acadêmico com a vivência de mercado, entregando aplicações que sejam rápidas, acessíveis e fáceis de usar.
                             </p>
 
                             {/* Subseção de Certificações */}
