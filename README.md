@@ -1,7 +1,7 @@
 # Ângelo Silvano | Portfólio
 Meu espaço pessoal na web para mostrar meus projetos e como eu trabalho como desenvolvedor front-end.
 
-🔥 Introdução
+# 🔥 Introdução
 Este é o meu portfólio oficial. Criei ele para organizar meu trabalho em um só lugar e mostrar o que sei fazer de melhor. O objetivo foi sair de um site simples e criar algo que fosse limpo, passasse confiança e fosse fácil de navegar tanto no celular quanto no computador.
 
 ### O que o site fa:
