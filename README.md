@@ -1,73 +1,28 @@
-# React + TypeScript + Vite
+Ângelo Silvano | Portfólio
+Meu espaço pessoal na web para mostrar meus projetos e como eu trabalho como desenvolvedor front-end.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔥 Introdução
+Este é o meu portfólio oficial. Criei ele para organizar meu trabalho em um só lugar e mostrar o que sei fazer de melhor. O objetivo foi sair de um site simples e criar algo que fosse limpo, passasse confiança e fosse fácil de navegar tanto no celular quanto no computador.
 
-Currently, two official plugins are available:
+### O que o site fa:
+- Mostra quem eu sou e minha trajetória na área.
+- Calcula sozinho há quantos anos eu trabalho com desenvolvimento.
+- Tem uma galeria com meus projetos principais e o link direto para eles.
+- O menu indica em qual parte da página você está enquanto você navega.
+- Tem um formulário de contato que avisa se você esqueceu de preencher algo antes de enviar.
+- Tudo aparece com animações suaves conforme você vai descendo a página.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Como rodar o projeto:
+1. Baixe os arquivos do repositório.
+2. No terminal, digite `npm install` para instalar as ferramentas.
+3. Depois, digite `npm run dev` para abrir o site no seu navegador.
 
-## React Compiler
+📦 Tecnologias usadas:
+Para construir esse projeto, usei as ferramentas que mais gosto de trabalhar hoje em dia:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **React** (para organizar o site em blocos/componentes)
+- **Vite** (para o site carregar super rápido enquanto eu desenvolvo)
+- **TypeScript** (para me ajudar a escrever um código sem erros)
+- **Tailwind CSS** (para deixar o visual moderno e organizado)
+- **FontAwesome** (para os ícones do site)
+- **ScrollReveal** (para as animações que aparecem ao rolar a página)
