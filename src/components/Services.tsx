@@ -2,13 +2,11 @@ import React from 'react';
 
 const Services: React.FC = () => {
     return (
-        <section id="services" className="bg-white border-b border-slate-100">
+        <section id="services" className="bg-slate-50/30 border-b border-slate-100">
             <div className="container mx-auto px-6 py-16 md:py-24 scroll-mt-20">
-                {/* Título e Subtítulo com tamanhos reduzidos para maior precisão visual */}
-                <h2 className="text-2xl md:text-3xl font-black text-center mb-3 section-title text-slate-950 tracking-tight">O que eu faço na prática</h2>
-                <p className="text-[11px] md:text-xs text-center mb-16 text-slate-500 font-bold uppercase tracking-[0.2em] max-w-3xl mx-auto">
-                    Com minhas habilidades, sua ideia se torna uma presença online de sucesso. Veja como posso te ajudar:
-                </p>
+                {/* Título com margem aumentada para compensar a remoção do texto de apoio */}
+                <h2 className="text-2xl md:text-3xl font-black text-center mb-16 section-title text-slate-950 tracking-tight">Serviços</h2>
+                
                 
                 <div className="grid gap-8 md:grid-cols-3">
                     {/* Serviço 1: Desenvolvimento Web */}
@@ -45,7 +43,7 @@ const Services: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Botão de Contato mais compacto e elegante */}
+                {/* Botão de Contato mantendo o padrão sóbrio aprovado */}
                 <div className="text-center mt-16">
                     <a 
                         href="https://wa.me/5584999566634?text=Olá,%20Ângelo!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." 
