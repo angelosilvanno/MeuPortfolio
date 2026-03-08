@@ -4,8 +4,8 @@ const Experience: React.FC = () => {
     return (
         <section id="experience" className="bg-slate-50/50 border-y border-slate-100">
             <div className="container mx-auto px-6 py-20 md:py-28 scroll-mt-20">
-                <h2 className="text-4xl md:text-5xl font-black text-center mb-4 section-title text-slate-950 tracking-tighter">Experiência</h2>
-                <p className="text-sm md:text-base text-center mb-20 text-slate-500 font-medium uppercase tracking-[0.2em]">Minha trajetória profissional e acadêmica no desenvolvimento</p>
+                <h2 className="text-4xl md:text-5xl font-black text-center mb-24 section-title text-slate-950 tracking-tighter">Experiência</h2>
+                
 
                 <div className="max-w-4xl mx-auto relative">
                     {/* Linha da Timeline */}
