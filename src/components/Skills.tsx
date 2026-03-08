@@ -12,17 +12,17 @@ const Skills: React.FC = () => {
         { name: 'CSS3', icon: 'fab fa-css3-alt text-indigo-500' },
         { name: 'JavaScript', icon: 'fab fa-js-square text-yellow-500' },
         { name: 'React', icon: 'fab fa-react text-indigo-400' },
-        { name: 'Next.js', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
-        { name: 'Tailwind', img: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tailwindcss.svg' },
-        { name: 'TypeScript', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+        { name: 'Next.js', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg' },
+        { name: 'Tailwind', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' },
+        { name: 'TypeScript', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg' },
         { name: 'Bootstrap', icon: 'fab fa-bootstrap text-violet-600' },
         { name: 'Vite', img: 'https://vitejs.dev/logo.svg' }
     ];
 
     const backSkills: Skill[] = [
         { name: 'Node.js', icon: 'fab fa-node-js text-green-600' },
-        { name: 'Java', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
-        { name: 'PostgreSQL', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' }
+        { name: 'Java', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg' },
+        { name: 'PostgreSQL', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg' }
     ];
 
     const toolSkills: Skill[] = [
@@ -42,7 +42,7 @@ const Skills: React.FC = () => {
     );
 
     return (
-        <section id="skills" className="bg-white border-b border-slate-100">
+        <section id="skills" className="bg-slate-50/50 border-b border-slate-100">
             <div className="container mx-auto px-6 py-20 md:py-28 scroll-mt-20">
                 <h2 className="text-3xl md:text-4xl font-black text-center mb-3 section-title text-slate-950 tracking-tighter">Hard Skills</h2>
                 <p className="text-[11px] md:text-xs text-center mb-20 text-slate-500 font-bold uppercase tracking-[0.2em]">Tecnologias que domino e ferramentas que uso no dia a dia</p>
