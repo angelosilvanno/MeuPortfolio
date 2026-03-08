@@ -26,27 +26,27 @@ const About: React.FC = () => {
                                 Olá! Me chamo <span className="font-bold text-slate-900">Ângelo Silvano</span> e atuo como <strong className="text-slate-950 font-bold">desenvolvedor front-end</strong> há cerca de <strong className="text-slate-950 font-bold">{anosExperiencia} anos</strong>. Sou graduando em <span className="font-semibold text-slate-800">Tecnologia da Informação</span> na <span className="font-semibold text-indigo-600">UFERSA</span> e, ao longo da minha trajetória, acumulei experiências práticas como desenvolvedor no <span className="font-semibold text-slate-800">Projeto Carcará (LISA/UFERSA)</span> e freelancer na <span className="font-semibold text-slate-800">CraftSix</span>, focando na criação de interfaces modernas e responsivas. Hoje, minhas tecnologias principais envolvem <span className="font-bold text-indigo-600">Next.js</span>, <span className="font-bold text-indigo-600">TypeScript</span> e <span className="font-bold text-indigo-600">Tailwind CSS</span>, ferramentas que utilizo para unir o conhecimento acadêmico com a vivência de mercado, entregando aplicações que sejam rápidas, acessíveis e fáceis de usar.
                             </p>
 
-                            {/* Subseção de Certificações */}
+                            {/* Subseção de Certificações - Visual Refinado */}
                             <div className="mt-10 pt-8 border-t border-slate-100">
-                                <h3 className="text-xl font-bold mb-6 text-slate-900 flex items-center gap-3">
+                                <h3 className="text-lg font-bold mb-6 text-slate-900 flex items-center gap-3 uppercase tracking-wider">
                                     <i className="fas fa-certificate text-slate-400"></i> Certificações
                                 </h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm md:text-base text-left">
-                                    <div className="flex items-center gap-3 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 transition-all duration-300 hover:border-slate-300 hover:bg-white hover:shadow-md group">
-                                        <div className="w-2 h-2 rounded-full bg-slate-400 group-hover:bg-indigo-500 shrink-0 transition-colors"></div>
-                                        <span className="text-slate-600 group-hover:text-slate-900 transition-colors"><strong className="text-slate-800 font-bold">Front-end em React</strong> — Ada Tech</span>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[13px] md:text-sm text-left">
+                                    <div className="flex items-center gap-4 bg-slate-50/50 border border-slate-100 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] hover:border-indigo-100 group">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0 transition-colors"></div>
+                                        <span className="text-slate-500 group-hover:text-slate-700 transition-colors"><strong className="text-slate-900 font-bold">Front-end em React</strong> — Ada Tech</span>
                                     </div>
-                                    <div className="flex items-center gap-3 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 transition-all duration-300 hover:border-slate-300 hover:bg-white hover:shadow-md group">
-                                        <div className="w-2 h-2 rounded-full bg-slate-400 group-hover:bg-indigo-500 shrink-0 transition-colors"></div>
-                                        <span className="text-slate-600 group-hover:text-slate-900 transition-colors"><strong className="text-slate-800 font-bold">JavaScript: O Guia Completo</strong> — Udemy</span>
+                                    <div className="flex items-center gap-4 bg-slate-50/50 border border-slate-100 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] hover:border-indigo-100 group">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0 transition-colors"></div>
+                                        <span className="text-slate-500 group-hover:text-slate-700 transition-colors"><strong className="text-slate-900 font-bold">JavaScript: O Guia Completo</strong> — Udemy</span>
                                     </div>
-                                    <div className="flex items-center gap-3 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 transition-all duration-300 hover:border-slate-300 hover:bg-white hover:shadow-md group">
-                                        <div className="w-2 h-2 rounded-full bg-slate-400 group-hover:bg-indigo-500 shrink-0 transition-colors"></div>
-                                        <span className="text-slate-600 group-hover:text-slate-900 transition-colors"><strong className="text-slate-800 font-bold">NLW Connect Fullstack</strong> — Rocketseat</span>
+                                    <div className="flex items-center gap-4 bg-slate-50/50 border border-slate-100 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] hover:border-indigo-100 group">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0 transition-colors"></div>
+                                        <span className="text-slate-500 group-hover:text-slate-700 transition-colors"><strong className="text-slate-900 font-bold">NLW Connect Fullstack</strong> — Rocketseat</span>
                                     </div>
-                                    <div className="flex items-center gap-3 bg-slate-50/50 p-4 rounded-2xl border border-slate-100 transition-all duration-300 hover:border-slate-300 hover:bg-white hover:shadow-md group">
-                                        <div className="w-2 h-2 rounded-full bg-slate-400 group-hover:bg-indigo-500 shrink-0 transition-colors"></div>
-                                        <span className="text-slate-600 group-hover:text-slate-900 transition-colors"><strong className="text-slate-800 font-bold">Imersão com Google Gemini</strong> — Alura</span>
+                                    <div className="flex items-center gap-4 bg-slate-50/50 border border-slate-100 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] hover:border-indigo-100 group">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0 transition-colors"></div>
+                                        <span className="text-slate-500 group-hover:text-slate-700 transition-colors"><strong className="text-slate-900 font-bold">Imersão com Google Gemini</strong> — Alura</span>
                                     </div>
                                 </div>
                             </div>
