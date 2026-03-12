@@ -6,9 +6,9 @@ const Footer: React.FC = () => {
     return (
         <footer className="bg-slate-50/30 text-slate-500 border-t border-slate-200">
             <div className="container mx-auto px-6 pt-10 pb-8">
-            
+                
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 mb-10 text-left">
-            
+                   
                     <div className="col-span-2 lg:col-span-1 space-y-4">
                         <a href="#welcome" className="text-xl font-mono font-bold text-slate-900 tracking-tighter hover:text-indigo-600 transition-colors">
                             &lt;Ângelo /&gt;
@@ -58,9 +58,9 @@ const Footer: React.FC = () => {
 
                 <div className="w-full h-px bg-slate-200 mb-8"></div>
 
-                <div className="w-full flex justify-center">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400 text-center">
-                        © {currentYear} Ângelo Silvano. Todos os direitos reservados.
+                <div className="w-full flex justify-center px-4">
+                    <p className="text-[10px] md:text-[11px] font-bold uppercase tracking-wider md:tracking-[0.2em] text-slate-400 text-center leading-relaxed">
+                        ©{currentYear} Ângelo Silvano. Todos os direitos reservados.
                     </p>
                 </div>
             </div>
