@@ -8,27 +8,27 @@ const Projects: React.FC = () => {
                 <h2 className="text-2xl md:text-4xl font-black text-center mb-12 section-title text-slate-950! tracking-tighter">Meus Projetos</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch"> 
-                    {/* Projeto 1: VibePlay */}
+                    {/* Projeto 1: AchadosCampus */}
                     <div className="bg-white shadow-sm rounded-4xl hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-500 border border-slate-100 flex flex-col h-full overflow-hidden group">
                         <div className="h-40 bg-slate-50/50 border-b border-slate-100 w-full overflow-hidden relative flex items-center justify-center">
-                            <i className="fas fa-music text-slate-200/60 text-6xl absolute transition-all duration-700 group-hover:scale-110 group-hover:text-indigo-500/10"></i>
+                            <i className="fas fa-search text-slate-200/60 text-6xl absolute transition-all duration-700 group-hover:scale-110 group-hover:text-indigo-50/10"></i>
                             <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 backdrop-blur-[1px] transition-all duration-500 flex items-center justify-center">
                                 <a href="https://vibeplay-web.vercel.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-slate-950 text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 hover:bg-slate-950 hover:text-white border border-transparent hover:border-slate-700">Site</a>
                             </div>
                         </div>
                         <div className="p-5 md:p-7 flex flex-col grow">
-                            <h3 className="text-lg md:text-xl font-black mb-2 text-slate-950 tracking-tight">VibePlay</h3>
+                            <h3 className="text-lg md:text-xl font-black mb-2 text-slate-950 tracking-tight">AchadosCampus</h3>
                             <div className="text-[13px] text-slate-600 leading-relaxed mb-6 grow text-left font-medium">
-                                <p className="mb-4">Desenvolvi o VibePlay para ser um player de música intuitivo e focado em interatividade. A ideia foi criar uma experiência onde o usuário tem controle total do som.</p>
+                                <p className="mb-4">Desenvolvi o AchadosCampus para centralizar a recuperação de objetos no ambiente universitário. O sistema conecta alunos e servidores de forma ágil, substituindo murais físicos e grupos de mensagens por uma plataforma organizada e segura.</p>
                                 <ul className="list-none space-y-1.5">
-                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Controle de áudio completo com ajuste individual.</li>
-                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Sistema de busca por nome e navegação por gêneros.</li>
+                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Filtros inteligentes por categoria e local do achado.</li>
+                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Integração em tempo real para busca de pertences.</li>
                                 </ul>
                             </div>
                             <div className="pt-4 border-t border-slate-50">
                                 <div className="flex flex-wrap gap-2 mb-6">
-                                    <span title="Next.js" className="bg-slate-50 p-2.5 rounded-xl border border-slate-100 flex items-center justify-center group-hover:border-slate-300 transition-all">
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" className="w-6 h-6" alt="Next.js" />
+                                    <span title="Vite" className="bg-slate-50 p-2.5 rounded-xl border border-slate-100 flex items-center justify-center group-hover:border-slate-300 transition-all">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" className="w-6 h-6" alt="Vite" />
                                     </span>
                                     <span title="Tailwind CSS" className="bg-slate-50 p-2.5 rounded-xl border border-slate-100 flex items-center justify-center group-hover:border-slate-300 transition-all">
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" className="w-6 h-6" alt="Tailwind CSS" />
@@ -60,10 +60,10 @@ const Projects: React.FC = () => {
                         <div className="p-5 md:p-7 flex flex-col grow">
                             <h3 className="text-lg md:text-xl font-black mb-2 text-slate-950 tracking-tight">FootCoder</h3>
                             <div className="text-[13px] text-slate-600 leading-relaxed mb-6 grow text-left font-medium">
-                                <p className="mb-4">Criei esta loja de camisetas de futebol com o foco em simular um fluxo de compra real e completo. O objetivo foi garantir uma experiência intuitiva.</p>
+                                <p className="mb-4">Criei esta loja de camisetas de futebol com o foco em simular um fluxo de compra real e completo. O objetivo foi garantir uma experiência intuitiva para o torcedor que busca praticidade na escolha do seu manto.</p>
                                 <ul className="list-none space-y-1.5">
-                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Catálogo organizado com visualização clara.</li>
-                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Carrinho de compras para gerenciamento dinâmico.</li>
+                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Catálogo organizado com visualização clara dos produtos.</li>
+                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Carrinho de compras funcional para gerenciamento dinâmico.</li>
                                 </ul>
                             </div>
                             <div className="pt-4 border-t border-slate-50">
@@ -104,10 +104,10 @@ const Projects: React.FC = () => {
                         <div className="p-5 md:p-7 flex flex-col grow">
                             <h3 className="text-lg md:text-xl font-black mb-2 text-slate-950 tracking-tight">Lógica Quiz</h3>
                             <div className="text-[13px] text-slate-600 leading-relaxed mb-6 grow text-left font-medium">
-                                <p className="mb-4">Um jogo educativo voltado para o estudo de Matemática Discreta, focado em tornar o aprendizado de lógica proposicional mais prático.</p>
+                                <p className="mb-4">Um jogo educativo voltado para o estudo de Matemática Discreta, focado em tornar o aprendizado de lógica proposicional mais prático. A ideia é transformar um conteúdo denso em algo interativo e acessível.</p>
                                 <ul className="list-none space-y-1.5">
-                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Feedback instantâneo para reforço do aprendizado.</li>
-                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Sistema de pontuação e progressão gamificada.</li>
+                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Feedback instantâneo para reforço imediato do aprendizado.</li>
+                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Sistema de pontuação e progressão com elementos de jogo.</li>
                                 </ul>
                             </div>
                             <div className="pt-4 border-t border-slate-50">
@@ -145,10 +145,10 @@ const Projects: React.FC = () => {
                         <div className="p-5 md:p-7 flex flex-col grow">
                             <h3 className="text-lg md:text-xl font-black mb-2 text-slate-950 tracking-tight">Coffee Delivery</h3>
                             <div className="text-[13px] text-slate-600 leading-relaxed mb-6 grow text-left font-medium">
-                                <p className="mb-4">Landing page de um serviço de entrega de café, com foco em um design limpo e um processo de escolha rápido para o cliente.</p>
+                                <p className="mb-4">Landing page de um serviço de entrega de café, com foco em um design limpo e um processo de escolha rápido para o cliente. O projeto prioriza a facilidade de navegação para converter visitas em pedidos.</p>
                                 <ul className="list-none space-y-1.5">
-                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Cardápio visual imersivo com fotos detalhadas.</li>
-                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Fluxo de adição ao carrinho simplificado.</li>
+                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Cardápio visual imersivo com fotografias detalhadas.</li>
+                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Fluxo de adição ao carrinho e checkout simplificado.</li>
                                 </ul>
                             </div>
                             <div className="pt-4 border-t border-slate-50">
@@ -186,10 +186,10 @@ const Projects: React.FC = () => {
                         <div className="p-5 md:p-7 flex flex-col grow">
                             <h3 className="text-lg md:text-xl font-black mb-2 text-slate-950 tracking-tight">RunTech</h3>
                             <div className="text-[13px] text-slate-600 leading-relaxed mb-6 grow text-left font-medium">
-                                <p className="mb-4">O RunTech é um e-commerce que criei focado em quem pratica corrida, garantindo uma experiência de compra completa e fluida.</p>
+                                <p className="mb-4">O RunTech é um e-commerce que criei focado em quem pratica corrida, garantindo uma experiência de compra completa e fluida. O design foi pensado para passar energia e confiança ao atleta.</p>
                                 <ul className="list-none space-y-1.5">
-                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Fluxo completo do catálogo ao checkout.</li>
-                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Filtros por categoria e busca dinâmica.</li>
+                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Fluxo completo desde a escolha no catálogo até o checkout.</li>
+                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Filtros por categoria e sistema de busca dinâmica eficiente.</li>
                                 </ul>
                             </div>
                             <div className="pt-4 border-t border-slate-50">
@@ -227,10 +227,10 @@ const Projects: React.FC = () => {
                         <div className="p-5 md:p-7 flex flex-col grow">
                             <h3 className="text-lg md:text-xl font-black mb-2 text-slate-950 tracking-tight">O Show do Código</h3>
                             <div className="text-[13px] text-slate-600 leading-relaxed mb-6 grow text-left font-medium">
-                                <p className="mb-4">Quiz inspirado no clássico "Show do Milhão", focado em testar conhecimentos técnicos de programação de um jeito lúdico.</p>
+                                <p className="mb-4">Quiz inspirado no clássico "Show do Milhão", focado em testar conhecimentos técnicos de programação de um jeito lúdico. É uma forma divertida de desafiar o que aprendemos no dia a dia do desenvolvimento.</p>
                                 <ul className="list-none space-y-1.5">
-                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Trilhas em Frontend e Backend.</li>
-                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Mecânicas imersivas com áudio.</li>
+                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Trilhas variadas cobrindo temas de Frontend e Backend.</li>
+                                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-950"></div> Mecânicas imersivas com efeitos de áudio e temporizador.</li>
                                 </ul>
                             </div>
                             <div className="pt-4 border-t border-slate-50">
