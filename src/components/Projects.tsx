@@ -4,7 +4,6 @@ const Projects: React.FC = () => {
     return (
         <section id="projects" className="bg-slate-50/30 border-b border-slate-100">
             <div className="container mx-auto px-6 py-14 md:py-20 scroll-mt-20">
-                {/* Título Principal */}
                 <h2 className="text-2xl md:text-4xl font-black text-center mb-12 section-title text-slate-950! tracking-tighter">Meus Projetos</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch"> 
@@ -13,7 +12,7 @@ const Projects: React.FC = () => {
                         <div className="h-40 bg-slate-50/50 border-b border-slate-100 w-full overflow-hidden relative flex items-center justify-center">
                             <i className="fas fa-search text-slate-200/60 text-6xl absolute transition-all duration-700 group-hover:scale-110 group-hover:text-indigo-50/10"></i>
                             <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 backdrop-blur-[1px] transition-all duration-500 flex items-center justify-center">
-                                <a href="https://vibeplay-web.vercel.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-slate-950 text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 hover:bg-slate-950 hover:text-white border border-transparent hover:border-slate-700">Site</a>
+                                <a href="https://achadoscampus.vercel.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-slate-950 text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 hover:bg-slate-950 hover:text-white border border-transparent hover:border-slate-700">Site</a>
                             </div>
                         </div>
                         <div className="p-5 md:p-7 flex flex-col grow">
@@ -38,10 +37,10 @@ const Projects: React.FC = () => {
                                     </span>
                                 </div>
                                 <div className="flex gap-3">
-                                    <a href="https://vibeplay-web.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-slate-950 hover:bg-slate-900 text-white text-[10px] font-black uppercase tracking-[0.2em] py-3.5 px-10 rounded-xl transition-all shadow-lg active:scale-95 border border-slate-800">
+                                    <a href="https://achadoscampus.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-slate-950 hover:bg-slate-900 text-white text-[10px] font-black uppercase tracking-[0.2em] py-3.5 px-10 rounded-xl transition-all shadow-lg active:scale-95 border border-slate-800">
                                         Ver Projeto <i className="fas fa-arrow-right text-[8px] group-hover:translate-x-0.5 transition-transform"></i>
                                     </a>
-                                    <a href="https://github.com/angelosilvanno/vibe-play" target="_blank" rel="noopener noreferrer" className="px-4 py-3 border-2 border-slate-100 text-slate-400 rounded-xl hover:text-slate-950 hover:border-slate-950 transition-all active:scale-95">
+                                    <a href="https://github.com/angelosilvanno/achados-campus" target="_blank" rel="noopener noreferrer" className="px-4 py-3 border-2 border-slate-100 text-slate-400 rounded-xl hover:text-slate-950 hover:border-slate-950 transition-all active:scale-95">
                                         <i className="fab fa-github text-lg"></i>
                                     </a>
                                 </div>
