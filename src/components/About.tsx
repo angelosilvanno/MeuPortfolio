@@ -3,6 +3,9 @@ import React from 'react';
 const About: React.FC = () => {
     const anoInicio = 2022;
     const anosExperiencia = new Date().getFullYear() - anoInicio;
+    
+    const dataMigracao = new Date(2026, 1, 1);
+    const mesesFullStack = (new Date().getFullYear() - dataMigracao.getFullYear()) * 12 + (new Date().getMonth() - dataMigracao.getMonth());
 
     return (
         <section id="about" className="bg-slate-50/30 border-b border-slate-100">
@@ -19,13 +22,11 @@ const About: React.FC = () => {
                     <div className="text-center md:text-left max-w-2xl">
                         <h2 className="text-3xl md:text-4xl font-black mb-8 section-title text-slate-900 tracking-tight">Sobre Mim</h2>
                         
-                        {/* Texto em parágrafo único e justificado com espaços corrigidos */}
                         <div className="text-base md:text-lg leading-relaxed text-slate-600 text-justify hyphens-auto">
                             <p>
-                                Olá! Me chamo <span className="font-bold text-slate-900">Ângelo Silvano</span> e atuo como <strong className="text-slate-950 font-bold">desenvolvedor front-end</strong> há cerca de <strong className="text-slate-950 font-bold">{anosExperiencia} anos</strong>. Sou graduando em <span className="font-semibold text-slate-800">Tecnologia da Informação</span> na <span className="font-semibold text-indigo-600">UFERSA</span> e, ao longo da minha trajetória, acumulei experiências práticas como desenvolvedor no <span className="font-semibold text-slate-800">Projeto Carcará | LISA - UFERSA</span> e freelancer na <span className="font-semibold text-slate-800">CraftSix</span>, focando na criação de interfaces modernas e responsivas. Hoje, minhas tecnologias principais envolvem <span className="font-bold text-indigo-600">Next.js</span>, <span className="font-bold text-indigo-600">TypeScript</span> e <span className="font-bold text-indigo-600">Tailwind CSS</span>, ferramentas que utilizo para unir o conhecimento acadêmico com a vivência de mercado, entregando aplicações que sejam rápidas, acessíveis e fáceis de usar.
+                                Sou graduando em <span className="font-semibold text-slate-800">Tecnologia da Informação na UFERSA</span> e atuo no <strong className="text-slate-950 font-bold">desenvolvimento Front-End há {anosExperiencia} anos</strong>. Há cerca de <strong className="text-slate-950 font-bold">{mesesFullStack} meses</strong> decidi expandir meu domínio para <strong className="text-slate-950 font-bold">Full-Stack</strong>. Recentemente finalizei minha colaboração no <span className="font-semibold text-slate-800">Projeto Carcará do Laboratório de Inovação em Software e Automação da UFERSA</span> e atuei na <span className="font-semibold text-slate-800">CraftSix</span> com foco em performance. Meu diferencial é a base sólida em <strong className="text-slate-950 font-bold">Qualidade de Software</strong> vinda da monitoria onde apliquei normas como a <strong className="text-slate-950 font-bold">ISO IEC 25010</strong>. Meu projeto <span className="font-bold text-indigo-600">PedeAí</span> reflete esse compromisso com estruturas seguras e confiáveis. Hoje busco unir interfaces intuitivas com arquiteturas sólidas em <span className="font-bold text-indigo-600">Node.js</span> e <span className="font-bold text-indigo-600">TypeScript</span>.
                             </p>
 
-                            {/* Subseção de Certificações */}
                             <div className="mt-10 pt-8 border-t border-slate-100">
                                 <h3 className="text-lg font-bold mb-6 text-slate-900 flex items-center gap-3 uppercase tracking-wider">
                                     <i className="fas fa-certificate text-slate-400"></i> Certificações
