@@ -51,7 +51,7 @@ const Projects: React.FC = () => {
                     {/* Projeto 2: FootCoder */}
                     <div className="bg-white shadow-sm rounded-4xl hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-500 border border-slate-100 flex flex-col h-full overflow-hidden group">
                         <div className="h-56 bg-slate-50/50 border-b border-slate-100 w-full overflow-hidden relative flex items-center justify-center">
-                            <img src="public/image/projects/foot-coder.png" className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105" alt="FootCoder" />
+                            <img src="image/projects/foot-coder.png" className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105" alt="FootCoder" />
                             <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 backdrop-blur-[1px] transition-all duration-500 flex items-center justify-center">
                                 <a href="https://foot-coder.vercel.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-slate-950 text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 hover:bg-slate-950 hover:text-white border border-transparent hover:border-slate-700">Site</a>
                             </div>
@@ -95,7 +95,7 @@ const Projects: React.FC = () => {
                     {/* Projeto 3: Lógica Quiz */}
                     <div className="bg-white shadow-sm rounded-4xl hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-500 border border-slate-100 flex flex-col h-full overflow-hidden group">
                         <div className="h-56 bg-slate-50/50 border-b border-slate-100 w-full overflow-hidden relative flex items-center justify-center">
-                            <img src="public/image/projects/logica-quiz.png" className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105" alt="Lógica Quiz" />
+                            <img src="image/projects/logica-quiz.png" className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105" alt="Lógica Quiz" />
                             <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 backdrop-blur-[1px] transition-all duration-500 flex items-center justify-center">
                                 <a href="https://logicaquiz.vercel.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-slate-950 text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 hover:bg-slate-950 hover:text-white border border-transparent hover:border-slate-700">Site</a>
                             </div>
@@ -136,7 +136,7 @@ const Projects: React.FC = () => {
                     {/* Projeto 4: Coffee Delivery */}
                     <div className="bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-4xl hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-500 border border-slate-100 flex flex-col h-full overflow-hidden group">
                         <div className="h-56 bg-slate-50/50 border-b border-slate-100 w-full overflow-hidden relative flex items-center justify-center">
-                            <img src="public/image/projects/coffee-delivery.png" className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105" alt="Coffee Delivery" />
+                            <img src="image/projects/coffee-delivery.png" className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105" alt="Coffee Delivery" />
                             <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 backdrop-blur-[1px] transition-all duration-500 flex items-center justify-center">
                                 <a href="https://coffeeexpresso.vercel.app/" target="_blank" rel="noopener noreferrer" className="bg-white text-slate-950 text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-full shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 hover:bg-slate-950 hover:text-white border border-transparent hover:border-slate-700">Site</a>
                             </div>
