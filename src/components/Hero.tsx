@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-950 leading-[1.2] md:leading-[1.1] tracking-tighter my-2 drop-shadow-sm">Ângelo Silvano</h1>
                         <div className="flex items-center justify-center md:justify-start gap-3 md:gap-5">
                             <div className="w-10 h-1 md:w-14 md:h-1.5 bg-indigo-600 rounded-full shadow-sm shadow-indigo-200"></div>
-                            <p className="text-lg md:text-xl lg:text-2xl text-slate-500 font-semibold tracking-tight">Desenvolvedor Front-end</p>
+                            <p className="text-lg md:text-xl lg:text-2xl text-slate-500 font-semibold tracking-tight">Desenvolvedor Full Stack</p>
                         </div>
 
                     <div className="mt-8 md:mt-12 flex flex-wrap justify-center md:justify-start gap-3 md:gap-5">
