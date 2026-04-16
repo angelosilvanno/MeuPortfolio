@@ -11,9 +11,9 @@ const Skills: React.FC = () => {
         { name: 'HTML5', icon: 'fab fa-html5 text-orange-500' },
         { name: 'CSS3', icon: 'fab fa-css3-alt text-indigo-500' },
         { name: 'JavaScript', icon: 'fab fa-js-square text-yellow-500' },
-        { name: 'React', icon: 'fab fa-react text-indigo-400' },
+        { name: 'ReactJS', icon: 'fab fa-react text-indigo-400' },
         { name: 'Next.js', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg' },
-        { name: 'Tailwind', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' },
+        { name: 'Tailwind CSS', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' },
         { name: 'TypeScript', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg' },
         { name: 'Bootstrap', icon: 'fab fa-bootstrap text-violet-600' },
         { name: 'Vite', img: 'https://vitejs.dev/logo.svg' }
