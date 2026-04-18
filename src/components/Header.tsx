@@ -4,7 +4,6 @@ const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
-    // Lógica para mudar o estilo do header ao rolar (substitui o handleHeaderScroll do JS antigo)
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
