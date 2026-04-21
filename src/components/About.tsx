@@ -11,53 +11,58 @@ const About: React.FC = () => {
     const mesesFullStack = (new Date().getFullYear() - dataMigracao.getFullYear()) * 12 + (new Date().getMonth() - dataMigracao.getMonth());
 
     return (
-        <section id="about" className="bg-slate-50/30 border-b border-slate-100">
-            <div className="container mx-auto px-6 py-20 md:py-28 scroll-mt-20">
-                <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20">
-                    <img 
-                        srcSet="/image/angelo.avif 256w, /image/angelo.avif 384w, /image/angelo.avif 512w" 
-                        sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, 256px" 
-                        src="/image/angelo.avif" 
-                        alt="Foto de Ângelo Silvano, um desenvolvedor web" 
-                        loading="lazy" 
-                        className="rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 object-cover border-4 border-white ring-4 ring-slate-50 transition-transform duration-700 hover:scale-105" 
-                    />
-                    <div className="text-center md:text-left max-w-2xl">
-                        <h2 className="text-3xl md:text-4xl font-black mb-8 section-title text-slate-900 tracking-tight">
+        <section id="about" className="bg-slate-50/50 border-b border-slate-100">
+            <div className="container mx-auto px-6 py-14 md:py-20 scroll-mt-20">
+                <div className="flex flex-col lg:flex-row items-center justify-center gap-6 md:gap-10 max-w-5xl mx-auto">
+                    
+                    <div className="relative shrink-0 w-full max-w-65 md:max-w-75 aspect-4/5 bg-slate-100 rounded-4xl overflow-hidden shadow-lg border border-slate-200/60 group flex items-center justify-center">
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(79,70,229,0.12),transparent_70%)]"></div>
+                        <img 
+                            src="/image/angelo.png" 
+                            alt="Ângelo Silvano" 
+                            loading="lazy" 
+                            className="relative w-full h-full object-contain p-2 transition-transform duration-700 group-hover:scale-105" 
+                        />
+                    </div>
+
+                    <div className="flex-1 text-left bg-white border border-slate-100 p-6 md:p-10 rounded-4xl shadow-sm">
+                        <h2 className="text-2xl md:text-3xl font-black mb-5 section-title text-slate-950 tracking-tighter">
                             {t('about.title')}
                         </h2>
                         
-                        <div className="text-base md:text-lg leading-relaxed text-slate-600 space-y-6 text-left">
-                            <p>
-                                {t('about.para1', anosExperiencia, mesesFullStack)}
-                            </p>
-                            <p>
-                                {t('about.para2')}
-                            </p>
-                            <p>
-                                {t('about.para3')}
-                            </p>
+                        <div className="text-[13px] md:text-sm lg:text-[15px] leading-relaxed text-slate-600 space-y-4">
+                            <p>{t('about.para1', anosExperiencia, mesesFullStack)}</p>
+                            <p>{t('about.para2')}</p>
+                            <p>{t('about.para3')}</p>
 
-                            <div className="mt-10 pt-8 border-t border-slate-100">
-                                <h3 className="text-lg font-bold mb-6 text-slate-900 flex items-center gap-3 uppercase tracking-wider">
-                                    <i className="fas fa-certificate text-slate-400"></i> {t('about.certificationsTitle')}
+                            <div className="mt-6 pt-5 border-t border-slate-50">
+                                <h3 className="text-[10px] font-black mb-3 text-slate-400 flex items-center gap-2 uppercase tracking-widest">
+                                    <i className="fas fa-certificate text-indigo-500/60"></i> {t('about.certificationsTitle')}
                                 </h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[13px] md:text-sm text-left">
-                                    <div className="flex items-center gap-4 bg-slate-50/50 border border-slate-100 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] hover:border-indigo-100 group">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0 transition-colors"></div>
-                                        <span className="text-slate-500 group-hover:text-slate-700 transition-colors"><strong className="text-slate-900 font-bold">Front-end em React</strong> — Ada Tech</span>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+                                    <div className="flex items-center gap-3 bg-slate-50/50 border border-slate-100 py-2 px-4 rounded-xl hover:bg-white hover:shadow-md transition-all group">
+                                        <div className="w-1 h-1 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
+                                        <span className="text-slate-500 text-[12px] group-hover:text-slate-800 transition-colors">
+                                            <strong className="text-slate-900 font-bold">{t('about.cert1')}</strong> — Ada Tech
+                                        </span>
                                     </div>
-                                    <div className="flex items-center gap-4 bg-slate-50/50 border border-slate-100 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] hover:border-indigo-100 group">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0 transition-colors"></div>
-                                        <span className="text-slate-500 group-hover:text-slate-700 transition-colors"><strong className="text-slate-900 font-bold">JavaScript: O Guia Completo</strong> — Udemy</span>
+                                    <div className="flex items-center gap-3 bg-slate-50/50 border border-slate-100 py-2 px-4 rounded-xl hover:bg-white hover:shadow-md transition-all group">
+                                        <div className="w-1 h-1 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
+                                        <span className="text-slate-500 text-[12px] group-hover:text-slate-800 transition-colors">
+                                            <strong className="text-slate-900 font-bold">{t('about.cert2')}</strong> — Udemy
+                                        </span>
                                     </div>
-                                    <div className="flex items-center gap-4 bg-slate-50/50 border border-slate-100 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] hover:border-indigo-100 group">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0 transition-colors"></div>
-                                        <span className="text-slate-500 group-hover:text-slate-700 transition-colors"><strong className="text-slate-900 font-bold">NLW Connect Fullstack</strong> — Rocketseat</span>
+                                    <div className="flex items-center gap-3 bg-slate-50/50 border border-slate-100 py-2 px-4 rounded-xl hover:bg-white hover:shadow-md transition-all group">
+                                        <div className="w-1 h-1 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
+                                        <span className="text-slate-500 text-[12px] group-hover:text-slate-800 transition-colors">
+                                            <strong className="text-slate-900 font-bold">{t('about.cert3')}</strong> — Rocketseat
+                                        </span>
                                     </div>
-                                    <div className="flex items-center gap-4 bg-slate-50/50 border border-slate-100 p-4 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] hover:border-indigo-100 group">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0 transition-colors"></div>
-                                        <span className="text-slate-500 group-hover:text-slate-700 transition-colors"><strong className="text-slate-900 font-bold">Imersão com Google Gemini</strong> — Alura</span>
+                                    <div className="flex items-center gap-3 bg-slate-50/50 border border-slate-100 py-2 px-4 rounded-xl hover:bg-white hover:shadow-md transition-all group">
+                                        <div className="w-1 h-1 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
+                                        <span className="text-slate-500 text-[12px] group-hover:text-slate-800 transition-colors">
+                                            <strong className="text-slate-900 font-bold">{t('about.cert4')}</strong> — Alura
+                                        </span>
                                     </div>
                                 </div>
                             </div>
