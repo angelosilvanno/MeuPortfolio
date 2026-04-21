@@ -15,7 +15,8 @@ const About: React.FC = () => {
             <div className="container mx-auto px-6 py-14 md:py-20 scroll-mt-20">
                 <div className="flex flex-col lg:flex-row items-center justify-center gap-6 md:gap-10 max-w-5xl mx-auto">
                     
-                    <div className="relative shrink-0 w-full max-w-65 md:max-w-75 aspect-4/5 bg-slate-100 rounded-4xl overflow-hidden shadow-lg border border-slate-200/60 group flex items-center justify-center">
+                    {/* Card da Foto - Ajustado para não cortar a imagem */}
+                    <div className="relative shrink-0 w-full max-w-70 md:max-w-80 bg-slate-100 rounded-4xl overflow-hidden shadow-lg border border-slate-200/60 group flex items-center justify-center p-4">
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(79,70,229,0.12),transparent_70%)]"></div>
                         <img 
                             src="/image/angelo.png" 
@@ -25,6 +26,7 @@ const About: React.FC = () => {
                         />
                     </div>
 
+                    {/* Card de Conteúdo */}
                     <div className="flex-1 text-left bg-white border border-slate-100 p-6 md:p-10 rounded-4xl shadow-sm">
                         <h2 className="text-2xl md:text-3xl font-black mb-5 section-title text-slate-950 tracking-tighter">
                             {t('about.title')}
@@ -41,25 +43,25 @@ const About: React.FC = () => {
                                 </h3>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
                                     <div className="flex items-center gap-3 bg-slate-50/50 border border-slate-100 py-2 px-4 rounded-xl hover:bg-white hover:shadow-md transition-all group">
-                                        <div className="w-1 h-1 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
+                                        <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
                                         <span className="text-slate-500 text-[12px] group-hover:text-slate-800 transition-colors">
                                             <strong className="text-slate-900 font-bold">{t('about.cert1')}</strong> — Ada Tech
                                         </span>
                                     </div>
                                     <div className="flex items-center gap-3 bg-slate-50/50 border border-slate-100 py-2 px-4 rounded-xl hover:bg-white hover:shadow-md transition-all group">
-                                        <div className="w-1 h-1 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
+                                        <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
                                         <span className="text-slate-500 text-[12px] group-hover:text-slate-800 transition-colors">
                                             <strong className="text-slate-900 font-bold">{t('about.cert2')}</strong> — Udemy
                                         </span>
                                     </div>
                                     <div className="flex items-center gap-3 bg-slate-50/50 border border-slate-100 py-2 px-4 rounded-xl hover:bg-white hover:shadow-md transition-all group">
-                                        <div className="w-1 h-1 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
+                                        <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
                                         <span className="text-slate-500 text-[12px] group-hover:text-slate-800 transition-colors">
                                             <strong className="text-slate-900 font-bold">{t('about.cert3')}</strong> — Rocketseat
                                         </span>
                                     </div>
                                     <div className="flex items-center gap-3 bg-slate-50/50 border border-slate-100 py-2 px-4 rounded-xl hover:bg-white hover:shadow-md transition-all group">
-                                        <div className="w-1 h-1 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
+                                        <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
                                         <span className="text-slate-500 text-[12px] group-hover:text-slate-800 transition-colors">
                                             <strong className="text-slate-900 font-bold">{t('about.cert4')}</strong> — Alura
                                         </span>
