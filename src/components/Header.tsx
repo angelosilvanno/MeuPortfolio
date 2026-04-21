@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const { language, setLanguage, t } = useLanguage();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -41,26 +43,40 @@ const Header: React.FC = () => {
                     <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'} text-2xl`}></i>
                 </button>
 
-                <ul id="menu" className="hidden md:flex gap-x-1 text-slate-500 font-semibold items-center">
-                    <li><a href="#welcome" className="text-[13px] lg:text-sm px-4 py-2 rounded-full hover:text-slate-950 hover:bg-slate-100/80 transition-all tracking-tight">Início</a></li>
-                    <li><a href="#about" className="text-[13px] lg:text-sm px-4 py-2 rounded-full hover:text-slate-950 hover:bg-slate-100/80 transition-all tracking-tight">Sobre</a></li>
-                    <li><a href="#experience" className="text-[13px] lg:text-sm px-4 py-2 rounded-full hover:text-slate-950 hover:bg-slate-100/80 transition-all tracking-tight">Experiência</a></li>
-                    <li><a href="#services" className="text-[13px] lg:text-sm px-4 py-2 rounded-full hover:text-slate-950 hover:bg-slate-100/80 transition-all tracking-tight">Serviços</a></li>
-                    <li><a href="#projects" className="text-[13px] lg:text-sm px-4 py-2 rounded-full hover:text-slate-950 hover:bg-slate-100/80 transition-all tracking-tight">Projetos</a></li>
-                    <li><a href="#skills" className="text-[13px] lg:text-sm px-4 py-2 rounded-full hover:text-slate-950 hover:bg-slate-100/80 transition-all tracking-tight">Habilidades</a></li>
-                    <li><a href="#contact" className="text-[13px] lg:text-sm px-4 py-2 rounded-full hover:text-slate-950 hover:bg-slate-100/80 transition-all tracking-tight">Contato</a></li>
+                <ul id="menu" className="hidden md:flex gap-x-2 lg:gap-x-4 text-slate-500 font-semibold items-center">
+                    <li><a href="#about" className="text-[13px] lg:text-sm px-4 py-2 rounded-full hover:text-slate-950 hover:bg-slate-100/80 transition-all tracking-tight">{t('nav.about')}</a></li>
+                    <li><a href="#projects" className="text-[13px] lg:text-sm px-4 py-2 rounded-full hover:text-slate-950 hover:bg-slate-100/80 transition-all tracking-tight">{t('nav.projects')}</a></li>
+                    <li><a href="#skills" className="text-[13px] lg:text-sm px-4 py-2 rounded-full hover:text-slate-950 hover:bg-slate-100/80 transition-all tracking-tight">{t('nav.skills')}</a></li>
+                    <li><a href="#contact" className="text-[13px] lg:text-sm px-4 py-2 rounded-full hover:text-slate-950 hover:bg-slate-100/80 transition-all tracking-tight">{t('nav.contact')}</a></li>
+                    
+                    <li className="ml-2 pl-2 border-l border-slate-200 flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest">
+                        <button 
+                            onClick={() => setLanguage('pt')} 
+                            className={`transition-colors ${language === 'pt' ? 'text-indigo-600' : 'text-slate-400 hover:text-slate-600'}`}
+                        >
+                            PT
+                        </button>
+                        <span className="text-slate-300">/</span>
+                        <button 
+                            onClick={() => setLanguage('en')} 
+                            className={`transition-colors ${language === 'en' ? 'text-indigo-600' : 'text-slate-400 hover:text-slate-600'}`}
+                        >
+                            EN
+                        </button>
+                    </li>
                 </ul>
             </nav>
 
             {/* Menu Mobile */}
             <ul id="mobile-menu" className={`${isMenuOpen ? 'flex animate-in fade-in slide-in-from-top-4' : 'hidden'} md:hidden bg-white/98 backdrop-blur-2xl w-full absolute left-0 shadow-2xl border-t border-slate-100 py-8 flex-col font-bold text-slate-800`}>
-                <li><a href="#welcome" onClick={closeMenu} className="px-10 py-4 hover:bg-indigo-50 hover:text-indigo-600 transition-colors block border-b border-slate-50/50">Início</a></li>
-                <li><a href="#about" onClick={closeMenu} className="px-10 py-4 hover:bg-indigo-50 hover:text-indigo-600 transition-colors block border-b border-slate-50/50">Sobre</a></li>
-                <li><a href="#experience" onClick={closeMenu} className="px-10 py-4 hover:bg-indigo-50 hover:text-indigo-600 transition-colors block border-b border-slate-50/50">Experiência</a></li>
-                <li><a href="#services" onClick={closeMenu} className="px-10 py-4 hover:bg-indigo-50 hover:text-indigo-600 transition-colors block border-b border-slate-50/50">Serviços</a></li>
-                <li><a href="#projects" onClick={closeMenu} className="px-10 py-4 hover:bg-indigo-50 hover:text-indigo-600 transition-colors block border-b border-slate-50/50">Projetos</a></li>
-                <li><a href="#skills" onClick={closeMenu} className="px-10 py-4 hover:bg-indigo-50 hover:text-indigo-600 transition-colors block border-b border-slate-50/50">Habilidades</a></li>
-                <li><a href="#contact" onClick={closeMenu} className="px-10 py-4 hover:bg-indigo-50 hover:text-indigo-600 transition-colors block border-b border-slate-50/50">Contato</a></li>
+                <li><a href="#about" onClick={closeMenu} className="px-10 py-5 hover:bg-indigo-50 hover:text-indigo-600 transition-colors block border-b border-slate-50/50">{t('nav.about')}</a></li>
+                <li><a href="#projects" onClick={closeMenu} className="px-10 py-5 hover:bg-indigo-50 hover:text-indigo-600 transition-colors block border-b border-slate-50/50">{t('nav.projects')}</a></li>
+                <li><a href="#skills" onClick={closeMenu} className="px-10 py-5 hover:bg-indigo-50 hover:text-indigo-600 transition-colors block border-b border-slate-50/50">{t('nav.skills')}</a></li>
+                <li><a href="#contact" onClick={closeMenu} className="px-10 py-5 hover:bg-indigo-50 hover:text-indigo-600 transition-colors block border-b border-slate-50/50">{t('nav.contact')}</a></li>
+                <li className="px-10 py-6 flex gap-4 uppercase tracking-widest text-xs">
+                    <button onClick={() => { setLanguage('pt'); closeMenu(); }} className={language === 'pt' ? 'text-indigo-600' : 'text-slate-400'}>Português</button>
+                    <button onClick={() => { setLanguage('en'); closeMenu(); }} className={language === 'en' ? 'text-indigo-600' : 'text-slate-400'}>English</button>
+                </li>
             </ul>
         </header>
     );

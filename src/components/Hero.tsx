@@ -1,6 +1,9 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Hero: React.FC = () => {
+    const { t } = useLanguage();
+
     return (
         <section id="welcome" className="relative overflow-hidden bg-white">
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[32px_32px] mask-[radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
@@ -14,7 +17,7 @@ const Hero: React.FC = () => {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                         </span>
-                        <span className="text-[9px] font-black uppercase tracking-widest">Disponível para novos projetos</span>
+                        <span className="text-[9px] font-black uppercase tracking-widest">{t('hero.badge')}</span>
                     </div>
 
                     {/* Título mais equilibrado */}
@@ -24,22 +27,21 @@ const Hero: React.FC = () => {
 
                     {/* Subtítulo dinâmico */}
                     <h2 className="text-2xl md:text-4xl font-black mb-6 tracking-tight">
-                        <span className="text-indigo-600">Desenvolvedor</span> Full Stack.
+                        <span className="text-indigo-600">{t('hero.role_1')}</span> {t('hero.role_2')}
                     </h2>
 
                     {/* Descrição compacta */}
                     <p className="text-slate-500 text-sm md:text-base font-medium max-w-xl leading-relaxed mb-10">
-                        Eu construo aplicações web completas, focadas em performance, 
-                        escalabilidade e na experiência real do usuário.
+                        {t('hero.description')}
                     </p>
 
                     {/* Botões centrais */}
                     <div className="flex flex-wrap justify-center gap-4 mb-16">
                         <a href="#contact" className="bg-slate-950 text-white text-xs md:text-sm font-bold py-3.5 px-8 md:px-10 rounded-xl hover:bg-indigo-600 transition-all duration-500 shadow-xl active:scale-95 border border-slate-900">
-                            Iniciar um projeto
+                            {t('hero.buttonMain')}
                         </a>
                         <a href="#projects" className="bg-white border-2 border-slate-100 text-slate-800 text-xs md:text-sm font-bold py-3.5 px-8 md:px-10 rounded-xl hover:bg-slate-50 transition-all duration-500 active:scale-95">
-                            Ver projetos
+                            {t('hero.buttonSecondary')}
                         </a>
                     </div>
                 </div>

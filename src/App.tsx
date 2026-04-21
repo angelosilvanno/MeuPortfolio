@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { LanguageProvider } from './context/LanguageContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -55,20 +56,22 @@ function App() {
   }, []);
 
   return (
-    <div className="font-sans bg-zinc-50 text-slate-800">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Services />
-        <Projects />
-        <Skills />
-        <Contact />
-      </main>
-      <Footer />
-      <ScrollToTop />
-    </div>
+    <LanguageProvider>
+      <div className="font-sans bg-zinc-50 text-slate-800">
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <Experience />
+          <Services />
+          <Projects />
+          <Skills />
+          <Contact />
+        </main>
+        <Footer />
+        <ScrollToTop />
+      </div>
+    </LanguageProvider>
   );
 }
 
