@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Contact: React.FC = () => {
+    const { t } = useLanguage();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [status, setStatus] = useState<'idle' | 'success' | 'error' | 'confirm_domain'>('idle');
     const [fieldErrors, setFieldErrors] = useState<{ [key: string]: string }>({});
@@ -15,11 +17,9 @@ const Contact: React.FC = () => {
         const message = (formData.get('message') as string).trim();
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        // Reset de estados
         setFieldErrors({});
         setStatus('idle');
 
-        // Validações de campo (Substituindo alerts)
         const errors: { [key: string]: string } = {};
         if (name.length < 2) errors.name = "Por favor, insira seu nome completo.";
         if (!emailRegex.test(email)) errors.email = "Insira um e-mail válido.";
@@ -30,7 +30,6 @@ const Contact: React.FC = () => {
             return;
         }
 
-        // Validação de Domínio (Aviso em vez de window.confirm)
         const allowedDomains = ['gmail.com', 'outlook.com', 'hotmail.com', 'yahoo.com', 'icloud.com', 'live.com', 'uol.com.br', 'bol.com.br', 'proton.me'];
         const emailDomain = email.split('@')[1];
         if (!allowedDomains.includes(emailDomain) && status !== 'confirm_domain') {
@@ -69,20 +68,19 @@ const Contact: React.FC = () => {
                         <span className="inline-block p-3 rounded-xl bg-white shadow-sm ring-1 ring-slate-100 text-indigo-600 mb-4 animate-pulse">
                             <i className="fas fa-comment-dots text-xl"></i>
                         </span>
-                        <h2 className="text-2xl md:text-4xl font-black mb-0 text-slate-950 tracking-tighter">Vamos Conversar?</h2>
-                        
+                        <h2 className="text-2xl md:text-4xl font-black mb-0 text-slate-950 tracking-tighter">{t('contact.title')}</h2>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                         <div className="lg:col-span-4 space-y-4">
                             <div className="bg-white border border-slate-100 p-4 rounded-2xl shadow-sm hover:border-slate-300 transition-all group">
-                                <h3 className="text-slate-400 text-[9px] font-black uppercase tracking-widest mb-2">Disponibilidade</h3>
+                                <h3 className="text-slate-400 text-[9px] font-black uppercase tracking-widest mb-2">{t('contact.availability')}</h3>
                                 <div className="flex items-center gap-3">
                                     <span className="relative flex h-2 w-2">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                                         <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                                     </span>
-                                    <p className="text-slate-900 font-bold text-[13px] tracking-tight">Aberto a novos projetos</p>
+                                    <p className="text-slate-900 font-bold text-[13px] tracking-tight">{t('contact.statusText')}</p>
                                 </div>
                             </div>
 
@@ -90,7 +88,7 @@ const Contact: React.FC = () => {
                                 <div className="bg-indigo-50 w-9 h-9 rounded-lg flex items-center justify-center text-indigo-600 mb-3 group-hover:scale-105 transition-transform shadow-sm">
                                     <i className="fas fa-envelope text-sm"></i>
                                 </div>
-                                <p className="text-slate-400 text-[9px] font-black uppercase tracking-widest mb-1">E-mail</p>
+                                <p className="text-slate-400 text-[9px] font-black uppercase tracking-widest mb-1">{t('contact.emailLabel')}</p>
                                 <p className="text-slate-900 font-bold break-all text-[13px] tracking-tight">angelosilvano.dev@gmail.com</p>
                             </a>
 
@@ -98,7 +96,7 @@ const Contact: React.FC = () => {
                                 <div className="bg-indigo-50 w-9 h-9 rounded-lg flex items-center justify-center text-indigo-600 mb-3 group-hover:scale-105 transition-transform shadow-sm">
                                     <i className="fab fa-whatsapp text-sm"></i>
                                 </div>
-                                <p className="text-slate-400 text-[9px] font-black uppercase tracking-widest mb-1">WhatsApp</p>
+                                <p className="text-slate-400 text-[9px] font-black uppercase tracking-widest mb-1">{t('contact.whatsappLabel')}</p>
                                 <p className="text-slate-900 font-bold text-[13px] tracking-tight">+55 (84) 99956-6634</p>
                             </a>
 
@@ -114,59 +112,58 @@ const Contact: React.FC = () => {
                         
                         <div className="lg:col-span-8">
                             <div className="bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-sm">
-                                <h3 className="text-lg md:text-xl font-black text-slate-950 mb-6 tracking-tight">Envie uma mensagem</h3>
+                                <h3 className="text-lg md:text-xl font-black text-slate-950 mb-6 tracking-tight">{t('contact.formTitle')}</h3>
                                 
-                                {/* Feedbacks Visuais */}
                                 {status === 'success' && (
                                     <div className="bg-emerald-50 border border-emerald-100 text-emerald-700 px-4 py-3 rounded-xl mb-6 text-[13px] flex items-center animate-in fade-in duration-500">
-                                        <i className="fas fa-check-circle mr-2"></i> Mensagem enviada com sucesso!
+                                        <i className="fas fa-check-circle mr-2"></i> {t('contact.status.success')}
                                     </div>
                                 )}
                                 {status === 'error' && (
                                     <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl mb-6 text-[13px] flex items-center animate-in fade-in duration-500">
-                                        <i className="fas fa-exclamation-circle mr-2"></i> Ops! Ocorreu um erro ao enviar. Tente novamente.
+                                        <i className="fas fa-exclamation-circle mr-2"></i> {t('contact.status.error')}
                                     </div>
                                 )}
                                 {status === 'confirm_domain' && (
                                     <div className="bg-indigo-50 border border-indigo-100 text-indigo-900 px-5 py-4 rounded-xl mb-6 text-[13px] flex flex-col gap-2 animate-in slide-in-from-top-4 duration-500">
                                         <p><i className="fas fa-info-circle mr-2"></i> Este provedor de e-mail não é comum. Deseja enviar mesmo assim?</p>
-                                        <button onClick={() => setStatus('idle')} className="text-[10px] font-black uppercase tracking-widest underline underline-offset-4 hover:text-indigo-600 transition-colors">Não, vou corrigir</button>
+                                        <button onClick={() => setStatus('idle')} className="text-[10px] font-black uppercase tracking-widest text-left underline underline-offset-4 hover:text-indigo-600 transition-colors">Não, vou corrigir</button>
                                     </div>
                                 )}
 
                                 <form onSubmit={handleFormSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                                     <div className="space-y-1.5">
-                                        <label htmlFor="name" className="block text-[9px] font-black uppercase tracking-widest text-slate-400 ml-1">Seu Nome</label>
+                                        <label htmlFor="name" className="block text-[9px] font-black uppercase tracking-widest text-slate-400 ml-1">{t('contact.labels.name')}</label>
                                         <input 
                                             type="text" 
                                             id="name" 
                                             name="name" 
                                             className={`w-full p-3.5 bg-slate-50/50 border-2 ${fieldErrors.name ? 'border-red-400' : 'border-transparent focus:border-indigo-600'} rounded-xl focus:outline-none transition-all text-[13px] font-semibold text-slate-900 placeholder:text-slate-400`} 
-                                            placeholder="Como te chamam?" 
+                                            placeholder={t('contact.placeholders.name')} 
                                             required 
                                         />
                                         {fieldErrors.name && <p className="text-red-500 text-[10px] font-black uppercase tracking-wider ml-1">{fieldErrors.name}</p>}
                                     </div>
                                     <div className="space-y-1.5">
-                                        <label htmlFor="email" className="block text-[9px] font-black uppercase tracking-widest text-slate-400 ml-1">Seu E-mail</label>
+                                        <label htmlFor="email" className="block text-[9px] font-black uppercase tracking-widest text-slate-400 ml-1">{t('contact.labels.email')}</label>
                                         <input 
                                             type="email" 
                                             id="email" 
                                             name="email" 
                                             className={`w-full p-3.5 bg-slate-50/50 border-2 ${fieldErrors.email ? 'border-red-400' : 'border-transparent focus:border-indigo-600'} rounded-xl focus:outline-none transition-all text-[13px] font-semibold text-slate-900 placeholder:text-slate-400`} 
-                                            placeholder="seu@email.com" 
+                                            placeholder={t('contact.placeholders.email')} 
                                             required 
                                         />
                                         {fieldErrors.email && <p className="text-red-500 text-[10px] font-black uppercase tracking-wider ml-1">{fieldErrors.email}</p>}
                                     </div>
                                     <div className="md:col-span-2 space-y-1.5">
-                                        <label htmlFor="message" className="block text-[9px] font-black uppercase tracking-widest text-slate-400 ml-1">Sua Mensagem</label>
+                                        <label htmlFor="message" className="block text-[9px] font-black uppercase tracking-widest text-slate-400 ml-1">{t('contact.labels.message')}</label>
                                         <textarea 
                                             id="message" 
                                             name="message" 
                                             rows={4} 
                                             className={`w-full p-3.5 bg-slate-50/50 border-2 ${fieldErrors.message ? 'border-red-400' : 'border-transparent focus:border-indigo-600'} rounded-xl focus:outline-none transition-all text-[13px] font-semibold text-slate-900 placeholder:text-slate-400 resize-none`} 
-                                            placeholder="No que eu posso te ajudar hoje?" 
+                                            placeholder={t('contact.placeholders.message')} 
                                             required 
                                         ></textarea>
                                         {fieldErrors.message && <p className="text-red-500 text-[10px] font-black uppercase tracking-wider ml-1">{fieldErrors.message}</p>}
@@ -178,11 +175,11 @@ const Contact: React.FC = () => {
                                             className="w-full bg-indigo-600 text-white py-4 px-6 rounded-xl font-bold text-sm hover:bg-indigo-700 transition-all duration-300 shadow-lg hover:shadow-indigo-500/30 active:scale-95 group disabled:opacity-70 disabled:cursor-not-allowed"
                                         >
                                             {isSubmitting ? (
-                                                <><i className="fas fa-spinner fa-spin mr-2"></i> Enviando...</>
+                                                <><i className="fas fa-spinner fa-spin mr-2"></i> ...</>
                                             ) : status === 'confirm_domain' ? (
                                                 <>Confirmar e Enviar Agora <i className="fas fa-check ml-2"></i></>
                                             ) : (
-                                                <>Enviar Proposta <i className="fas fa-paper-plane ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"></i></>
+                                                <>{t('contact.button')} <i className="fas fa-paper-plane ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"></i></>
                                             )}
                                         </button>
                                     </div>

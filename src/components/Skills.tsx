@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 interface Skill {
     name: string;
@@ -7,6 +8,8 @@ interface Skill {
 }
 
 const Skills: React.FC = () => {
+    const { t } = useLanguage();
+
     const frontSkills: Skill[] = [
         { name: 'HTML5', icon: 'fab fa-html5 text-orange-500' },
         { name: 'CSS3', icon: 'fab fa-css3-alt text-indigo-500' },
@@ -53,10 +56,12 @@ const Skills: React.FC = () => {
     return (
         <section id="skills" className="bg-slate-50/50 border-b border-slate-100">
             <div className="container mx-auto px-6 py-20 md:py-28 scroll-mt-20">
-                <h2 className="text-4xl md:text-5xl font-black text-center mb-6 text-slate-950 tracking-tighter">Habilidades</h2>
+                <h2 className="text-4xl md:text-5xl font-black text-center mb-6 text-slate-950 tracking-tighter">
+                    {t('skills.title')}
+                </h2>
                 
                 <p className="text-[10px] md:text-xs text-center mb-16 text-slate-400 font-black uppercase tracking-[0.4em]">
-                    FRONTEND <span className="mx-2 text-slate-200">/</span> BACKEND <span className="mx-2 text-slate-200">/</span> FERRAMENTAS <span className="mx-2 text-slate-200">/</span> METODOLOGIAS
+                    {t('skills.subtitle')}
                 </p>
 
                 <div className="max-w-5xl mx-auto">
@@ -65,17 +70,14 @@ const Skills: React.FC = () => {
                         {frontSkills.map((skill) => (
                             <SkillCard key={skill.name} skill={skill} />
                         ))}
-
                         <h3 className="hidden">Back-end</h3>
                         {backSkills.map((skill) => (
                             <SkillCard key={skill.name} skill={skill} />
                         ))}
-
                         <h3 className="hidden">Ferramentas e Nuvem</h3>
                         {toolSkills.map((skill) => (
                             <SkillCard key={skill.name} skill={skill} />
                         ))}
-
                         <h3 className="hidden">Engenharia e Qualidade</h3>
                         {engSkills.map((skill) => (
                             <SkillCard key={skill.name} skill={skill} />
