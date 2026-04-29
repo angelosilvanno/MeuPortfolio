@@ -31,9 +31,15 @@ const About: React.FC = () => {
                         </h2>
                         
                         <div className="text-[13px] md:text-sm lg:text-[15px] leading-relaxed text-slate-600 space-y-4 text-left">
-                            <p>{t('about.para1', anosExperiencia, mesesFullStack)}</p>
-                            <p>{t('about.para2')}</p>
-                            <p>{t('about.para3')}</p>
+                            <p>
+                                Sou um Desenvolvedor Full Stack apaixonado por construir aplicações web escaláveis e de alta performance. Com {anosExperiencia} anos de experiência no ecossistema Front-End e sólida formação em Tecnologia da Informação pela UFERSA, hoje domino o ciclo completo de desenvolvimento utilizando Node.js, TypeScript e React.
+                            </p>
+                            <p>
+                                Minha vivência com Qualidade de Software moldou um diferencial técnico raro: aplico normas rigorosas de usabilidade e manutenibilidade (como a ISO/IEC 25010) em todo código que escrevo. 
+                            </p>
+                            <p>
+                                Após entregar soluções reais para laboratórios de inovação (Projeto Carcará - LISA) e otimizar performances para clientes (CraftSix), meu foco atual é unir interfaces intuitivas com arquiteturas sólidas, limpas e seguras. Iniciei essa transição focada em Full Stack há {mesesFullStack} meses.
+                            </p>
 
                             <div className="mt-6 pt-5 border-t border-slate-50">
                                 <h3 className="text-[10px] font-black mb-3 text-slate-400 flex items-center gap-2 uppercase tracking-widest">
@@ -41,25 +47,25 @@ const About: React.FC = () => {
                                 </h3>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
                                     <div className="flex items-center gap-3 bg-slate-50/50 border border-slate-100 py-2 px-4 rounded-xl hover:bg-white hover:shadow-md transition-all group">
-                                        <div className="w-1 h-1 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
+                                        <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
                                         <span className="text-slate-500 text-[12px] group-hover:text-slate-800 transition-colors">
                                             <strong className="text-slate-900 font-bold">{t('about.cert1')}</strong> — Ada Tech
                                         </span>
                                     </div>
                                     <div className="flex items-center gap-3 bg-slate-50/50 border border-slate-100 py-2 px-4 rounded-xl hover:bg-white hover:shadow-md transition-all group">
-                                        <div className="w-1 h-1 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
+                                        <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
                                         <span className="text-slate-500 text-[12px] group-hover:text-slate-800 transition-colors">
                                             <strong className="text-slate-900 font-bold">{t('about.cert2')}</strong> — Udemy
                                         </span>
                                     </div>
                                     <div className="flex items-center gap-3 bg-slate-50/50 border border-slate-100 py-2 px-4 rounded-xl hover:bg-white hover:shadow-md transition-all group">
-                                        <div className="w-1 h-1 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
+                                        <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
                                         <span className="text-slate-500 text-[12px] group-hover:text-slate-800 transition-colors">
                                             <strong className="text-slate-900 font-bold">{t('about.cert3')}</strong> — Rocketseat
                                         </span>
                                     </div>
                                     <div className="flex items-center gap-3 bg-slate-50/50 border border-slate-100 py-2 px-4 rounded-xl hover:bg-white hover:shadow-md transition-all group">
-                                        <div className="w-1 h-1 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
+                                        <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-500 shrink-0"></div>
                                         <span className="text-slate-500 text-[12px] group-hover:text-slate-800 transition-colors">
                                             <strong className="text-slate-900 font-bold">{t('about.cert4')}</strong> — Alura
                                         </span>

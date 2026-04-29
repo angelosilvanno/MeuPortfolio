@@ -26,9 +26,9 @@ const translations: Record<Language, Record<string, TranslationValue>> = {
         },
         about: {
             title: "Sobre Mim",
-            para1: "Minha base vem da graduação em Tecnologia da Informação na UFERSA e hoje estou me formando na área. Trabalho com Front-End há {0} anos e, de uns {1} meses pra cá, comecei a ir além e estudar também o lado de back-end.",
-            para2: "Participei do Projeto Carcará no LISA — Laboratório de Inovação em Software e Automação da UFERSA — e também tive uma experiência na CraftSix, onde foquei bastante em melhorar o desempenho das aplicações. Um ponto que me destaca é a experiência com qualidade de software, por conta da monitoria, onde tive contato com boas práticas e padrões que ajudam a deixar os sistemas mais confiáveis.",
-            para3: "O projeto PedeAí mostra bem isso, foi feito pensando em ser seguro e funcionar bem no dia a dia. Hoje meu foco é juntar interfaces simples de usar com um back-end bem organizado usando Node.js e TypeScript.",
+            para1: "Sou um Desenvolvedor Full Stack apaixonado por construir aplicações web escaláveis e de alta performance. Com {0} anos de experiência no ecossistema Front-End e sólida formação em Tecnologia da Informação pela UFERSA, hoje domino o ciclo completo de desenvolvimento utilizando Node.js, TypeScript e React.",
+            para2: "Minha vivência com Qualidade de Software moldou um diferencial técnico raro: aplico normas rigorosas de usabilidade e manutenibilidade (como a ISO/IEC 25010) em todo código que escrevo.",
+            para3: "Após entregar soluções reais para laboratórios de inovação (Projeto Carcará - LISA) e otimizar performances para clientes (CraftSix), meu foco atual é unir interfaces intuitivas com arquiteturas sólidas, limpas e seguras.",
             certificationsTitle: "Certificações",
             cert1: "Front-end em React",
             cert2: "JavaScript: O Guia Completo",
@@ -111,7 +111,7 @@ const translations: Record<Language, Record<string, TranslationValue>> = {
             githubBtn: "Veja mais no GitHub"
         },
         skills: {
-            title: "Habilidades",
+            title: "Hard Skills",
             subtitle: "FRONTEND / BACKEND / FERRAMENTAS / NUVEM / METODOLOGIAS"
         },
         contact: {
@@ -138,9 +138,9 @@ const translations: Record<Language, Record<string, TranslationValue>> = {
         },
         about: {
             title: "About Me",
-            para1: "My foundation comes from my IT degree at UFERSA, and today I am graduating in the field. I've been working in Front-End for {0} years, and for about {1} months now, I've started studying the back-end side as well.",
-            para2: "I participated in the Carcará Project at LISA — Laboratory for Innovation in Software and Automation at UFERSA — and also had an experience at CraftSix, focusing heavily on improving performance. A key differentiator is my experience with software quality from my teaching assistantship, where I had contact with best practices and patterns that help make systems more reliable.",
-            para3: "The PedeAí project reflects this, built for security and daily reliability. Today my focus is combining easy-to-use interfaces with a well-organized back-end using Node.js and TypeScript.",
+            para1: "I am a Full Stack Developer passionate about building scalable, high-performance web applications. With {0} years of experience in the Front-End ecosystem and a solid background in IT from UFERSA, I now master the full development cycle using Node.js, TypeScript and React.",
+            para2: "My experience with Software Quality has shaped a rare technical differentiator: I apply rigorous usability and maintainability standards (such as ISO/IEC 25010) to every code I write.",
+            para3: "After delivering real solutions for innovation labs (Project Carcará - LISA) and optimizing performance for clients (CraftSix), my current focus is uniting intuitive interfaces with solid, clean and secure architectures.",
             certificationsTitle: "Certifications",
             cert1: "Front-end in React",
             cert2: "JavaScript: The Complete Guide",
